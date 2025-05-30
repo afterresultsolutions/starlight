@@ -10,6 +10,13 @@ export default defineConfig({
 			social: [{ icon: 'github', label: 'GitHub', href: 'https://afterresult.solutions' }],
 			sidebar: [
 				{
+					label: 'Service',
+					items: [
+						// Each item here is one entry in the navigation menu.
+						{ label: 'Service', slug: '/service' },
+					],
+				},
+				{
 					label: 'Guides',
 					items: [
 						// Each item here is one entry in the navigation menu.
