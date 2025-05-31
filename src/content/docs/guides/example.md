@@ -1,11 +1,10 @@
 ---
-title: Example Guide
-description: A guide in my new Starlight docs site.
+title: AfterResult Solutions
+description: Turning Leads into Loyal Customers, One Result at a Time.
 ---
 
-Guides lead a user through a specific task they want to accomplish, often with a sequence of steps.
-Writing a good guide requires thinking about what your users are trying to do.
+AfterResult Solution is a dynamic business growth partner specializing in lead generation, digital marketing, and brand development. We help businesses—big or small—connect with their target audience through strategic online and offline marketing solutions designed to deliver measurable results. Our expertise spans from social media management and SEO to targeted campaigns that boost visibility, engagement, and conversions. At AfterResult Solution, we are committed to driving real impact for our clients by transforming prospects into loyal customers, helping brands grow sustainably in a competitive market.
 
-## Further reading
+## Fueling Growth, Delivering Results.
 
-- Read [about how-to guides](https://diataxis.fr/how-to-guides/) in the Diátaxis framework
+- Read [about AfterResult](https://www.afterresult.com/about) in the Official Website
