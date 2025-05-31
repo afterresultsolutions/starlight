@@ -1,11 +1,22 @@
 ---
-title: Example Reference
-description: A reference page in my new Starlight docs site.
+title: Our Services
+description: AfterResult Solution is a results-driven marketing and branding agency helping businesses grow through targeted lead generation, smart digital strategies, and strong brand presence—both online and offline.
 ---
 
-Reference pages are ideal for outlining how things work in terse and clear terms.
-Less concerned with telling a story or addressing a specific use case, they should give a comprehensive outline of what you're documenting.
+Our Services:
+	•	Lead Generation (B2B & B2C)
+	•	Social Media Marketing & Management
+	•	Search Engine Optimization (SEO)
+	•	WhatsApp & SMS Marketing
+	•	Website Design & Development
+	•	Marketplace Management (Amazon, Flipkart, etc.)
+	•	Brand Strategy & Consulting
+	•	Google & Meta Ads Campaigns
+	•	Offline Marketing & Activation
+	•	Performance Marketing & Analytics
+	•	Landing Page Creation & Conversion Optimization
 
-## Further reading
 
-- Read [about reference](https://diataxis.fr/reference/) in the Diátaxis framework
+## Further Search
+
+- Use [AfterResult Service Search engine](https://www.afterresult.com/service) to get a wide range of 90+ services
