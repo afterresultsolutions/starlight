@@ -9,28 +9,25 @@ export default defineConfig({
 			title: 'AfterResult Solutions',
 			social: [{ icon: 'github', label: 'GitHub', href: 'https://afterresult.solutions' }],
 			sidebar: [
-				{
-					label: 'Service',
-					items: [
-						// Each item here is one entry in the navigation menu.
-						{ label: 'Service', slug: 'service' },
-					],
-				},
-				{
-					label: 'Guides',
-					items: [
-						// Each item here is one entry in the navigation menu.
-						{ label: 'Learn More', slug: 'guides/example' },
-					],
-				{
-					label: 'Pricing',
-					items: [
-						// Each item here is one entry in the navigation menu.
-						{ label: 'Pricing', slug: 'pricing' },
-					],
-				},
-		
-			],
+  {
+    label: 'Service',
+    items: [
+      { label: 'Service', slug: 'service' },
+    ],
+  },
+  {
+    label: 'Guides',
+    items: [
+      { label: 'Learn More', slug: 'guides/example' },
+    ],
+  },
+  {
+    label: 'Pricing',
+    items: [
+      { label: 'Pricing', slug: 'pricing' },
+    ],
+  },
+],
 		}),
 	],
 });
