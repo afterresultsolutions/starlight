@@ -19,13 +19,14 @@ export default defineConfig({
     label: 'Guides',
     items: [
       { label: 'Learn More', slug: 'guides/example' },
+      { label: 'Search', slug: 'pricing' },
     ],
   },
   {
     label: 'Pricing',
     items: [
       { label: 'Pricing', slug: 'pricing' },
-    ],
+    ],	  
   },
 ],
 		}),
