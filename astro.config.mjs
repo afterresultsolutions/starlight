@@ -13,7 +13,7 @@ export default defineConfig({
 					label: 'Service',
 					items: [
 						// Each item here is one entry in the navigation menu.
-						{ label: 'Service', slug: '/service' },
+						{ label: 'Service', slug: 'service' },
 					],
 				},
 				{
