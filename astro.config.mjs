@@ -23,10 +23,7 @@ export default defineConfig({
 						{ label: 'Learn More', slug: 'guides/example' },
 					],
 				},
-				{
-					label: 'Service',
-					autogenerate: { directory: 'Service' },
-				},
+		
 			],
 		}),
 	],
