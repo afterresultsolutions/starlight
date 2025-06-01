@@ -19,7 +19,7 @@ export default defineConfig({
     label: 'Guides',
     items: [
       { label: 'Learn More', slug: 'guides/example' },
-      { label: 'Search', slug: 'pricing' },
+      { label: 'Search', slug: 'search' },
     ],
   },
   {
