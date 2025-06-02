@@ -6,7 +6,7 @@ import starlight from '@astrojs/starlight';
 export default defineConfig({
 	integrations: [
 		starlight({
-			title: 'AfterResult Solutions',
+			title: 'AR Solutions',
 			social: [{ icon: 'github', label: 'GitHub', href: 'https://afterresult.solutions' }],
 			sidebar: [
   {
