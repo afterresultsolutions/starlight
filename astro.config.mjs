@@ -28,6 +28,9 @@ export default defineConfig({
         {
           label: 'Guides',
           items: [{ label: 'Learn More', slug: 'guides/example' }],
+          items: [{ label: 'Contact', slug: 'contact' }], 
+          items: [{ label: 'Contact', slug: 'contact' }], 
+          items: [{ label: 'Contact', slug: 'contact' }], 
         },
         {
           label: 'Pricing',
