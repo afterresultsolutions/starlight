@@ -7,7 +7,7 @@ export default defineConfig({
   integrations: [
     starlight({
       title: 'AR Solutions',
-      favicon: '/favicon-new.svg', // ✅ Added here
+      favicon: '/favicon-new.svg',
       social: [
         {
           icon: 'github',
@@ -18,23 +18,31 @@ export default defineConfig({
       sidebar: [
         {
           label: 'Service',
-          items: [{ label: 'Service', slug: 'service' }],
+          items: [
+            { label: 'Service', slug: 'service' },
+          ],
         },
         {
           label: 'Guides',
-          items: [{ label: 'Learn More', slug: 'guides/example' }],
-          items: [{ label: 'Contact', slug: 'contact' }], 
+          items: [
+            { label: 'Learn More', slug: 'guides/example' },
+            { label: 'Contact', slug: 'contact' },
+          ],
         },
         {
-          label: 'Guides',
-          items: [{ label: 'Learn More', slug: 'guides/example' }],
-          items: [{ label: 'Contact', slug: 'contact' }], 
-          items: [{ label: 'Contact', slug: 'contact' }], 
-          items: [{ label: 'Contact', slug: 'contact' }], 
+          label: 'Blog',
+          items: [
+            { label: 'AR and AI: The Future', slug: 'blog/first-blog' },
+            { label: 'Top Augmented Reality Trends', slug :'blog/second-blog'},
+            { label: 'The Future of Augmented Reality', slug :'blog/third-blog'}
+            // Add more blog posts here as you create them
+          ],
         },
         {
           label: 'Pricing',
-          items: [{ label: 'Pricing', slug: 'pricing' }],
+          items: [
+            { label: 'Pricing', slug: 'pricing' },
+          ],
         },
       ],
     }),
