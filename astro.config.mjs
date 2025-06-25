@@ -19,7 +19,9 @@ export default defineConfig({
         {
           label: 'Service',
           items: [
-            { label: 'Service', slug: 'service' },
+            { label: 'Strategic Implementation', slug: 'first-page.md' },
+            { label: 'Digital Growth & Enablement', slug: 'second-page.md' },
+            { label: 'Precision-Driven Lead Generation', slug: 'second-page.md' }
           ],
         },
         {
