@@ -1,3 +1,8 @@
+---
+title: "Strategic Implementation"
+description: "Engage customers offline through canopy activations, partnerships, and outdoor campaigns."
+---
+
 ## Strategic Implementation
 
 At AfterResult OPM, we believe in bridging innovative marketing with actionable, result-driven strategies. Our "Strategic Implementation" service is crafted to ensure your brand engages directly with your target audience, both on-ground and through reliable community networks.

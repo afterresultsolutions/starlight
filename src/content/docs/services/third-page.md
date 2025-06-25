@@ -1,3 +1,8 @@
+---
+title: "Precision-Driven Lead Generation"
+description: "Generate high-quality leads using AI-based prospecting and decision-maker targeting."
+---
+
 ## Precision-Driven Lead Generation
 
 At AfterResult Leadin, we specialize in delivering accurate, actionable, and high-converting leads tailored to your industry and sales goals. Our "Precision-Driven Lead Generation" services empower businesses to grow faster by identifying, qualifying, and connecting with the right prospects.

@@ -1,3 +1,8 @@
+---
+title: "Digital Growth & Enablement"
+description: "Digital services including marketplace listing, e-commerce development, and brand scaling."
+---
+
 ## Digital Growth & Enablement
 
 At AfterResult DPM, we empower businesses to grow digitally by offering full-spectrum services tailored to the modern marketplace. Our "Digital Growth & Enablement" services are crafted to accelerate your online presence, streamline e-commerce operations, and scale your startup effectively.
