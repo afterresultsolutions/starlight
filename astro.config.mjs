@@ -17,11 +17,11 @@ export default defineConfig({
       ],
       sidebar: [
         {
-          label: 'Service',
+          label: 'Services',
           items: [
-            { label: 'Strategic Implementation', slug: 'services/first-page.md' },
-            { label: 'Digital Growth & Enablement', slug: 'services/second-page.md' },
-            { label: 'Precision-Driven Lead Generation', slug: 'services/second-page.md' }
+            { label: 'Strategic Implementation', slug: 'services/first-page' },
+            { label: 'Digital Growth & Enablement', slug: 'services/second-page' },
+            { label: 'Precision-Driven Lead Generation', slug: 'services/second-page' }
           ],
         },
         {
