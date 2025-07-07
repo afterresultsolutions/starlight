@@ -2,6 +2,19 @@
 title: "Precision-Driven Lead Generation"
 description: "Generate high-quality leads using AI-based prospecting and decision-maker targeting."
 ---
+<a href="/contact" style="
+  display: inline-block;
+  padding: 12px 28px;
+  background-color: #0070f3;
+  color: #fff;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+  margin-top: 24px;
+  transition: background 0.2s;
+">
+  Contact Us
+</a>
 
 ## Precision-Driven Lead Generation
 

@@ -2,6 +2,19 @@
 title: "Search Engine Optimization (SEO)"
 description: "Our comprehensive approach covers all aspects of SEO to drive organic traffic and qualified leads to your site."
 ---
+<a href="/contact" style="
+  display: inline-block;
+  padding: 12px 28px;
+  background-color: #0070f3;
+  color: #fff;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+  margin-top: 24px;
+  transition: background 0.2s;
+">
+  Contact Us
+</a>
 
 # Search Engine Optimization (SEO)
 

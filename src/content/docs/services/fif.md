@@ -2,6 +2,19 @@
 title: "Social Media Marketing"
 description: "Our Social Media Marketing service is designed to elevate your brand on platforms like Instagram, Facebook, and LinkedIn"
 ---
+<a href="/contact" style="
+  display: inline-block;
+  padding: 12px 28px;
+  background-color: #0070f3;
+  color: #fff;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+  margin-top: 24px;
+  transition: background 0.2s;
+">
+  Contact Us
+</a>
 
 # Social Media Marketing
 

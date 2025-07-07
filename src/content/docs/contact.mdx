@@ -1,33 +1,66 @@
 ---
-title: "Contact Us"
-description: "Grow your online presence with our expert social media management services."
-date: 2025-06-19
-tags:
-  - social media
-  - marketing
-  - branding
+title: Contact
+description: Get in touch with us using the form below.
 ---
 
-## Social Media Management
+<a href="/contact" style="
+  display: inline-block;
+  padding: 12px 28px;
+  background-color: #0070f3;
+  color: #fff;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+  margin-top: 20px;
+  transition: background 0.2s;
+">
+  Contact Us
+</a>
 
-We help businesses build a strong and engaging social media presence.
+<form 
+  action="https://formspree.io/f/your-form-id" 
+  method="POST" 
+  style="max-width:400px;margin:2rem 0;"
+>
+  <label htmlFor="name">Name</label><br />
+  <input 
+    type="text" 
+    id="name" 
+    name="name" 
+    required 
+    style="width:100%;padding:8px;margin-bottom:12px;" 
+  /><br />
 
-### What We Offer
+  <label htmlFor="email">Email</label><br />
+  <input 
+    type="email" 
+    id="email" 
+    name="email" 
+    required 
+    style="width:100%;padding:8px;margin-bottom:12px;" 
+  /><br />
 
-- Content creation (images, videos, captions)
-- Page optimization
-- Hashtag strategy
-- Daily posting
-- Story updates
-- Audience engagement
-- Performance tracking
+  <label htmlFor="message">Query</label><br />
+  <textarea 
+    id="message" 
+    name="message" 
+    rows="5" 
+    required 
+    style="width:100%;padding:8px;margin-bottom:12px;"
+  ></textarea><br />
 
-### Platforms We Manage
-
-- Instagram  
-- Facebook  
-- LinkedIn  
-- Twitter  
-- YouTube  
-
-Let us handle your social media, so you can focus on growing your business.
+  <button 
+    type="submit" 
+    style="
+      background-color:#0070f3;
+      color:#fff;
+      padding:10px 24px;
+      border:none;
+      border-radius:5px;
+      font-weight:bold;
+      cursor:pointer;
+    "
+  >
+    Send
+  </button>
+</form>
