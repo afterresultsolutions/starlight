@@ -2,7 +2,7 @@
 title: "Social Media Marketing"
 description: "Our Social Media Marketing service is designed to elevate your brand on platforms like Instagram, Facebook, and LinkedIn"
 ---
-<a href="/contact" style="
+<a href="https://wa.me/919991283530?text=Hi%2C%20I%20am%20interested%20in%20Social%20Media%20Marketing%2C%20please%20arrange%20a%20call%20back." style="
   display: inline-block;
   padding: 12px 28px;
   background-color: #0070f3;
@@ -15,6 +15,7 @@ description: "Our Social Media Marketing service is designed to elevate your bra
 ">
   Contact Us
 </a>
+
 
 # Social Media Marketing
 

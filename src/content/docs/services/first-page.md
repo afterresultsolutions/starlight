@@ -2,7 +2,7 @@
 title: "Strategic Implementation"
 description: "Engage customers offline through canopy activations, partnerships, and outdoor campaigns."
 ---
-<a href="/contact" style="
+<a href="https://wa.me/919991283530?text=Hi%2C%20I%20am%20interested%20in%20Strategic%20Implementation%2C%20please%20arrange%20a%20call%20back." style="
   display: inline-block;
   padding: 12px 28px;
   background-color: #0070f3;
@@ -15,6 +15,7 @@ description: "Engage customers offline through canopy activations, partnerships,
 ">
   Contact Us
 </a>
+
 
 ## Strategic Implementation
 

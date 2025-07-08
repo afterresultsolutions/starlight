@@ -2,7 +2,7 @@
 title: "Shopify & WooCommerce Development"
 description: "We specialize in building high-converting e-commerce websites using Shopify and WooCommerce—two of the world’s most trusted platforms"
 ---
-<a href="/contact" style="
+<a href="https://wa.me/919991283530?text=Hi%2C%20I%20am%20interested%20in%20Shopify%20Development%2C%20please%20arrange%20a%20call%20back." style="
   display: inline-block;
   padding: 12px 28px;
   background-color: #0070f3;
@@ -15,6 +15,7 @@ description: "We specialize in building high-converting e-commerce websites usin
 ">
   Contact Us
 </a>
+
 
 
 # Shopify & WooCommerce Development

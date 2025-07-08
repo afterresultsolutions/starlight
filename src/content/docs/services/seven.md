@@ -2,7 +2,7 @@
 title: "Google My Business (GMB) Optimization"
 description: "We help you capture more foot traffic and local leads with a fully optimized and engaging profile."
 ---
-<a href="/contact" style="
+<a href="https://wa.me/919991283530?text=Hi%2C%20I%20am%20interested%20in%20Business%20Optimisation%2C%20please%20arrange%20a%20call%20back." style="
   display: inline-block;
   padding: 12px 28px;
   background-color: #0070f3;
@@ -15,6 +15,7 @@ description: "We help you capture more foot traffic and local leads with a fully
 ">
   Contact Us
 </a>
+
 
 # Google My Business (GMB) Optimization
 

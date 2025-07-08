@@ -2,7 +2,7 @@
 title: "Search Engine Optimization (SEO)"
 description: "Our comprehensive approach covers all aspects of SEO to drive organic traffic and qualified leads to your site."
 ---
-<a href="/contact" style="
+<a href="https://wa.me/919991283530?text=Hi%2C%20I%20am%20interested%20in%20Search%20Engine%20optimisation%2C%20please%20arrange%20a%20call%20back." style="
   display: inline-block;
   padding: 12px 28px;
   background-color: #0070f3;
@@ -15,6 +15,7 @@ description: "Our comprehensive approach covers all aspects of SEO to drive orga
 ">
   Contact Us
 </a>
+
 
 # Search Engine Optimization (SEO)
 
