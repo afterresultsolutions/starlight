@@ -39,1790 +39,1268 @@ Full-service social media management.
 
 ---
 
-    file: ../../assets/houston.webp
-  actions:
-    - text: Learn More
-      link: https://www.afterresult.com/about
-      icon: right-arrow
-    - text: Go to AfterResult.com
-      link: https://www.afterresult.com/
-      icon: external
-      variant: minimal
-
-> Need a custom plan or want to discuss your goals?  
-> 📞 Contact us on WhatsApp or call directly.
-
-
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>AfterResult Quotation Estimator</title>
-
-<style>
-  body {
-    font-family: "Inter", Arial, sans-serif;
-    background: transparent;
-    color: #ddd;
-    margin: 0;
-    padding: 0px;
-  }
-  #calculatorContainer {
-    max-width: 900px;
-    width: 100%;
-    margin: 20px auto;
-    padding: 15px;
-    background: transparent;
-    border-radius: 18px;
-    border: 0px solid #f39c12;
-    box-shadow: 0 0 0px #f39c12;
-    box-sizing: border-box;
-  }
-  h2, h3 {
-    color: #f39c12;
-    font-weight: 400;
-    font-size: 1.5rem;
-    text-align: center;
-    margin-bottom: 15px;
-  }
-  label {
-    display: block;
-    font-size: 13px;
-    color: #ccc;
-    margin-bottom: 5px;
-    font-weight: 300;
-  }
-  select,
-  input[type="number"],
-  input[type="text"],
-  input[type="email"],
-  input[type="tel"] {
-    width: 100%;
-    padding: 8px 14px;
-    border-radius: 20px;
-    border: 2px solid #f39c12;
-    background: #111;
-    color: #fff;
-    font-size: 14px;
-    margin-bottom: 14px;
-    outline: none;
-    transition: border-color 0.3s;
-    text-align: left;
-  }
-  select:hover,
-  select:focus,
-  input:hover,
-  input:focus {
-    border-color: #e67e22;
-  }
-  .button-row {
-    display: flex;
-    gap: 12px;
-    margin-bottom: 12px;
-    margin-top: 8px;
-    flex-wrap: wrap;
-  }
-  button {
-    flex: 1;
-    padding: 10px 0;
-    border: none;
-    border-radius: 25px;
-    background: linear-gradient(90deg, #f39c12 0%, #e74c3c 100%);
-    color: white;
-    font-weight: 600;
-    font-size: 0.80rem;
-    cursor: pointer;
-    margin-bottom: 0;
-    transition: background 0.3s;
-    min-width: 120px;
-  }
-  button.whatsapp {
-    background: linear-gradient(90deg, #25d366 0%, #128c7e 100%);
-  }
-  button:hover {
-    background: linear-gradient(90deg, #e67e22 0%, #c0392b 100%);
-  }
-  button.whatsapp:hover {
-    background: linear-gradient(90deg, #128c7e 0%, #25d366 100%);
-  }
-  .hidden {
-    display: none !important;
-  }
-  #estimatedPriceRange {
-    color: #f39c12;
-    font-weight: 600;
-    font-size: 0.8rem;
-    min-height: 24px;
-    margin-bottom: 8px;
-    white-space: pre-line;
-    text-align: center;
-  }
-  #averagePriceRange {
-    color: #aaa;
-    font-weight: 400;
-    font-size: 0.7rem;
-    margin-bottom: 16px;
-    text-align: center;
-    font-style: italic;
-  }
-  .slider-row {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    margin-bottom: 14px;
-    justify-content: center;
-  }
-  .slider-row label {
-    margin: 0 0 0 0;
-    font-size: 0.9em;
-    color: #bbb;
-    font-weight: 400;
-  }
-  input[type="range"] {
-    width: 240px;
-    accent-color: #f39c12;
-    height: 3px;
-    background: linear-gradient(90deg, #f39c12 0%, #e74c3c 100%);
-    border-radius: 2px;
-    outline: none;
-    margin: 0;
-    -webkit-appearance: none;
-  }
-  input[type="range"]::-webkit-slider-thumb {
-    -webkit-appearance: none;
-    appearance: none;
-    width: 10px;
-    height: 18px;
-    border-radius: 50%;
-    background: #fff;
-    border: 2px solid #f39c12;
-    box-shadow: 0 2px 8px #0002;
-    cursor: pointer;
-    transition: background 0.2s;
-  }
-  input[type="range"]:focus::-webkit-slider-thumb {
-    background: #f39c12;
-    border-color: #e67e22;
-  }
-  input[type="range"]::-moz-range-thumb {
-    width: 10px;
-    height: 18px;
-    border-radius: 50%;
-    background: #fff;
-    border: 2px solid #f39c12;
-    box-shadow: 0 2px 8px #0002;
-    cursor: pointer;
-    transition: background 0.2s;
-  }
-  input[type="range"]:focus::-moz-range-thumb {
-    background: #f39c12;
-    border-color: #e67e22;
-  }
-  input[type="range"]::-ms-thumb {
-    width: 10px;
-    height: 18px;
-    border-radius: 50%;
-    background: #fff;
-    border: 2px solid #f39c12;
-    box-shadow: 0 2px 8px #0002;
-    cursor: pointer;
-    transition: background 0.2s;
-  }
-  .centered-checkboxes {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 10px;
-    font-size: 0.85em;
-    margin-bottom: 6px;
-  }
-  .small-btn {
-    background: transparent !important;
-    color: #888 !important;
-    border: none !important;
-    font-size: 0.80em !important;
-    font-weight: 400 !important;
-    padding: 2px 8px !important;
-    margin: 0 !important;
-    min-width: unset !important;
-    box-shadow: none !important;
-    cursor: pointer;
-    display: inline-block;
-    vertical-align: middle;
-  }
-  .add-service-btn {
-    display: block;
-    width: auto;
-    background: transparent !important;
-    color: #888 !important;
-    font-size: 0.85em !important;
-    border: none !important;
-    margin: 0 auto 10px auto !important;
-    padding: 2px 8px !important;
-    text-align: left;
-    cursor: pointer;
-    min-width: unset !important;
-    box-shadow: none !important;
-    font-weight: 400 !important;
-  }
-  .remove-service-btn {
-    background: transparent !important;
-    color: #e74c3c !important;
-    font-size: 1.25em !important;
-    border: none !important;
-    margin-left: 6px !important;
-    padding: 0 6px !important;
-    cursor: pointer;
-    vertical-align: middle;
-    min-width: unset !important;
-    box-shadow: none !important;
-    font-weight: 700 !important;
-    line-height: 1 !important;
-    display: inline-block;
-  }
-  .remove-service-btn:focus {
-    outline: 2px solid #e74c3c;
-  }
-  .remove-other-card-btn {
-    background: transparent !important;
-    color: #e74c3c !important;
-    font-size: 1.25em !important;
-    border: none !important;
-    margin-left: 6px !important;
-    padding: 0 6px !important;
-    cursor: pointer;
-    vertical-align: middle;
-    min-width: unset !important;
-    box-shadow: none !important;
-    font-weight: 700 !important;
-    line-height: 1 !important;
-    display: inline-block;
-    float: right;
-  }
-  #quotePreviewSection {
-    background: #fff;
-    color: #222;
-    border-radius: 10px;
-    padding: 15px;
-    box-shadow: 0 0 20px #f39c12;
-    margin-top: 25px;
-    font-family: "Inter", Arial, sans-serif;
-    font-size: 13px;
-    max-width: 500px;
-    position: relative;
-    overflow-x: auto;
-  }
-  #quotePreviewContent {
-    max-width: 100%;
-    margin: auto;
-    text-align: left;
-    word-wrap: break-word;
-    position: relative;
-    z-index: 2;
-  }
-  .watermark {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%) rotate(-30deg);
-    font-size: 5vw;
-    color: rgba(243, 156, 18, 0.09);
-    user-select: none;
-    pointer-events: none;
-    font-weight: 900;
-    letter-spacing: 10px;
-    white-space: nowrap;
-    z-index: 1;
-  }
-  .quotation-header {
-    display: flex;
-    align-items: center;
-    gap: 14px;
-    border-bottom: 2px solid #f39c12;
-    padding-bottom: 6px;
-    margin-bottom: 15px;
-    flex-wrap: wrap;
-  }
-  .quotation-header img {
-    height: 50px;
-    width: auto;
-    border-radius: 8px;
-    background: #fff;
-    padding: 4px;
-    flex-shrink: 0;
-  }
-  .quotation-meta {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    margin-bottom: 8px;
-    font-size: 11px;
-  }
-  .quotation-section-title {
-    color: #f39c12;
-    font-size: 14px;
-    margin-top: 15px;
-    margin-bottom: 6px;
-    font-weight: 600;
-  }
-  .quotation-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-bottom: 12px;
-    font-size: 13px;
-  }
-  .quotation-table th,
-  .quotation-table td {
-    border: 1px solid #ccc;
-    padding: 6px 10px;
-    text-align: left;
-    font-size: 13px;
-    font-weight: 400;
-  }
-  .quotation-table th {
-    background: #f39c12;
-    color: #fff;
-    font-weight: 600;
-    text-align: center;
-  }
-  .quotation-table td {
-    text-align: center;
-  }
-  .quotation-table td.left {
-    text-align: left;
-  }
-  .quotation-terms {
-    font-size: 11px;
-    color: #444;
-    background: #f7f7f7;
-    padding: 10px;
-    border-radius: 6px;
-    max-height: 120px;
-    overflow-y: auto;
-  }
-  .quotation-sign {
-    margin-top: 16px;
-    font-size: 12px;
-  }
-  .qr-section {
-    display: flex;
-    align-items: center;
-    gap: 16px;
-    margin-top: 16px;
-    margin-bottom: 12px;
-    flex-wrap: wrap;
-  }
-  .qr-section img {
-    width: 70px;
-    height: 70px;
-    border-radius: 8px;
-    border: 1px solid #ccc;
-    background: #fff;
-    padding: 2px;
-  }
-  .qr-section .website-link {
-    font-size: 13px;
-    color: #1d6fa5;
-    font-weight: 600;
-    text-decoration: underline;
-    word-break: break-word;
-  }
-  /* Popup form styles */
-  #popupFormOverlay {
-    position: fixed;
-    top: 0; left: 0; right: 0; bottom: 0;
-    background: rgba(0,0,0,0.85);
-    display: none;
-    justify-content: center;
-    align-items: center;
-    z-index: 9999;
-  }
-  #popupFormOverlay.show {
-    display: flex;
-  }
-  #popupForm {
-    background: #222;
-    padding: 20px 25px;
-    border-radius: 15px;
-    max-width: 400px;
-    width: 90%;
-    box-sizing: border-box;
-    box-shadow: 0 0 15px #f39c12;
-  }
-  #popupForm h3 {
-    color: #f39c12;
-    margin-top: 0;
-    margin-bottom: 15px;
-    font-weight: 400;
-    text-align: center;
-  }
-  #popupForm label {
-    color: #ccc;
-    font-size: 13px;
-    margin-bottom: 4px;
-    display: block;
-  }
-  #popupForm input {
-    width: 100%;
-    padding: 8px 14px;
-    border-radius: 20px;
-    border: 2px solid #f39c12;
-    background: #111;
-    color: #fff;
-    font-size: 14px;
-    margin-bottom: 14px;
-    outline: none;
-    transition: border-color 0.3s;
-    text-align: left;
-  }
-  #popupForm input:focus {
-    border-color: #e67e22;
-  }
-  #popupForm .button-row {
-    display: flex;
-    justify-content: space-between;
-    gap: 10px;
-  }
-  #popupForm button {
-    flex: 1;
-    padding: 10px 0;
-    border: none;
-    border-radius: 25px;
-    background: linear-gradient(90deg, #f39c12 0%, #e74c3c 100%);
-    color: white;
-    font-weight: 700;
-    font-size: 0.9rem;
-    cursor: pointer;
-    transition: background 0.3s;
-  }
-  #popupForm button:hover {
-    background: linear-gradient(90deg, #e67e22 0%, #c0392b 100%);
-  }
-  @media (max-width: 600px) {
-    #calculatorContainer {
-      padding: 7px;
+<!-- AfterResult Quotation Estimator - Corrected and Complete Code -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AfterResult Quotation Estimator</title>
+  <style>
+    body { font-family: "Inter", Arial, sans-serif; background: transparent; color: #ddd; margin: 0; padding: 0; }
+    #calculatorContainer { max-width: 900px; width: 100%; margin: 20px auto; padding: 15px; background: transparent; border-radius: 18px; border: 0px solid #f39c12; box-shadow: 0 0 0px #f39c12; box-sizing: border-box; }
+    h2, h3 { color: #f39c12; font-weight: 400; font-size: 1.5rem; text-align: center; margin-bottom: 15px; }
+    label { display: block; font-size: 13px; color: #ccc; margin-bottom: 5px; font-weight: 300; }
+    select, input[type="number"], input[type="text"], input[type="email"], input[type="tel"] { width: 100%; padding: 8px 14px; border-radius: 20px; border: 2px solid #f39c12; background: #111; color: #fff; font-size: 14px; margin-bottom: 14px; outline: none; transition: border-color 0.3s; text-align: left; }
+    select:hover, select:focus, input:hover, input:focus { border-color: #e67e22; }
+    .button-row { display: flex; gap: 12px; margin-bottom: 12px; margin-top: 8px; flex-wrap: wrap; }
+    button { flex: 1; padding: 10px 0; border: none; border-radius: 25px; background: linear-gradient(90deg, #f39c12 0%, #e74c3c 100%); color: white; font-weight: 600; font-size: 0.80rem; cursor: pointer; margin-bottom: 0; transition: background 0.3s; min-width: 120px; }
+    button.whatsapp { background: linear-gradient(90deg, #25d366 0%, #128c7e 100%); }
+    button:hover { background: linear-gradient(90deg, #e67e22 0%, #c0392b 100%); }
+    button.whatsapp:hover { background: linear-gradient(90deg, #128c7e 0%, #25d366 100%); }
+    .hidden { display: none !important; }
+    #estimatedPriceRange { color: #f39c12; font-weight: 600; font-size: 0.8rem; min-height: 24px; margin-bottom: 8px; white-space: pre-line; text-align: center; }
+    #averagePriceRange { color: #aaa; font-weight: 400; font-size: 0.7rem; margin-bottom: 16px; text-align: center; font-style: italic; }
+    .slider-row { display: flex; align-items: center; gap: 8px; margin-bottom: 14px; justify-content: center; }
+    .slider-row label { margin: 0 0 0 0; font-size: 0.9em; color: #bbb; font-weight: 400; }
+    input[type="range"] { width: 240px; accent-color: #f39c12; height: 3px; background: linear-gradient(90deg, #f39c12 0%, #e74c3c 100%); border-radius: 2px; outline: none; margin: 0; -webkit-appearance: none; }
+    input[type="range"]::-webkit-slider-thumb { -webkit-appearance: none; appearance: none; width: 10px; height: 18px; border-radius: 50%; background: #fff; border: 2px solid #f39c12; box-shadow: 0 2px 8px #0002; cursor: pointer; transition: background 0.2s; }
+    input[type="range"]:focus::-webkit-slider-thumb { background: #f39c12; border-color: #e67e22; }
+    input[type="range"]::-moz-range-thumb { width: 10px; height: 18px; border-radius: 50%; background: #fff; border: 2px solid #f39c12; box-shadow: 0 2px 8px #0002; cursor: pointer; transition: background 0.2s; }
+    input[type="range"]:focus::-moz-range-thumb { background: #f39c12; border-color: #e67e22; }
+    input[type="range"]::-ms-thumb { width: 10px; height: 18px; border-radius: 50%; background: #fff; border: 2px solid #f39c12; box-shadow: 0 2px 8px #0002; cursor: pointer; transition: background 0.2s; }
+    .centered-checkboxes { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; font-size: 0.85em; margin-bottom: 6px; }
+    .small-btn { background: transparent !important; color: #888 !important; border: none !important; font-size: 0.80em !important; font-weight: 400 !important; padding: 2px 8px !important; margin: 0 !important; min-width: unset !important; box-shadow: none !important; cursor: pointer; display: inline-block; vertical-align: middle; }
+    .add-service-btn { display: block; width: auto; background: transparent !important; color: #888 !important; font-size: 0.85em !important; border: none !important; margin: 0 auto 10px auto !important; padding: 2px 8px !important; text-align: left; cursor: pointer; min-width: unset !important; box-shadow: none !important; font-weight: 400 !important; }
+    .remove-service-btn { background: transparent !important; color: #e74c3c !important; font-size: 1.25em !important; border: none !important; margin-left: 6px !important; padding: 0 6px !important; cursor: pointer; vertical-align: middle; min-width: unset !important; box-shadow: none !important; font-weight: 700 !important; line-height: 1 !important; display: inline-block; }
+    .remove-service-btn:focus { outline: 2px solid #e74c3c; }
+    .remove-other-card-btn { background: transparent !important; color: #e74c3c !important; font-size: 1.25em !important; border: none !important; margin-left: 6px !important; padding: 0 6px !important; cursor: pointer; vertical-align: middle; min-width: unset !important; box-shadow: none !important; font-weight: 700 !important; line-height: 1 !important; display: inline-block; float: right; }
+    #quotePreviewSection { background: #fff; color: #222; border-radius: 10px; padding: 15px; box-shadow: 0 0 20px #f39c12; margin-top: 25px; font-family: "Inter", Arial, sans-serif; font-size: 13px; max-width: 500px; position: relative; overflow-x: auto; }
+    #quotePreviewContent { max-width: 100%; margin: auto; text-align: left; word-wrap: break-word; position: relative; z-index: 2; }
+    .watermark { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(-30deg); font-size: 5vw; color: rgba(243, 156, 18, 0.09); user-select: none; pointer-events: none; font-weight: 900; letter-spacing: 10px; white-space: nowrap; z-index: 1; }
+    .quotation-header { display: flex; align-items: center; gap: 14px; border-bottom: 2px solid #f39c12; padding-bottom: 6px; margin-bottom: 15px; flex-wrap: wrap; }
+    .quotation-header img { height: 50px; width: auto; border-radius: 8px; background: #fff; padding: 4px; flex-shrink: 0; }
+    .quotation-meta { display: flex; flex-wrap: wrap; justify-content: space-between; margin-bottom: 8px; font-size: 11px; }
+    .quotation-section-title { color: #f39c12; font-size: 14px; margin-top: 15px; margin-bottom: 6px; font-weight: 600; }
+    .quotation-table { width: 100%; border-collapse: collapse; margin-bottom: 12px; font-size: 13px; }
+    .quotation-table th, .quotation-table td { border: 1px solid #ccc; padding: 6px 10px; text-align: left; font-size: 13px; font-weight: 400; }
+    .quotation-table th { background: #f39c12; color: #fff; font-weight: 600; text-align: center; }
+    .quotation-table td { text-align: center; }
+    .quotation-table td.left { text-align: left; }
+    .quotation-terms { font-size: 11px; color: #444; background: #f7f7f7; padding: 10px; border-radius: 6px; max-height: 120px; overflow-y: auto; }
+    .quotation-sign { margin-top: 16px; font-size: 12px; }
+    .qr-section { display: flex; align-items: center; gap: 16px; margin-top: 16px; margin-bottom: 12px; flex-wrap: wrap; }
+    .qr-section img { width: 70px; height: 70px; border-radius: 8px; border: 1px solid #ccc; background: #fff; padding: 2px; }
+    .qr-section .website-link { font-size: 13px; color: #1d6fa5; font-weight: 600; text-decoration: underline; word-break: break-word; }
+    #popupFormOverlay { position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0,0,0,0.85); display: none; justify-content: center; align-items: center; z-index: 9999; }
+    #popupFormOverlay.show { display: flex; }
+    #popupForm { background: #222; padding: 20px 25px; border-radius: 15px; max-width: 400px; width: 90%; box-sizing: border-box; box-shadow: 0 0 15px #f39c12; }
+    #popupForm h3 { color: #f39c12; margin-top: 0; margin-bottom: 15px; font-weight: 400; text-align: center; }
+    #popupForm label { color: #ccc; font-size: 13px; margin-bottom: 4px; display: block; }
+    #popupForm input { width: 100%; padding: 8px 14px; border-radius: 20px; border: 2px solid #f39c12; background: #111; color: #fff; font-size: 14px; margin-bottom: 14px; outline: none; transition: border-color 0.3s; text-align: left; }
+    #popupForm input:focus { border-color: #e67e22; }
+    #popupForm .button-row { display: flex; justify-content: space-between; gap: 10px; }
+    #popupForm button { flex: 1; padding: 10px 0; border: none; border-radius: 25px; background: linear-gradient(90deg, #f39c12 0%, #e74c3c 100%); color: white; font-weight: 700; font-size: 0.9rem; cursor: pointer; transition: background 0.3s; }
+    #popupForm button:hover { background: linear-gradient(90deg, #e67e22 0%, #c0392b 100%); }
+    @media (max-width: 600px) {
+      #calculatorContainer { padding: 7px; }
+      .quotation-header img { height: 38px; }
+      .quotation-table th, .quotation-table td { padding: 4px 4px; font-size: 12px; }
+      .qr-section img { width: 50px; height: 50px; }
+      .button-row { gap: 7px; }
     }
-    .quotation-header img {
-      height: 38px;
-    }
-    .quotation-table th, .quotation-table td {
-      padding: 4px 4px;
-      font-size: 12px;
-    }
-    .qr-section img {
-      width: 50px;
-      height: 50px;
-    }
-    .button-row {
-      gap: 7px;
-    }
-  }
-
-</style>
-
-<div id="calculatorContainer" role="main" aria-label="Quotation Estimator">
-  <h2>AfterResult Quotation Estimator</h2>
-  <div id="multiServiceList"></div>
-  <div id="serviceSelectorContainer">
-    <label for="serviceSelect">Select a Service</label>
-    <select id="serviceSelect" aria-label="Select a service">
-      <option value="" disabled="" selected="">-- Choose a service --</option>
-      <option value="Logo Design">Logo Design</option>
-      <option value="Basic Website">Basic Website</option>
-      <option value="Advanced Website">Advanced Website</option>
-      <option value="Social Media Management">Social Media Management</option>
-      <option value="SEO Services">SEO Services</option>
-      <option value="App Development">App Development</option>
-      <option value="Content Writing">Content Writing</option>
-      <option value="eCommerce Store">eCommerce Store</option>
-      <option value="Marketplace Management">Marketplace Management</option>
-      <option value="Digital Marketing">Digital Marketing</option>
-      <option value="Branding Services">Branding Services</option>
-      <option value="Instagram Followers">Instagram Followers</option>
-      <option value="Meta and Google Ads">Meta Ads and Google Ads</option>
-      <option value="3D / Product Design">3D or Product Design</option>
-      <option value="Other">Other (Request Quote)</option>
-    </select>
-    <button id="addServiceBtn" class="add-service-btn" type="button" style="font-size:12px;">+ Add Another Service</button>
-  </div>
-
-  <div id="complexityWrapper" class="hidden">
-    <label for="complexitySelect">Select Project Complexity</label>
-    <select id="complexitySelect" aria-label="Select project complexity">
-      <option value="" disabled="" selected="">-- Choose complexity --</option>
-      <option value="Basic">Basic</option>
-      <option value="Moderate">Moderate</option>
-      <option value="Advanced">Advanced</option>
-    </select>
-  </div>
-
-  <div id="categoryWrapper" class="hidden">
-    <label for="categorySelect">Select Category</label>
-    <select id="categorySelect" aria-label="Select category">
-      <option value="" disabled="" selected="">-- Choose category --</option>
-      <option value="Lifestyle">Lifestyle</option>
-      <option value="Education">Education</option>
-      <option value="Furniture &amp; Home Decor">Furniture &amp; Home Decor</option>
-      <option value="E-commerce">E-commerce</option>
-      <option value="Service-Based Business">Service-Based Business</option>
-      <option value="Other">Other</option>
-    </select>
-    <input type="text" id="customCategoryInput" class="hidden" placeholder="Enter your category" style="margin-bottom:10px;">
-  </div>
-
-  <div id="brandNameWrapper" class="hidden">
-    <label for="brandNameInput">Brand Name</label>
-    <input type="text" id="brandNameInput" placeholder="Enter your brand name">
-  </div>
-  <div id="brandDescWrapper" class="hidden">
-    <label for="brandDescInput">Brand Description (Optional)</label>
-    <input type="text" id="brandDescInput" placeholder="Describe your brand (optional)">
-  </div>
-
-  <div id="typeWrapper" class="hidden">
-    <label for="typeSelect">Select Type</label>
-    <select id="typeSelect" aria-label="Select type">
-      <option value="" disabled="" selected="">-- Choose type --</option>
-      <option value="Landing Page">Landing Page</option>
-      <option value="E-commerce">E-commerce</option>
-      <option value="Ed-Tech">Ed-Tech</option>
-      <option value="Blog">Blog</option>
-      <option value="News and Updates">News and Updates</option>
-      <option value="Tools">Tools</option>
-      <option value="Agency">Agency</option>
-      <option value="Appointment">Appointment</option>
-      <option value="Company Profile">Company Profile</option>
-      <option value="Other">Other</option>
-    </select>
-    <input type="text" id="customTypeInput" class="hidden" placeholder="Enter type" style="margin-bottom:10px;">
-  </div>
-
-  <div id="durationSliderWrapper" class="hidden slider-row" aria-label="Select project duration">
-    <label for="durationSlider" style="margin-bottom: 2px">Duration:</label>
-    <span style="font-size: 0.85em; color: #aaa">1</span>
-    <input type="range" id="durationSlider" min="1" max="36" value="1" aria-valuemin="1" aria-valuemax="36" aria-valuenow="1" aria-label="Duration in months">
-    <span id="durationSliderValue" style="font-size: 0.9em; color: #f39c12; font-weight: 600">1</span>
-    <span style="font-size: 0.85em; color: #aaa">36 months</span>
-  </div>
-
-  <div id="budgetWrapper" class="hidden">
-    <label for="budgetInput">Enter Your Marketing Budget (₹)</label>
-    <input type="number" id="budgetInput" min="5000" step="1" placeholder="Enter amount (min 5000)">
-    <span id="budgetMinMsg" style="color:#f39c12;font-size:0.9em;display:none;">Minimum budget is ₹5,000</span>
-  </div>
-
-  <div id="campaignObjectiveWrapper" class="hidden">
-    <label for="campaignObjectiveSelect">Campaign Objective</label>
-    <select id="campaignObjectiveSelect">
-      <option value="" disabled="" selected="">-- Select Objective --</option>
-      <option value="Sales">Sales</option>
-      <option value="Leads">Leads</option>
-      <option value="Traffic">Traffic</option>
-      <option value="Engagement">Engagement</option>
-      <option value="Awareness">Awareness</option>
-    </select>
-  </div>
-
-  <div id="adsPlatformWrapper" class="hidden">
-    <label>Select Ad Platforms</label>
-    <div class="centered-checkboxes">
-      <label><input type="checkbox" class="adsPlatform" value="Meta Ads"> Meta Ads</label>
-      <label><input type="checkbox" class="adsPlatform" value="Google Ads"> Google Ads</label>
+  </style>
+</head>
+<body>
+  <div id="calculatorContainer" role="main" aria-label="Quotation Estimator">
+    <h2>AfterResult Quotation Estimator</h2>
+    <div id="multiServiceList"></div>
+    <div id="serviceSelectorContainer">
+      <label for="serviceSelect">Select a Service</label>
+      <select id="serviceSelect" aria-label="Select a service">
+        <option value="" disabled selected>-- Choose a service --</option>
+        <option value="Logo Design">Logo Design</option>
+        <option value="Basic Website">Basic Website</option>
+        <option value="Advanced Website">Advanced Website</option>
+        <option value="Social Media Management">Social Media Management</option>
+        <option value="SEO Services">SEO Services</option>
+        <option value="App Development">App Development</option>
+        <option value="Content Writing">Content Writing</option>
+        <option value="eCommerce Store">eCommerce Store</option>
+        <option value="Marketplace Management">Marketplace Management</option>
+        <option value="Digital Marketing">Digital Marketing</option>
+        <option value="Branding Services">Branding Services</option>
+        <option value="Instagram Followers">Instagram Followers</option>
+        <option value="Meta and Google Ads">Meta Ads and Google Ads</option>
+        <option value="3D / Product Design">3D or Product Design</option>
+        <option value="Other">Other (Request Quote)</option>
+      </select>
+      <button id="addServiceBtn" class="add-service-btn" type="button" style="font-size:12px;">+ Add Another Service</button>
     </div>
-  </div>
-
-  <div id="productCountWrapper" class="hidden">
-    <label for="productCount">Number of Products</label>
-    <input type="number" id="productCount" min="1" max="10000" value="1">
-  </div>
-
-  <div id="marketplaceWrapper" class="hidden">
-    <label>Select Marketplace Platforms</label>
-    <div class="centered-checkboxes" id="marketplacePlatforms">
-      <label><input type="checkbox" class="marketplacePlatform" value="Amazon"> Amazon</label>
-      <label><input type="checkbox" class="marketplacePlatform" value="Flipkart"> Flipkart</label>
-      <label><input type="checkbox" class="marketplacePlatform" value="Other"> Other</label>
+    <div id="complexityWrapper" class="hidden">
+      <label for="complexitySelect">Select Project Complexity</label>
+      <select id="complexitySelect" aria-label="Select project complexity">
+        <option value="" disabled selected>-- Choose complexity --</option>
+        <option value="Basic">Basic</option>
+        <option value="Moderate">Moderate</option>
+        <option value="Advanced">Advanced</option>
+      </select>
     </div>
-    <input type="text" id="customMarketplaceInput" class="hidden" placeholder="Enter platform name">
-    <div id="marketplaceProductCountWrapper" class="hidden">
-      <label for="marketplaceProductCount">Number of Products</label>
-      <input type="number" id="marketplaceProductCount" min="1" max="10000" value="1">
+    <div id="categoryWrapper" class="hidden">
+      <label for="categorySelect">Select Category</label>
+      <select id="categorySelect" aria-label="Select category">
+        <option value="" disabled selected>-- Choose category --</option>
+        <option value="Lifestyle">Lifestyle</option>
+        <option value="Education">Education</option>
+        <option value="Furniture &amp; Home Decor">Furniture &amp; Home Decor</option>
+        <option value="E-commerce">E-commerce</option>
+        <option value="Service-Based Business">Service-Based Business</option>
+        <option value="Other">Other</option>
+      </select>
+      <input type="text" id="customCategoryInput" class="hidden" placeholder="Enter your category" style="margin-bottom:10px;">
     </div>
-  </div>
-
-  <div id="smmPlatformsWrapper" class="hidden checkboxGroup" aria-label="Select social media platforms">
-    <label>Select Platforms</label><br>
-    <label><input type="checkbox" class="smmPlatform" value="Instagram"> Instagram</label>
-    <label><input type="checkbox" class="smmPlatform" value="Facebook"> Facebook</label>
-    <label><input type="checkbox" class="smmPlatform" value="LinkedIn"> LinkedIn</label>
-    <label><input type="checkbox" class="smmPlatform" value="Twitter"> Twitter</label>
-    <label><input type="checkbox" class="smmPlatform" value="YouTube"> YouTube</label>
-    <label><input type="checkbox" class="smmPlatform" value="Other"> Other</label>
-    <input type="text" id="customSmmPlatformInput" class="hidden" placeholder="Enter platform name">
-  </div>
-
-  <div id="seoTypeWrapper" class="hidden">
-    <label for="seoTypeSelect">SEO Service Type</label>
-    <select id="seoTypeSelect">
-      <option value="" disabled="" selected="">-- Select SEO Type --</option>
-      <option value="On-page">On-page SEO</option>
-      <option value="Off-page">Off-page SEO</option>
-      <option value="Both">On-page + Off-page SEO</option>
-    </select>
-  </div>
-
-  <div id="appDescWrapper" class="hidden">
-    <label for="appDescInput">App Description (Optional)</label>
-    <input type="text" id="appDescInput" placeholder="Describe your app (optional)">
-  </div>
-
-  <div id="ecommerceProductCountWrapper" class="hidden">
-    <label for="ecommerceProductCount">Number of Products</label>
-    <input type="number" id="ecommerceProductCount" min="1" max="10000" value="1">
-  </div>
-
-  <div id="brandingMediumWrapper" class="hidden">
-    <label for="brandingMediumSelect">Branding Medium</label>
-    <select id="brandingMediumSelect">
-      <option value="" disabled="" selected="">-- Select Medium --</option>
-      <option value="Online">Online</option>
-      <option value="Offline">Offline</option>
-    </select>
-  </div>
-  <div id="brandingLocationWrapper" class="hidden">
-    <label for="brandingLocationInput">Location (Only Delhi-NCR supported)</label>
-    <input type="text" id="brandingLocationInput" list="brandingLocationList" placeholder="Type location">
-    <datalist id="brandingLocationList">
-      <option value="Delhi-NCR">
-      </option><option value="Delhi">
-      </option><option value="Noida">
-      </option><option value="Gurgaon">
-      </option><option value="Ghaziabad">
-      </option><option value="Faridabad">
-    </option></datalist>
-    <span id="brandingLocationMsg" style="color:#f39c12;font-size:0.9em;display:none;">We are currently not serving this area.</span>
-  </div>
-
-  <div id="followerWrapper" class="hidden">
-    <label for="followerPlatformSelect">Select Platform</label>
-    <select id="followerPlatformSelect">
-      <option value="" disabled="" selected="">-- Select Platform --</option>
-      <option value="Instagram">Instagram</option>
-      <option value="Facebook">Facebook</option>
-      <option value="LinkedIn">LinkedIn</option>
-      <option value="Other">Other</option>
-    </select>
-    <input type="text" id="customFollowerPlatformInput" class="hidden" placeholder="Enter platform name">
-    <label for="followerCount">Number of Followers (Min 50, step 50)</label>
-    <input type="number" id="followerCount" min="50" step="50" value="50">
-    <span id="followerRangeMsg" style="color:#f39c12;font-size:0.9em;display:none;">Min 50, step 50. Price is for every 50 followers.</span>
-  </div>
-
-  <div id="productDesignWrapper" class="hidden">
-    <label for="productDesignCount">Number of Products</label>
-    <input type="number" id="productDesignCount" min="1" max="10000" value="1">
-    <span id="productDesignRangeMsg" style="color:#f39c12;font-size:0.9em;display:none;">For more than 10 products, only request quote via WhatsApp.</span>
-  </div>
-
-  <div id="otherServiceWrapper" class="hidden">
-    <label for="otherServiceDesc">Describe Your Service Request</label>
-    <input type="text" id="otherServiceDesc" placeholder="Describe your requirement">
-  </div>
-
-  <div id="estimatedPriceRange"></div>
-  <div id="averagePriceRange"></div>
-
-  <div class="button-row" id="actionButtonsRow">
-    <button id="previewQuoteBtn" type="button">Preview Quotation</button>
-    <button id="downloadQuoteBtn" type="button">Download Quotation</button>
-    <button id="whatsappQuoteBtn" class="whatsapp" type="button">Request via WhatsApp</button>
-    <button id="callQuoteBtn" type="button" style="display:none;">Call for Custom Quote</button>
-  </div>
-
-  <div>
-    <div id="quotePreviewSection" class="hidden">
-      <div id="quotePreviewContent"></div>
+    <div id="brandNameWrapper" class="hidden">
+      <label for="brandNameInput">Brand Name</label>
+      <input type="text" id="brandNameInput" placeholder="Enter your brand name">
     </div>
-  </div>
-</div>
-
-
-<div id="popupFormOverlay">
-  <form id="popupForm" autocomplete="off">
-    <h3>Enter Your Details</h3>
-    <label for="popupName">Name</label>
-    <input type="text" id="popupName" required="">
-    <label for="popupEmail">Email</label>
-    <input type="email" id="popupEmail" required="">
-    <label for="popupPhone">Phone</label>
-    <input type="tel" id="popupPhone" pattern="[0-9]{10}" maxlength="10" required="">
-    <div class="button-row">
-      <button id="popupSubmitBtn" type="submit">Continue</button>
-      <button id="popupCancelBtn" type="button">Cancel</button>
+    <div id="brandDescWrapper" class="hidden">
+      <label for="brandDescInput">Brand Description (Optional)</label>
+      <input type="text" id="brandDescInput" placeholder="Describe your brand (optional)">
     </div>
-  </form>
-</div>
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
-<script>
-/* --- UTILITY FUNCTIONS --- */
-function formatINR(num) {
-  if (typeof num === "string") num = parseInt(num, 10);
-  if (isNaN(num)) return "";
-  return "₹" + num.toLocaleString("en-IN");
-}
-function formatRange(min, max) {
-  return min === max ? formatINR(min) : `${formatINR(min)} – ${formatINR(max)}`;
-}
-function onlyDigits(str) {
-  return String(str).replace(/\D/g, "");
-}
-function getTodayDateStr() {
-  const d = new Date();
-  return d.toLocaleDateString("en-IN", {year: "numeric", month: "short", day: "2-digit"});
-}
-
-/* --- GLOBAL STATE --- */
-let multiServices = [];
-let currentServiceIndex = 0;
-let userDetails = { name: "", email: "", phone: "" };
-let quotePreviewData = null;
-
-/* --- ELEMENTS --- */
-const serviceSelect = document.getElementById("serviceSelect");
-const addServiceBtn = document.getElementById("addServiceBtn");
-const multiServiceList = document.getElementById("multiServiceList");
-const complexityWrapper = document.getElementById("complexityWrapper");
-const complexitySelect = document.getElementById("complexitySelect");
-const categoryWrapper = document.getElementById("categoryWrapper");
-const categorySelect = document.getElementById("categorySelect");
-const customCategoryInput = document.getElementById("customCategoryInput");
-const brandNameWrapper = document.getElementById("brandNameWrapper");
-const brandNameInput = document.getElementById("brandNameInput");
-const brandDescWrapper = document.getElementById("brandDescWrapper");
-const brandDescInput = document.getElementById("brandDescInput");
-const typeWrapper = document.getElementById("typeWrapper");
-const typeSelect = document.getElementById("typeSelect");
-const customTypeInput = document.getElementById("customTypeInput");
-const durationSliderWrapper = document.getElementById("durationSliderWrapper");
-const durationSlider = document.getElementById("durationSlider");
-const durationSliderValue = document.getElementById("durationSliderValue");
-const budgetWrapper = document.getElementById("budgetWrapper");
-const budgetInput = document.getElementById("budgetInput");
-const budgetMinMsg = document.getElementById("budgetMinMsg");
-const campaignObjectiveWrapper = document.getElementById("campaignObjectiveWrapper");
-const campaignObjectiveSelect = document.getElementById("campaignObjectiveSelect");
-const adsPlatformWrapper = document.getElementById("adsPlatformWrapper");
-const productCountWrapper = document.getElementById("productCountWrapper");
-const productCount = document.getElementById("productCount");
-const marketplaceWrapper = document.getElementById("marketplaceWrapper");
-const marketplacePlatforms = document.getElementById("marketplacePlatforms");
-const customMarketplaceInput = document.getElementById("customMarketplaceInput");
-const marketplaceProductCountWrapper = document.getElementById("marketplaceProductCountWrapper");
-const marketplaceProductCount = document.getElementById("marketplaceProductCount");
-const smmPlatformsWrapper = document.getElementById("smmPlatformsWrapper");
-const customSmmPlatformInput = document.getElementById("customSmmPlatformInput");
-const seoTypeWrapper = document.getElementById("seoTypeWrapper");
-const seoTypeSelect = document.getElementById("seoTypeSelect");
-const appDescWrapper = document.getElementById("appDescWrapper");
-const appDescInput = document.getElementById("appDescInput");
-const ecommerceProductCountWrapper = document.getElementById("ecommerceProductCountWrapper");
-const ecommerceProductCount = document.getElementById("ecommerceProductCount");
-const brandingMediumWrapper = document.getElementById("brandingMediumWrapper");
-const brandingMediumSelect = document.getElementById("brandingMediumSelect");
-const brandingLocationWrapper = document.getElementById("brandingLocationWrapper");
-const brandingLocationInput = document.getElementById("brandingLocationInput");
-const brandingLocationMsg = document.getElementById("brandingLocationMsg");
-const followerWrapper = document.getElementById("followerWrapper");
-const followerPlatformSelect = document.getElementById("followerPlatformSelect");
-const customFollowerPlatformInput = document.getElementById("customFollowerPlatformInput");
-const followerCount = document.getElementById("followerCount");
-const followerRangeMsg = document.getElementById("followerRangeMsg");
-const productDesignWrapper = document.getElementById("productDesignWrapper");
-const productDesignCount = document.getElementById("productDesignCount");
-const productDesignRangeMsg = document.getElementById("productDesignRangeMsg");
-const otherServiceWrapper = document.getElementById("otherServiceWrapper");
-const otherServiceDesc = document.getElementById("otherServiceDesc");
-const estimatedPriceRange = document.getElementById("estimatedPriceRange");
-const averagePriceRange = document.getElementById("averagePriceRange");
-const previewQuoteBtn = document.getElementById("previewQuoteBtn");
-const downloadQuoteBtn = document.getElementById("downloadQuoteBtn");
-const whatsappQuoteBtn = document.getElementById("whatsappQuoteBtn");
-const callQuoteBtn = document.getElementById("callQuoteBtn");
-const quotePreviewSection = document.getElementById("quotePreviewSection");
-const quotePreviewContent = document.getElementById("quotePreviewContent");
-const popupFormOverlay = document.getElementById("popupFormOverlay");
-const popupForm = document.getElementById("popupForm");
-const popupName = document.getElementById("popupName");
-const popupEmail = document.getElementById("popupEmail");
-const popupPhone = document.getElementById("popupPhone");
-const popupSubmitBtn = document.getElementById("popupSubmitBtn");
-const popupCancelBtn = document.getElementById("popupCancelBtn");
-const actionButtonsRow = document.getElementById("actionButtonsRow");
-
-/* --- LOGIC CONSTANTS --- */
-const LOGO_PRICING = {
-  "Basic": 1800,
-  "Moderate": 3500,
-  "Advanced": 6500
-};
-const WEBSITE_PRICING = {
-  "Basic Website": {
-    "Basic": 5000,
-    "Moderate": 9000,
-    "Advanced": 16000
-  },
-  "Advanced Website": {
-    "Basic": 17000,
-    "Moderate": 32000,
-    "Advanced": 55000
-  }
-};
-const WEBSITE_TYPES = [
-  "Landing Page", "E-commerce", "Ed-Tech", "Blog", "News and Updates",
-  "Tools", "Agency", "Appointment", "Company Profile", "Other"
-];
-const SMM_PRICING = {
-  "Basic": 3500,
-  "Moderate": 6500,
-  "Advanced": 12000
-};
-const SEO_PRICING = {
-  "On-page": 5000,
-  "Off-page": 14000,
-  "Both": 17000
-};
-const APP_PRICING = {
-  "Basic": 35000,
-  "Moderate": 65000,
-  "Advanced": 120000
-};
-const ECOMMERCE_PRICING = {
-  1: 50,
-  10: 450
-};
-const MARKETPLACE_PRICING_PER_PRODUCT = 250;
-const BRANDING_ONLINE_PRICING = {
-  "Basic": 12000,
-  "Moderate": 22000,
-  "Advanced": 35000
-};
-const BRANDING_OFFLINE_RANGE = [35000, 60000];
-const FOLLOWER_PRICING = {
-  "Instagram": 45,
-  "Facebook": 45,
-  "LinkedIn": 65,
-  "Other": 45
-};
-const FOLLOWER_OTHER_MAX = 100;
-const FOLLOWER_STEP = 50;
-const FOLLOWER_MIN = 50;
-const ADS_BASE_PRICING = {
-  "Sales": 6000,
-  "Leads": 6000,
-  "Traffic": 3000,
-  "Engagement": 3000,
-  "Awareness": 2500
-};
-const PRODUCT_DESIGN_RANGE = [6000, 13000];
-const CONTENT_WRITING_PRICING = {
-  "Basic": 2500,
-  "Moderate": 4500,
-  "Advanced": 8000
-};
-
-/* --- FIELD RESET/SHOW/HIDE LOGIC --- */
-function resetAllFields() {
-  // Hide all
-  complexityWrapper.classList.add("hidden");
-  categoryWrapper.classList.add("hidden");
-  customCategoryInput.classList.add("hidden");
-  brandNameWrapper.classList.add("hidden");
-  brandDescWrapper.classList.add("hidden");
-  typeWrapper.classList.add("hidden");
-  customTypeInput.classList.add("hidden");
-  durationSliderWrapper.classList.add("hidden");
-  budgetWrapper.classList.add("hidden");
-  budgetInput.value = "";
-  budgetMinMsg.style.display = "none";
-  campaignObjectiveWrapper.classList.add("hidden");
-  campaignObjectiveSelect.value = "";
-  adsPlatformWrapper.classList.add("hidden");
-  productCountWrapper.classList.add("hidden");
-  productCount.value = 1;
-  marketplaceWrapper.classList.add("hidden");
-  customMarketplaceInput.classList.add("hidden");
-  marketplaceProductCountWrapper.classList.add("hidden");
-  marketplaceProductCount.value = 1;
-  smmPlatformsWrapper.classList.add("hidden");
-  customSmmPlatformInput.classList.add("hidden");
-  seoTypeWrapper.classList.add("hidden");
-  seoTypeSelect.value = "";
-  appDescWrapper.classList.add("hidden");
-  appDescInput.value = "";
-  ecommerceProductCountWrapper.classList.add("hidden");
-  ecommerceProductCount.value = 1;
-  brandingMediumWrapper.classList.add("hidden");
-  brandingMediumSelect.value = "";
-  brandingLocationWrapper.classList.add("hidden");
-  brandingLocationInput.value = "";
-  brandingLocationMsg.style.display = "none";
-  followerWrapper.classList.add("hidden");
-  followerPlatformSelect.value = "";
-  customFollowerPlatformInput.classList.add("hidden");
-  followerCount.value = 50;
-  followerRangeMsg.style.display = "none";
-  productDesignWrapper.classList.add("hidden");
-  productDesignCount.value = 1;
-  productDesignRangeMsg.style.display = "none";
-  otherServiceWrapper.classList.add("hidden");
-  otherServiceDesc.value = "";
-  estimatedPriceRange.textContent = "";
-  averagePriceRange.textContent = "";
-  // Uncheck all checkboxes
-  document.querySelectorAll('input[type="checkbox"]').forEach(cb => cb.checked = false);
-  // Hide custom platform inputs
-  customSmmPlatformInput.value = "";
-  customMarketplaceInput.value = "";
-  customFollowerPlatformInput.value = "";
-  // Hide action buttons
-  previewQuoteBtn.style.display = "";
-  downloadQuoteBtn.style.display = "";
-  whatsappQuoteBtn.style.display = "";
-  callQuoteBtn.style.display = "none";
-  // Enable all buttons
-  previewQuoteBtn.disabled = false;
-  downloadQuoteBtn.disabled = false;
-  whatsappQuoteBtn.disabled = false;
-  callQuoteBtn.disabled = false;
-}
-function showRelevantFields(service) {
-  resetAllFields();
-  // Show only relevant fields
-  switch (service) {
-    case "Logo Design":
-      complexityWrapper.classList.remove("hidden");
-      categoryWrapper.classList.remove("hidden");
-      brandNameWrapper.classList.remove("hidden");
-      brandDescWrapper.classList.remove("hidden");
-      break;
-    case "Basic Website":
-    case "Advanced Website":
-      complexityWrapper.classList.remove("hidden");
-      typeWrapper.classList.remove("hidden");
-      break;
-    case "Social Media Management":
-      complexityWrapper.classList.remove("hidden");
-      smmPlatformsWrapper.classList.remove("hidden");
-      durationSliderWrapper.classList.remove("hidden");
-      break;
-    case "SEO Services":
-      seoTypeWrapper.classList.remove("hidden");
-      durationSliderWrapper.classList.remove("hidden");
-      break;
-    case "App Development":
-      complexityWrapper.classList.remove("hidden");
-      appDescWrapper.classList.remove("hidden");
-      break;
-    case "Content Writing":
-      complexityWrapper.classList.remove("hidden");
-      durationSliderWrapper.classList.remove("hidden");
-      break;
-    case "eCommerce Store":
-      ecommerceProductCountWrapper.classList.remove("hidden");
-      break;
-    case "Marketplace Management":
-      marketplaceWrapper.classList.remove("hidden");
-      marketplaceProductCountWrapper.classList.remove("hidden");
-      break;
-    case "Digital Marketing":
-      budgetWrapper.classList.remove("hidden");
-      campaignObjectiveWrapper.classList.remove("hidden");
-      durationSliderWrapper.classList.remove("hidden");
-      break;
-    case "Branding Services":
-      brandingMediumWrapper.classList.remove("hidden");
-      complexityWrapper.classList.remove("hidden");
-      break;
-    case "Instagram Followers":
-      followerWrapper.classList.remove("hidden");
-      break;
-    case "Meta and Google Ads":
-      budgetWrapper.classList.remove("hidden");
-      campaignObjectiveWrapper.classList.remove("hidden");
-      adsPlatformWrapper.classList.remove("hidden");
-      durationSliderWrapper.classList.remove("hidden");
-      break;
-    case "3D / Product Design":
-      productDesignWrapper.classList.remove("hidden");
-      break;
-    case "Other":
-      otherServiceWrapper.classList.remove("hidden");
-      break;
-  }
-}
-function isOtherSelected() {
-  // Checks if 'Other' is selected in any relevant dropdown or checkbox
-  if (serviceSelect.value === "Other") return true;
-  if (categoryWrapper.classList.contains("hidden") === false && categorySelect.value === "Other") return true;
-  if (typeWrapper.classList.contains("hidden") === false && typeSelect.value === "Other") return true;
-  if (marketplaceWrapper.classList.contains("hidden") === false) {
-    let checked = Array.from(document.querySelectorAll(".marketplacePlatform:checked")).map(cb => cb.value);
-    if (checked.includes("Other")) return true;
-  }
-  if (smmPlatformsWrapper.classList.contains("hidden") === false) {
-    let checked = Array.from(document.querySelectorAll(".smmPlatform:checked")).map(cb => cb.value);
-    if (checked.includes("Other")) return true;
-  }
-  if (followerWrapper.classList.contains("hidden") === false && followerPlatformSelect.value === "Other") return true;
-  return false;
-}
-function handleOtherSelection() {
-  // Hide preview/download/whatsapp, show call for custom quote, show message if needed
-  if (isOtherSelected()) {
-    previewQuoteBtn.style.display = "none";
-    downloadQuoteBtn.style.display = "none";
-    whatsappQuoteBtn.style.display = "none";
-    callQuoteBtn.style.display = "";
-    estimatedPriceRange.textContent = "Custom service can only be requested by WhatsApp or by call.";
-    averagePriceRange.textContent = "";
-  } else {
-    previewQuoteBtn.style.display = "";
-    downloadQuoteBtn.style.display = "";
-    whatsappQuoteBtn.style.display = "";
-    callQuoteBtn.style.display = "none";
-  }
-}
-
-/* --- FIELD EVENTS & DYNAMIC LOGIC --- */
-serviceSelect.addEventListener("change", function() {
-  currentServiceIndex = 0;
-  showRelevantFields(serviceSelect.value);
-  handleOtherSelection();
-  updatePrice();
-  updateMultiServiceUI();
-});
-addServiceBtn.addEventListener("click", function() {
-  // Save current service to multiServices
-  if (!serviceSelect.value) return;
-  saveCurrentServiceToMulti();
-  // Reset all fields for new service
-  serviceSelect.value = "";
-  resetAllFields();
-  updateMultiServiceUI();
-});
-function saveCurrentServiceToMulti() {
-  let data = collectCurrentServiceData();
-  if (!data || !data.service) return;
-  multiServices.push(data);
-}
-function removeServiceAtIndex(idx) {
-  multiServices.splice(idx, 1);
-  updateMultiServiceUI();
-}
-function updateMultiServiceUI() {
-  // Show all selected services as tags with remove
-  multiServiceList.innerHTML = "";
-  if (multiServices.length > 0) {
-    multiServices.forEach((svc, idx) => {
-      let el = document.createElement("span");
-      el.style.display = "inline-block";
-      el.style.background = "#222";
-      el.style.color = "#f39c12";
-      el.style.border = "1px solid #f39c12";
-      el.style.borderRadius = "14px";
-      el.style.padding = "2px 12px";
-      el.style.margin = "0 6px 8px 0";
-      el.style.fontSize = "13px";
-      el.textContent = svc.service;
-      let rm = document.createElement("button");
-      rm.type = "button";
-      rm.className = "remove-service-btn";
-      rm.innerHTML = "&times;";
-      rm.title = "Remove";
-      rm.onclick = () => { removeServiceAtIndex(idx); updateMultiServiceUI(); };
-      el.appendChild(rm);
-      multiServiceList.appendChild(el);
-    });
-  }
-  addServiceBtn.style.display = (serviceSelect.value && multiServices.length < 8) ? "" : "";
-}
-function collectCurrentServiceData() {
-  let svc = serviceSelect.value;
-  if (!svc) return null;
-  let obj = { service: svc };
-  // Collect all relevant fields for this service
-  switch (svc) {
-    case "Logo Design":
-      obj.complexity = complexitySelect.value;
-      obj.category = categorySelect.value === "Other" ? customCategoryInput.value : categorySelect.value;
-      obj.brandName = brandNameInput.value;
-      obj.brandDesc = brandDescInput.value;
-      obj.isOther = (categorySelect.value === "Other");
-      break;
-    case "Basic Website":
-    case "Advanced Website":
-      obj.complexity = complexitySelect.value;
-      obj.type = typeSelect.value === "Other" ? customTypeInput.value : typeSelect.value;
-      obj.isOther = (typeSelect.value === "Other");
-      break;
-    case "Social Media Management":
-      obj.complexity = complexitySelect.value;
-      obj.platforms = Array.from(document.querySelectorAll(".smmPlatform:checked")).map(cb => cb.value === "Other" ? customSmmPlatformInput.value : cb.value);
-      obj.duration = durationSlider.value;
-      obj.isOther = Array.from(document.querySelectorAll(".smmPlatform:checked")).map(cb => cb.value).includes("Other");
-      break;
-    case "SEO Services":
-      obj.seoType = seoTypeSelect.value;
-      obj.duration = durationSlider.value;
-      break;
-    case "App Development":
-      obj.complexity = complexitySelect.value;
-      obj.appDesc = appDescInput.value;
-      break;
-    case "Content Writing":
-      obj.complexity = complexitySelect.value;
-      obj.duration = durationSlider.value;
-      break;
-    case "eCommerce Store":
-      obj.productCount = ecommerceProductCount.value;
-      break;
-    case "Marketplace Management":
-      obj.platforms = Array.from(document.querySelectorAll(".marketplacePlatform:checked")).map(cb => cb.value === "Other" ? customMarketplaceInput.value : cb.value);
-      obj.productCount = marketplaceProductCount.value;
-      obj.isOther = Array.from(document.querySelectorAll(".marketplacePlatform:checked")).map(cb => cb.value).includes("Other");
-      break;
-    case "Digital Marketing":
-      obj.budget = budgetInput.value;
-      obj.objective = campaignObjectiveSelect.value;
-      obj.duration = durationSlider.value;
-      break;
-    case "Branding Services":
-      obj.medium = brandingMediumSelect.value;
-      obj.complexity = complexitySelect.value;
-      obj.location = brandingLocationInput.value;
-      break;
-    case "Instagram Followers":
-      obj.platform = followerPlatformSelect.value === "Other" ? customFollowerPlatformInput.value : followerPlatformSelect.value;
-      obj.followerCount = followerCount.value;
-      obj.isOther = (followerPlatformSelect.value === "Other");
-      break;
-    case "Meta and Google Ads":
-      obj.budget = budgetInput.value;
-      obj.objective = campaignObjectiveSelect.value;
-      obj.platforms = Array.from(document.querySelectorAll(".adsPlatform:checked")).map(cb => cb.value);
-      obj.duration = durationSlider.value;
-      break;
-    case "3D / Product Design":
-      obj.productCount = productDesignCount.value;
-      break;
-    case "Other":
-      obj.desc = otherServiceDesc.value;
-      obj.isOther = true;
-      break;
-  }
-  return obj;
-}
-
-/* --- CATEGORY/TYPE 'Other' HANDLING --- */
-categorySelect.addEventListener("change", function() {
-  if (categorySelect.value === "Other") {
-    customCategoryInput.classList.remove("hidden");
-  } else {
-    customCategoryInput.classList.add("hidden");
-  }
-  handleOtherSelection();
-  updatePrice();
-});
-customCategoryInput.addEventListener("input", function() {
-  handleOtherSelection();
-  updatePrice();
-});
-typeSelect.addEventListener("change", function() {
-  if (typeSelect.value === "Other") {
-    customTypeInput.classList.remove("hidden");
-  } else {
-    customTypeInput.classList.add("hidden");
-  }
-  handleOtherSelection();
-  updatePrice();
-});
-customTypeInput.addEventListener("input", function() {
-  handleOtherSelection();
-  updatePrice();
-});
-
-/* --- BRANDING LOCATION SUGGESTION/RESTRICTION --- */
-brandingMediumSelect.addEventListener("change", function() {
-  if (brandingMediumSelect.value === "Offline") {
-    brandingLocationWrapper.classList.remove("hidden");
-  } else {
-    brandingLocationWrapper.classList.add("hidden");
-    brandingLocationMsg.style.display = "none";
-  }
-  updatePrice();
-});
-brandingLocationInput.addEventListener("input", function() {
-  if (brandingLocationInput.value && brandingLocationInput.value.toLowerCase().indexOf("delhi") === -1 && brandingLocationInput.value.toLowerCase().indexOf("ncr") === -1) {
-    brandingLocationMsg.style.display = "";
-    estimatedPriceRange.textContent = "";
-    previewQuoteBtn.style.display = "none";
-    downloadQuoteBtn.style.display = "none";
-    whatsappQuoteBtn.style.display = "none";
-    callQuoteBtn.style.display = "none";
-  } else {
-    brandingLocationMsg.style.display = "none";
-    previewQuoteBtn.style.display = "";
-    downloadQuoteBtn.style.display = "";
-    whatsappQuoteBtn.style.display = "";
-    callQuoteBtn.style.display = "none";
-    updatePrice();
-  }
-});
-
-/* --- SOCIAL MEDIA MANAGEMENT 'Other' HANDLING --- */
-document.querySelectorAll(".smmPlatform").forEach(cb => {
-  cb.addEventListener("change", function() {
-    let checked = Array.from(document.querySelectorAll(".smmPlatform:checked")).map(cb => cb.value);
-    if (checked.includes("Other")) {
-      customSmmPlatformInput.classList.remove("hidden");
-      // If other is checked, do not select all others
-      document.querySelectorAll(".smmPlatform").forEach(cb2 => {
-        if (cb2.value !== "Other") cb2.checked = false;
-      });
-    } else {
-      customSmmPlatformInput.classList.add("hidden");
-    }
-    handleOtherSelection();
-    updatePrice();
-  });
-});
-customSmmPlatformInput.addEventListener("input", function() {
-  handleOtherSelection();
-  updatePrice();
-});
-
-/* --- MARKETPLACE 'Other' HANDLING --- */
-document.querySelectorAll(".marketplacePlatform").forEach(cb => {
-  cb.addEventListener("change", function() {
-    let checked = Array.from(document.querySelectorAll(".marketplacePlatform:checked")).map(cb => cb.value);
-    if (checked.includes("Other")) {
-      customMarketplaceInput.classList.remove("hidden");
-      // Uncheck all others
-      document.querySelectorAll(".marketplacePlatform").forEach(cb2 => {
-        if (cb2.value !== "Other") cb2.checked = false;
-      });
-    } else {
-      customMarketplaceInput.classList.add("hidden");
-    }
-    handleOtherSelection();
-    updatePrice();
-  });
-});
-customMarketplaceInput.addEventListener("input", function() {
-  handleOtherSelection();
-  updatePrice();
-});
-
-/* --- FOLLOWER SECTION --- */
-followerPlatformSelect.addEventListener("change", function() {
-  if (followerPlatformSelect.value === "Other") {
-    customFollowerPlatformInput.classList.remove("hidden");
-  } else {
-    customFollowerPlatformInput.classList.add("hidden");
-  }
-  handleOtherSelection();
-  updatePrice();
-});
-customFollowerPlatformInput.addEventListener("input", function() {
-  handleOtherSelection();
-  updatePrice();
-});
-followerCount.addEventListener("input", function() {
-  let val = parseInt(followerCount.value, 10);
-  if (isNaN(val) || val < FOLLOWER_MIN) followerCount.value = FOLLOWER_MIN;
-  if (val % FOLLOWER_STEP !== 0) followerCount.value = Math.ceil(val / FOLLOWER_STEP) * FOLLOWER_STEP;
-  updatePrice();
-});
-
-/* --- PRODUCT DESIGN --- */
-productDesignCount.addEventListener("input", function() {
-  let val = parseInt(productDesignCount.value, 10);
-  if (isNaN(val) || val < 1) productDesignCount.value = 1;
-  if (val > 10000) productDesignCount.value = 10000;
-  updatePrice();
-});
-
-/* --- ECOMMERCE PRODUCT COUNT --- */
-ecommerceProductCount.addEventListener("input", function() {
-  let val = parseInt(ecommerceProductCount.value, 10);
-  if (isNaN(val) || val < 1) ecommerceProductCount.value = 1;
-  if (val > 10000) ecommerceProductCount.value = 10000;
-  updatePrice();
-});
-
-/* --- MARKETPLACE PRODUCT COUNT --- */
-marketplaceProductCount.addEventListener("input", function() {
-  let val = parseInt(marketplaceProductCount.value, 10);
-  if (isNaN(val) || val < 1) marketplaceProductCount.value = 1;
-  if (val > 10000) marketplaceProductCount.value = 10000;
-  updatePrice();
-});
-
-/* --- COMPLEXITY, TYPE, ETC --- */
-complexitySelect.addEventListener("change", function() {
-  updatePrice();
-});
-typeSelect.addEventListener("change", function() {
-  updatePrice();
-});
-seoTypeSelect.addEventListener("change", function() {
-  updatePrice();
-});
-brandingMediumSelect.addEventListener("change", function() {
-  updatePrice();
-});
-durationSlider.addEventListener("input", function() {
-  durationSliderValue.textContent = durationSlider.value;
-  updatePrice();
-});
-
-/* --- BUDGET --- */
-budgetInput.addEventListener("input", function() {
-  let val = parseInt(budgetInput.value, 10);
-  if (isNaN(val)) val = 0;
-  if (val < 5000) {
-    budgetMinMsg.style.display = "";
-    budgetInput.value = 5000;
-  } else {
-    budgetMinMsg.style.display = "none";
-  }
-  updatePrice();
-});
-
-/* --- CAMPAIGN OBJECTIVE --- */
-campaignObjectiveSelect.addEventListener("change", function() {
-  updatePrice();
-});
-
-/* --- MAIN PRICING LOGIC --- */
-function updatePrice() {
-  let svc = serviceSelect.value;
-  let price = 0, priceRange = "", showPrice = true, duration = 1;
-  estimatedPriceRange.textContent = "";
-  averagePriceRange.textContent = "";
-  handleOtherSelection();
-  // Hide price for 'Other'
-  if (isOtherSelected()) {
-    estimatedPriceRange.textContent = "Custom service can only be requested by WhatsApp or by call.";
-    averagePriceRange.textContent = "";
-    return;
-  }
-  switch (svc) {
-    case "Logo Design":
-      if (!complexitySelect.value) { showPrice = false; break; }
-      if (categorySelect.value === "Other") { showPrice = false; break; }
-      price = LOGO_PRICING[complexitySelect.value] || 0;
-      priceRange = formatINR(price);
-      break;
-    case "Basic Website":
-    case "Advanced Website":
-      if (!complexitySelect.value) { showPrice = false; break; }
-      if (typeSelect.value === "Other") { showPrice = false; break; }
-      price = WEBSITE_PRICING[svc][complexitySelect.value] || 0;
-      priceRange = formatINR(price);
-      break;
-    case "Social Media Management":
-      if (!complexitySelect.value) { showPrice = false; break; }
-      let platforms = Array.from(document.querySelectorAll(".smmPlatform:checked")).map(cb => cb.value);
-      if (platforms.includes("Other")) { showPrice = false; break; }
-      duration = parseInt(durationSlider.value, 10) || 1;
-      price = SMM_PRICING[complexitySelect.value] * duration;
-      priceRange = formatINR(price) + " (" + duration + " month" + (duration > 1 ? "s" : "") + ")";
-      break;
-    case "SEO Services":
-      if (!seoTypeSelect.value) { showPrice = false; break; }
-      duration = parseInt(durationSlider.value, 10) || 1;
-      price = SEO_PRICING[seoTypeSelect.value] * duration;
-      priceRange = formatINR(SEO_PRICING[seoTypeSelect.value]) + " /month, " + formatINR(price) + " (" + duration + " month" + (duration > 1 ? "s" : "") + ")";
-      break;
-    case "App Development":
-      if (!complexitySelect.value) { showPrice = false; break; }
-      price = APP_PRICING[complexitySelect.value];
-      priceRange = formatINR(price);
-      break;
-    case "Content Writing":
-      if (!complexitySelect.value) { showPrice = false; break; }
-      duration = parseInt(durationSlider.value, 10) || 1;
-      price = CONTENT_WRITING_PRICING[complexitySelect.value] * duration;
-      priceRange = formatINR(CONTENT_WRITING_PRICING[complexitySelect.value]) + " /month, " + formatINR(price) + " (" + duration + " month" + (duration > 1 ? "s" : "") + ")";
-      break;
-    case "eCommerce Store":
-      let prodCount = parseInt(ecommerceProductCount.value, 10) || 1;
-      if (prodCount < 1) prodCount = 1;
-      let full10s = Math.floor(prodCount / 10);
-      let rem = prodCount % 10;
-      price = full10s * ECOMMERCE_PRICING[10] + rem * ECOMMERCE_PRICING[1];
-      priceRange = formatINR(price) + " (" + prodCount + " products)";
-      break;
-    case "Marketplace Management":
-      let mpPlatforms = Array.from(document.querySelectorAll(".marketplacePlatform:checked")).map(cb => cb.value);
-      if (mpPlatforms.includes("Other")) { showPrice = false; break; }
-      let mpProdCount = parseInt(marketplaceProductCount.value, 10) || 1;
-      price = mpProdCount * MARKETPLACE_PRICING_PER_PRODUCT;
-      priceRange = formatINR(price) + " (" + mpProdCount + " products)";
-      break;
-    case "Digital Marketing":
-      let budget = parseInt(budgetInput.value, 10) || 0;
-      if (budget < 5000) { showPrice = false; break; }
-      if (budget > 20000) {
-        estimatedPriceRange.textContent = "20,000+ budget needs a custom quote. Only request via WhatsApp or call.";
-        previewQuoteBtn.style.display = "none";
-        downloadQuoteBtn.style.display = "none";
-        whatsappQuoteBtn.style.display = "none";
-        callQuoteBtn.style.display = "";
-        return;
-      }
-      let dmObjective = campaignObjectiveSelect.value;
-      let dmFee = 0;
-      if (dmObjective === "Sales" || dmObjective === "Leads") dmFee = 6000;
-      else if (dmObjective === "Traffic" || dmObjective === "Engagement") dmFee = 3500;
-      else if (dmObjective === "Awareness") dmFee = 2500;
-      price = budget + dmFee;
-      priceRange = "Budget: " + formatINR(budget) + " + Service Fee: " + formatINR(dmFee) + " = " + formatINR(price);
-      break;
-    case "Branding Services":
-      if (!complexitySelect.value || !brandingMediumSelect.value) { showPrice = false; break; }
-      if (brandingMediumSelect.value === "Online") {
-        price = BRANDING_ONLINE_PRICING[complexitySelect.value];
-        priceRange = formatINR(price);
-      } else if (brandingMediumSelect.value === "Offline") {
-        priceRange = formatRange(BRANDING_OFFLINE_RANGE[0], BRANDING_OFFLINE_RANGE[1]);
-      }
-      break;
-    case "Instagram Followers":
-      if (!followerPlatformSelect.value) { showPrice = false; break; }
-      if (followerPlatformSelect.value === "Other") { showPrice = false; break; }
-      let fCount = parseInt(followerCount.value, 10) || 50;
-      if (fCount < 50) fCount = 50;
-      let per50 = FOLLOWER_PRICING[followerPlatformSelect.value] || 45;
-      let total = Math.ceil(fCount / 50) * per50;
-      price = total;
-      priceRange = formatINR(per50) + " per 50, " + formatINR(total) + " (" + fCount + " followers)";
-      break;
-    case "Meta and Google Ads":
-      let adsBudget = parseInt(budgetInput.value, 10) || 0;
-      if (adsBudget < 5000) { showPrice = false; break; }
-      let adsObjective = campaignObjectiveSelect.value;
-      let adsFee = ADS_BASE_PRICING[adsObjective] || 3000;
-      price = adsBudget + adsFee;
-      priceRange = "Budget: " + formatINR(adsBudget) + " + Service Fee: " + formatINR(adsFee) + " = " + formatINR(price);
-      break;
-    case "3D / Product Design":
-      let pdCount = parseInt(productDesignCount.value, 10) || 1;
-      if (pdCount > 10) {
-        estimatedPriceRange.textContent = "For more than 10 products, only request quote via WhatsApp or call.";
-        previewQuoteBtn.style.display = "none";
-        downloadQuoteBtn.style.display = "none";
-        whatsappQuoteBtn.style.display = "none";
-        callQuoteBtn.style.display = "";
-        return;
-      }
-      priceRange = formatRange(PRODUCT_DESIGN_RANGE[0] * pdCount, PRODUCT_DESIGN_RANGE[1] * pdCount) + " (" + pdCount + " products)";
-      break;
-    case "Other":
-      showPrice = false;
-      break;
-  }
-  if (showPrice) {
-    estimatedPriceRange.textContent = priceRange;
-  } else {
-    estimatedPriceRange.textContent = "";
-  }
-}
-
-/* --- PREVIEW/WHATSAPP/DOWNLOAD BUTTONS --- */
-previewQuoteBtn.addEventListener("click", function() {
-  // If multiServices, preview all; else, preview current
-  let allServices = [...multiServices];
-  if (serviceSelect.value) {
-    let data = collectCurrentServiceData();
-    if (data && data.service) allServices.push(data);
-  }
-  if (allServices.length === 0) return;
-  showPopupForm(() => {
-    quotePreviewData = allServices;
-    renderQuotePreview(allServices, userDetails);
-    quotePreviewSection.classList.remove("hidden");
-    window.scrollTo({top: quotePreviewSection.offsetTop - 30, behavior: "smooth"});
-  });
-});
-downloadQuoteBtn.addEventListener("click", function() {
-  // Download full preview as PDF (all pages, not just viewport)
-  if (!quotePreviewData) {
-    previewQuoteBtn.click();
-    return;
-  }
-  let el = quotePreviewSection;
-  el.style.background = "#fff";
-  el.style.color = "#222";
-  // Use html2canvas to render full content, then jsPDF to save
-  html2canvas(el, {scrollY: -window.scrollY, useCORS:true, windowWidth: el.scrollWidth, windowHeight: el.scrollHeight, scale: 2})
-    .then(canvas => {
-      const imgData = canvas.toDataURL('image/png');
-      const pdf = new window.jspdf.jsPDF({
-        orientation: 'p',
-        unit: 'pt',
-        format: [canvas.width, canvas.height]
-      });
-      pdf.addImage(imgData, 'PNG', 0, 0, canvas.width, canvas.height);
-      pdf.save('AfterResult_Quotation.pdf');
-    });
-});
-whatsappQuoteBtn.addEventListener("click", function() {
-  // WhatsApp with all details
-  let allServices = [...multiServices];
-  if (serviceSelect.value) {
-    let data = collectCurrentServiceData();
-    if (data && data.service) allServices.push(data);
-  }
-  if (allServices.length === 0) return;
-  showPopupForm(() => {
-    let msg = "Quotation Request from AfterResult:\n";
-    msg += "Name: " + userDetails.name + "\n";
-    msg += "Email: " + userDetails.email + "\n";
-    msg += "Phone: " + userDetails.phone + "\n";
-    allServices.forEach((svc, idx) => {
-      msg += "\nService #" + (idx+1) + ": " + svc.service + "\n";
-      Object.keys(svc).forEach(k => {
-        if (k === "service" || k === "isOther") return;
-        msg += k.replace(/([A-Z])/g, ' $1').replace(/^./, str => str.toUpperCase()) + ": " + svc[k] + "\n";
-      });
-    });
-    let url = "https://wa.me/919999999999?text=" + encodeURIComponent(msg);
-    window.open(url, "_blank");
-  });
-});
-callQuoteBtn.addEventListener("click", function() {
-  window.open("tel:+919999999999");
-});
-
-/* --- POPUP FORM LOGIC --- */
-function showPopupForm(cb) {
-  popupFormOverlay.classList.add("show");
-  popupName.value = userDetails.name || "";
-  popupEmail.value = userDetails.email || "";
-  popupPhone.value = userDetails.phone || "";
-  popupForm.onsubmit = function(e) {
-    e.preventDefault();
-    if (!popupName.value.trim() || !popupEmail.value.trim() || !popupPhone.value.trim()) return;
-    userDetails.name = popupName.value.trim();
-    userDetails.email = popupEmail.value.trim();
-    userDetails.phone = popupPhone.value.trim();
-    popupFormOverlay.classList.remove("show");
-    cb();
-  };
-  popupCancelBtn.onclick = function() {
-    popupFormOverlay.classList.remove("show");
-  };
-}
-
-/* --- QUOTATION PREVIEW LOGIC --- */
-function renderQuotePreview(services, user) {
-  let html = `
-    <div class="quotation-header">
-      <img src="https://www.afterresult.com/web/image/website/1/logo/AfterResult?unique=c0bef19" alt="AfterResult Logo">
-      <div>
-        <div style="font-size:18px;font-weight:700;color:#f39c12;">AfterResult</div>
-        <div style="font-size:13px;">Digital Services Quotation</div>
+    <div id="typeWrapper" class="hidden">
+      <label for="typeSelect">Select Type</label>
+      <select id="typeSelect" aria-label="Select type">
+        <option value="" disabled selected>-- Choose type --</option>
+        <option value="Landing Page">Landing Page</option>
+        <option value="E-commerce">E-commerce</option>
+        <option value="Ed-Tech">Ed-Tech</option>
+        <option value="Blog">Blog</option>
+        <option value="News and Updates">News and Updates</option>
+        <option value="Tools">Tools</option>
+        <option value="Agency">Agency</option>
+        <option value="Appointment">Appointment</option>
+        <option value="Company Profile">Company Profile</option>
+        <option value="Other">Other</option>
+      </select>
+      <input type="text" id="customTypeInput" class="hidden" placeholder="Enter type" style="margin-bottom:10px;">
+    </div>
+    <div id="durationSliderWrapper" class="hidden slider-row" aria-label="Select project duration">
+      <label for="durationSlider" style="margin-bottom: 2px">Duration:</label>
+      <span style="font-size: 0.85em; color: #aaa">1</span>
+      <input type="range" id="durationSlider" min="1" max="36" value="1" aria-valuemin="1" aria-valuemax="36" aria-valuenow="1" aria-label="Duration in months">
+      <span id="durationSliderValue" style="font-size: 0.9em; color: #f39c12; font-weight: 600">1</span>
+      <span style="font-size: 0.85em; color: #aaa">36 months</span>
+    </div>
+    <div id="budgetWrapper" class="hidden">
+      <label for="budgetInput">Enter Your Marketing Budget (₹)</label>
+      <input type="number" id="budgetInput" min="5000" step="1" placeholder="Enter amount (min 5000)">
+      <span id="budgetMinMsg" style="color:#f39c12;font-size:0.9em;display:none;">Minimum budget is ₹5,000</span>
+    </div>
+    <div id="campaignObjectiveWrapper" class="hidden">
+      <label for="campaignObjectiveSelect">Campaign Objective</label>
+      <select id="campaignObjectiveSelect">
+        <option value="" disabled selected>-- Select Objective --</option>
+        <option value="Sales">Sales</option>
+        <option value="Leads">Leads</option>
+        <option value="Traffic">Traffic</option>
+        <option value="Engagement">Engagement</option>
+        <option value="Awareness">Awareness</option>
+      </select>
+    </div>
+    <div id="adsPlatformWrapper" class="hidden">
+      <label>Select Ad Platforms</label>
+      <div class="centered-checkboxes">
+        <label><input type="checkbox" class="adsPlatform" value="Meta Ads"> Meta Ads</label>
+        <label><input type="checkbox" class="adsPlatform" value="Google Ads"> Google Ads</label>
       </div>
     </div>
-    <div class="quotation-meta">
-      <span>Date: ${getTodayDateStr()}</span>
-      <span>To: ${user.name} (${user.email}, ${user.phone})</span>
+    <div id="productCountWrapper" class="hidden">
+      <label for="productCount">Number of Products</label>
+      <input type="number" id="productCount" min="1" max="10000" value="1">
     </div>
-    <div class="quotation-section-title">Quotation Details</div>
-    <table class="quotation-table">
-      <tr>
-        <th>#</th>
-        <th>Service</th>
-        <th>Details</th>
-        <th>Amount</th>
-      </tr>
-  `;
-  let total = 0;
-  services.forEach((svc, idx) => {
-    let details = "";
-    let amt = "";
-    switch (svc.service) {
-      case "Logo Design":
-        details = `Complexity: ${svc.complexity || ""}<br>Category: ${svc.category || ""}<br>Brand: ${svc.brandName || ""}` + (svc.brandDesc ? `<br>Description: ${svc.brandDesc}` : "");
-        if (!svc.isOther && svc.complexity) {
-          amt = formatINR(LOGO_PRICING[svc.complexity] || 0);
-          total += LOGO_PRICING[svc.complexity] || 0;
-        } else {
-          amt = "Custom Quote";
-        }
-        break;
-      case "Basic Website":
-      case "Advanced Website":
-        details = `Complexity: ${svc.complexity || ""}<br>Type: ${svc.type || ""}`;
-        if (!svc.isOther && svc.complexity) {
-          amt = formatINR(WEBSITE_PRICING[svc.service][svc.complexity] || 0);
-          total += WEBSITE_PRICING[svc.service][svc.complexity] || 0;
-        } else {
-          amt = "Custom Quote";
-        }
-        break;
-      case "Social Media Management":
-        details = `Complexity: ${svc.complexity || ""}<br>Platforms: ${svc.platforms ? svc.platforms.join(", ") : ""}<br>Duration: ${svc.duration || 1} month(s)`;
-        if (!svc.isOther && svc.complexity) {
-          let p = SMM_PRICING[svc.complexity] * (parseInt(svc.duration,10)||1);
-          amt = formatINR(p);
-          total += p;
-        } else {
-          amt = "Custom Quote";
-        }
-        break;
-      case "SEO Services":
-        details = `SEO Type: ${svc.seoType || ""}<br>Duration: ${svc.duration || 1} month(s)`;
-        if (svc.seoType) {
-          let p = SEO_PRICING[svc.seoType] * (parseInt(svc.duration,10)||1);
-          amt = formatINR(p);
-          total += p;
-        }
-        break;
-      case "App Development":
-        details = `Complexity: ${svc.complexity || ""}` + (svc.appDesc ? `<br>Description: ${svc.appDesc}` : "");
-        if (svc.complexity) {
-          amt = formatINR(APP_PRICING[svc.complexity]);
-          total += APP_PRICING[svc.complexity];
-        }
-        break;
-      case "Content Writing":
-        details = `Complexity: ${svc.complexity || ""}<br>Duration: ${svc.duration || 1} month(s)`;
-        if (svc.complexity) {
-          let p = CONTENT_WRITING_PRICING[svc.complexity] * (parseInt(svc.duration,10)||1);
-          amt = formatINR(p);
-          total += p;
-        }
-        break;
-      case "eCommerce Store":
-        details = `Products: ${svc.productCount || 1}`;
-        let prodCount = parseInt(svc.productCount,10)||1;
-        let full10s = Math.floor(prodCount/10);
-        let rem = prodCount%10;
-        let p = full10s*ECOMMERCE_PRICING[10]+rem*ECOMMERCE_PRICING[1];
-        amt = formatINR(p);
-        total += p;
-        break;
-      case "Marketplace Management":
-        details = `Platforms: ${svc.platforms ? svc.platforms.join(", ") : ""}<br>Products: ${svc.productCount || 1}`;
-        if (!svc.isOther) {
-          let p = (parseInt(svc.productCount,10)||1) * MARKETPLACE_PRICING_PER_PRODUCT;
-          amt = formatINR(p);
-          total += p;
-        } else {
-          amt = "Custom Quote";
-        }
-        break;
-      case "Digital Marketing":
-        details = `Budget: ${formatINR(svc.budget||0)}<br>Objective: ${svc.objective || ""}<br>Duration: ${svc.duration || 1} month(s)`;
-        if (svc.budget > 20000) {
-          amt = "Custom Quote";
-        } else {
-          let fee = 0;
-          if (svc.objective === "Sales" || svc.objective === "Leads") fee = 6000;
-          else if (svc.objective === "Traffic" || svc.objective === "Engagement") fee = 3500;
-          else if (svc.objective === "Awareness") fee = 2500;
-          let p = (parseInt(svc.budget,10)||0) + fee;
-          amt = formatINR(p);
-          total += p;
-        }
-        break;
-      case "Branding Services":
-        details = `Medium: ${svc.medium || ""}<br>Complexity: ${svc.complexity || ""}` + (svc.location ? `<br>Location: ${svc.location}` : "");
-        if (svc.medium === "Online") {
-          let p = BRANDING_ONLINE_PRICING[svc.complexity];
-          amt = formatINR(p);
-          total += p;
-        } else if (svc.medium === "Offline") {
-          amt = formatRange(BRANDING_OFFLINE_RANGE[0], BRANDING_OFFLINE_RANGE[1]);
-        }
-        break;
-      case "Instagram Followers":
-        details = `Platform: ${svc.platform || ""}<br>Followers: ${svc.followerCount || 50}`;
-        if (!svc.isOther) {
-          let cnt = parseInt(svc.followerCount,10)||50;
-          let per50 = FOLLOWER_PRICING[svc.platform]||45;
-          let p = Math.ceil(cnt/50)*per50;
-          amt = formatINR(p);
-          total += p;
-        } else {
-          amt = "Custom Quote";
-        }
-        break;
-      case "Meta and Google Ads":
-        details = `Budget: ${formatINR(svc.budget||0)}<br>Objective: ${svc.objective || ""}<br>Platforms: ${svc.platforms ? svc.platforms.join(", ") : ""}<br>Duration: ${svc.duration || 1} month(s)`;
-        let adsFee = ADS_BASE_PRICING[svc.objective] || 3000;
-        let adsP = (parseInt(svc.budget,10)||0) + adsFee;
-        amt = formatINR(adsP);
-        total += adsP;
-        break;
-      case "3D / Product Design":
-        details = `Products: ${svc.productCount || 1}`;
-        let cnt = parseInt(svc.productCount,10)||1;
-        if (cnt > 10) {
-          amt = "Custom Quote";
-        } else {
-          amt = formatRange(PRODUCT_DESIGN_RANGE[0]*cnt, PRODUCT_DESIGN_RANGE[1]*cnt);
-        }
-        break;
-      case "Other":
-        details = svc.desc || "";
-        amt = "Custom Quote";
-        break;
+    <div id="marketplaceWrapper" class="hidden">
+      <label>Select Marketplace Platforms</label>
+      <div class="centered-checkboxes" id="marketplacePlatforms">
+        <label><input type="checkbox" class="marketplacePlatform" value="Amazon"> Amazon</label>
+        <label><input type="checkbox" class="marketplacePlatform" value="Flipkart"> Flipkart</label>
+        <label><input type="checkbox" class="marketplacePlatform" value="Other"> Other</label>
+      </div>
+      <input type="text" id="customMarketplaceInput" class="hidden" placeholder="Enter platform name">
+      <div id="marketplaceProductCountWrapper" class="hidden">
+        <label for="marketplaceProductCount">Number of Products</label>
+        <input type="number" id="marketplaceProductCount" min="1" max="10000" value="1">
+      </div>
+    </div>
+    <div id="smmPlatformsWrapper" class="hidden checkboxGroup" aria-label="Select social media platforms">
+      <label>Select Platforms</label><br>
+      <label><input type="checkbox" class="smmPlatform" value="Instagram"> Instagram</label>
+      <label><input type="checkbox" class="smmPlatform" value="Facebook"> Facebook</label>
+      <label><input type="checkbox" class="smmPlatform" value="LinkedIn"> LinkedIn</label>
+      <label><input type="checkbox" class="smmPlatform" value="Twitter"> Twitter</label>
+      <label><input type="checkbox" class="smmPlatform" value="YouTube"> YouTube</label>
+      <label><input type="checkbox" class="smmPlatform" value="Other"> Other</label>
+      <input type="text" id="customSmmPlatformInput" class="hidden" placeholder="Enter platform name">
+    </div>
+    <div id="seoTypeWrapper" class="hidden">
+      <label for="seoTypeSelect">SEO Service Type</label>
+      <select id="seoTypeSelect">
+        <option value="" disabled selected>-- Select SEO Type --</option>
+        <option value="On-page">On-page SEO</option>
+        <option value="Off-page">Off-page SEO</option>
+        <option value="Both">On-page + Off-page SEO</option>
+      </select>
+    </div>
+    <div id="appDescWrapper" class="hidden">
+      <label for="appDescInput">App Description (Optional)</label>
+      <input type="text" id="appDescInput" placeholder="Describe your app (optional)">
+    </div>
+    <div id="ecommerceProductCountWrapper" class="hidden">
+      <label for="ecommerceProductCount">Number of Products</label>
+      <input type="number" id="ecommerceProductCount" min="1" max="10000" value="1">
+    </div>
+    <div id="brandingMediumWrapper" class="hidden">
+      <label for="brandingMediumSelect">Branding Medium</label>
+      <select id="brandingMediumSelect">
+        <option value="" disabled selected>-- Select Medium --</option>
+        <option value="Online">Online</option>
+        <option value="Offline">Offline</option>
+      </select>
+    </div>
+    <div id="brandingLocationWrapper" class="hidden">
+      <label for="brandingLocationInput">Location (Only Delhi-NCR supported)</label>
+      <input type="text" id="brandingLocationInput" list="brandingLocationList" placeholder="Type location">
+      <datalist id="brandingLocationList">
+        <option value="Delhi-NCR">
+        <option value="Delhi">
+        <option value="Noida">
+        <option value="Gurgaon">
+        <option value="Ghaziabad">
+        <option value="Faridabad">
+      </datalist>
+      <span id="brandingLocationMsg" style="color:#f39c12;font-size:0.9em;display:none;">We are currently not serving this area.</span>
+    </div>
+    <div id="followerWrapper" class="hidden">
+      <label for="followerPlatformSelect">Select Platform</label>
+      <select id="followerPlatformSelect">
+        <option value="" disabled selected>-- Select Platform --</option>
+        <option value="Instagram">Instagram</option>
+        <option value="Facebook">Facebook</option>
+        <option value="LinkedIn">LinkedIn</option>
+        <option value="Other">Other</option>
+      </select>
+      <input type="text" id="customFollowerPlatformInput" class="hidden" placeholder="Enter platform name">
+      <label for="followerCount">Number of Followers (Min 50, step 50)</label>
+      <input type="number" id="followerCount" min="50" step="50" value="50">
+      <span id="followerRangeMsg" style="color:#f39c12;font-size:0.9em;display:none;">Min 50, step 50. Price is for every 50 followers.</span>
+    </div>
+    <div id="productDesignWrapper" class="hidden">
+      <label for="productDesignCount">Number of Products</label>
+      <input type="number" id="productDesignCount" min="1" max="10000" value="1">
+      <span id="productDesignRangeMsg" style="color:#f39c12;font-size:0.9em;display:none;">For more than 10 products, only request quote via WhatsApp.</span>
+    </div>
+    <div id="otherServiceWrapper" class="hidden">
+      <label for="otherServiceDesc">Describe Your Service Request</label>
+      <input type="text" id="otherServiceDesc" placeholder="Describe your requirement">
+    </div>
+    <div id="estimatedPriceRange"></div>
+    <div id="averagePriceRange"></div>
+    <div class="button-row" id="actionButtonsRow">
+      <button id="previewQuoteBtn" type="button">Preview Quotation</button>
+      <button id="downloadQuoteBtn" type="button">Download Quotation</button>
+      <button id="whatsappQuoteBtn" class="whatsapp" type="button">Request via WhatsApp</button>
+      <button id="callQuoteBtn" type="button" style="display:none;">Call for Custom Quote</button>
+    </div>
+    <div>
+      <div id="quotePreviewSection" class="hidden">
+        <div id="quotePreviewContent"></div>
+      </div>
+    </div>
+  </div>
+  <div id="popupFormOverlay">
+    <form id="popupForm" autocomplete="off">
+      <h3>Enter Your Details</h3>
+      <label for="popupName">Name</label>
+      <input type="text" id="popupName" required>
+      <label for="popupEmail">Email</label>
+      <input type="email" id="popupEmail" required>
+      <label for="popupPhone">Phone</label>
+      <input type="tel" id="popupPhone" pattern="[0-9]{10}" maxlength="10" required>
+      <div class="button-row">
+        <button id="popupSubmitBtn" type="submit">Continue</button>
+        <button id="popupCancelBtn" type="button">Cancel</button>
+      </div>
+    </form>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  <script>
+    /* --- UTILITY FUNCTIONS --- */
+    function formatINR(num) {
+      if (typeof num === "string") num = parseInt(num, 10);
+      if (isNaN(num)) return "";
+      return "₹" + num.toLocaleString("en-IN");
     }
-    html += `<tr>
-      <td>${idx+1}</td>
-      <td>${svc.service}</td>
-      <td class="left">${details}</td>
-      <td>${amt}</td>
-    </tr>`;
-  });
-  html += `<tr>
-    <th colspan="3" style="text-align:right;">Total</th>
-    <th>${formatINR(total)}</th>
-  </tr>`;
-  html += `</table>
-    <div class="quotation-section-title">Terms &amp; Conditions</div>
-    <div class="quotation-terms">
-      <ul>
-        <li>Quotation valid for 15 days from date of issue.</li>
-        <li>GST extra as applicable.</li>
-        <li>50% advance payment required to start project.</li>
-        <li>Delivery timelines as per project complexity and requirements.</li>
-        <li>For custom/other services, final price will be shared after discussion.</li>
-        <li>For branding (offline), service limited to Delhi-NCR only.</li>
-        <li>For digital marketing, budget above ₹20,000 requires custom quote.</li>
-        <li>All services subject to company policies and mutual agreement.</li>
-      </ul>
-    </div>
-    <div class="quotation-sign">
-      <b>AfterResult Team</b><br>
-      <span style="font-size:11px;">www.afterresult.com | info@afterresult.com | +91-9999999999</span>
-    </div>
-    <div class="qr-section">
-      <img src="https://www.afterresult.com/web/image/website/1/logo/AfterResult?unique=c0bef19" alt="AfterResult Logo">
-      <span class="website-link">www.afterresult.com</span>
-    </div>
-    <div class="watermark">AfterResult</div>
-  `;
-  quotePreviewContent.innerHTML = html;
-}
+    function formatRange(min, max) {
+      return min === max ? formatINR(min) : `${formatINR(min)} – ${formatINR(max)}`;
+    }
+    function onlyDigits(str) {
+      return String(str).replace(/\D/g, "");
+    }
+    function getTodayDateStr() {
+      const d = new Date();
+      return d.toLocaleDateString("en-IN", {year: "numeric", month: "short", day: "2-digit"});
+    }
 
-/* --- INITIALIZE --- */
-resetAllFields();
-updateMultiServiceUI();
-updatePrice();
+    /* --- GLOBAL STATE --- */
+    let multiServices = [];
+    let currentServiceIndex = 0;
+    let userDetails = { name: "", email: "", phone: "" };
+    let quotePreviewData = null;
 
-</script>
+    /* --- ELEMENTS --- */
+    const serviceSelect = document.getElementById("serviceSelect");
+    const addServiceBtn = document.getElementById("addServiceBtn");
+    const multiServiceList = document.getElementById("multiServiceList");
+    const complexityWrapper = document.getElementById("complexityWrapper");
+    const complexitySelect = document.getElementById("complexitySelect");
+    const categoryWrapper = document.getElementById("categoryWrapper");
+    const categorySelect = document.getElementById("categorySelect");
+    const customCategoryInput = document.getElementById("customCategoryInput");
+    const brandNameWrapper = document.getElementById("brandNameWrapper");
+    const brandNameInput = document.getElementById("brandNameInput");
+    const brandDescWrapper = document.getElementById("brandDescWrapper");
+    const brandDescInput = document.getElementById("brandDescInput");
+    const typeWrapper = document.getElementById("typeWrapper");
+    const typeSelect = document.getElementById("typeSelect");
+    const customTypeInput = document.getElementById("customTypeInput");
+    const durationSliderWrapper = document.getElementById("durationSliderWrapper");
+    const durationSlider = document.getElementById("durationSlider");
+    const durationSliderValue = document.getElementById("durationSliderValue");
+    const budgetWrapper = document.getElementById("budgetWrapper");
+    const budgetInput = document.getElementById("budgetInput");
+    const budgetMinMsg = document.getElementById("budgetMinMsg");
+    const campaignObjectiveWrapper = document.getElementById("campaignObjectiveWrapper");
+    const campaignObjectiveSelect = document.getElementById("campaignObjectiveSelect");
+    const adsPlatformWrapper = document.getElementById("adsPlatformWrapper");
+    const productCountWrapper = document.getElementById("productCountWrapper");
+    const productCount = document.getElementById("productCount");
+    const marketplaceWrapper = document.getElementById("marketplaceWrapper");
+    const marketplacePlatforms = document.getElementById("marketplacePlatforms");
+    const customMarketplaceInput = document.getElementById("customMarketplaceInput");
+    const marketplaceProductCountWrapper = document.getElementById("marketplaceProductCountWrapper");
+    const marketplaceProductCount = document.getElementById("marketplaceProductCount");
+    const smmPlatformsWrapper = document.getElementById("smmPlatformsWrapper");
+    const customSmmPlatformInput = document.getElementById("customSmmPlatformInput");
+    const seoTypeWrapper = document.getElementById("seoTypeWrapper");
+    const seoTypeSelect = document.getElementById("seoTypeSelect");
+    const appDescWrapper = document.getElementById("appDescWrapper");
+    const appDescInput = document.getElementById("appDescInput");
+    const ecommerceProductCountWrapper = document.getElementById("ecommerceProductCountWrapper");
+    const ecommerceProductCount = document.getElementById("ecommerceProductCount");
+    const brandingMediumWrapper = document.getElementById("brandingMediumWrapper");
+    const brandingMediumSelect = document.getElementById("brandingMediumSelect");
+    const brandingLocationWrapper = document.getElementById("brandingLocationWrapper");
+    const brandingLocationInput = document.getElementById("brandingLocationInput");
+    const brandingLocationMsg = document.getElementById("brandingLocationMsg");
+    const followerWrapper = document.getElementById("followerWrapper");
+    const followerPlatformSelect = document.getElementById("followerPlatformSelect");
+    const customFollowerPlatformInput = document.getElementById("customFollowerPlatformInput");
+    const followerCount = document.getElementById("followerCount");
+    const followerRangeMsg = document.getElementById("followerRangeMsg");
+    const productDesignWrapper = document.getElementById("productDesignWrapper");
+    const productDesignCount = document.getElementById("productDesignCount");
+    const productDesignRangeMsg = document.getElementById("productDesignRangeMsg");
+    const otherServiceWrapper = document.getElementById("otherServiceWrapper");
+    const otherServiceDesc = document.getElementById("otherServiceDesc");
+    const estimatedPriceRange = document.getElementById("estimatedPriceRange");
+    const averagePriceRange = document.getElementById("averagePriceRange");
+    const previewQuoteBtn = document.getElementById("previewQuoteBtn");
+    const downloadQuoteBtn = document.getElementById("downloadQuoteBtn");
+    const whatsappQuoteBtn = document.getElementById("whatsappQuoteBtn");
+    const callQuoteBtn = document.getElementById("callQuoteBtn");
+    const quotePreviewSection = document.getElementById("quotePreviewSection");
+    const quotePreviewContent = document.getElementById("quotePreviewContent");
+    const popupFormOverlay = document.getElementById("popupFormOverlay");
+    const popupForm = document.getElementById("popupForm");
+    const popupName = document.getElementById("popupName");
+    const popupEmail = document.getElementById("popupEmail");
+    const popupPhone = document.getElementById("popupPhone");
+    const popupSubmitBtn = document.getElementById("popupSubmitBtn");
+    const popupCancelBtn = document.getElementById("popupCancelBtn");
+    const actionButtonsRow = document.getElementById("actionButtonsRow");
+
+    /* --- LOGIC CONSTANTS --- */
+    const LOGO_PRICING = {
+      "Basic": 1800,
+      "Moderate": 3500,
+      "Advanced": 6500
+    };
+    const WEBSITE_PRICING = {
+      "Basic Website": {
+        "Basic": 5000,
+        "Moderate": 9000,
+        "Advanced": 16000
+      },
+      "Advanced Website": {
+        "Basic": 17000,
+        "Moderate": 32000,
+        "Advanced": 55000
+      }
+    };
+    const WEBSITE_TYPES = [
+      "Landing Page", "E-commerce", "Ed-Tech", "Blog", "News and Updates",
+      "Tools", "Agency", "Appointment", "Company Profile", "Other"
+    ];
+    const SMM_PRICING = {
+      "Basic": 3500,
+      "Moderate": 6500,
+      "Advanced": 12000
+    };
+    const SEO_PRICING = {
+      "On-page": 5000,
+      "Off-page": 14000,
+      "Both": 17000
+    };
+    const APP_PRICING = {
+      "Basic": 35000,
+      "Moderate": 65000,
+      "Advanced": 120000
+    };
+    const ECOMMERCE_PRICING = {
+      1: 50,
+      10: 450
+    };
+    const MARKETPLACE_PRICING_PER_PRODUCT = 250;
+    const BRANDING_ONLINE_PRICING = {
+      "Basic": 12000,
+      "Moderate": 22000,
+      "Advanced": 35000
+    };
+    const BRANDING_OFFLINE_RANGE = [35000, 60000];
+    const FOLLOWER_PRICING = {
+      "Instagram": 45,
+      "Facebook": 45,
+      "LinkedIn": 65,
+      "Other": 45
+    };
+    const FOLLOWER_OTHER_MAX = 100;
+    const FOLLOWER_STEP = 50;
+    const FOLLOWER_MIN = 50;
+    const ADS_BASE_PRICING = {
+      "Sales": 6000,
+      "Leads": 6000,
+      "Traffic": 3000,
+      "Engagement": 3000,
+      "Awareness": 2500
+    };
+    const PRODUCT_DESIGN_RANGE = [6000, 13000];
+    const CONTENT_WRITING_PRICING = {
+      "Basic": 2500,
+      "Moderate": 4500,
+      "Advanced": 8000
+    };
+
+    /* --- FIELD RESET/SHOW/HIDE LOGIC --- */
+    function resetAllFields() {
+      // Hide all
+      complexityWrapper.classList.add("hidden");
+      categoryWrapper.classList.add("hidden");
+      customCategoryInput.classList.add("hidden");
+      brandNameWrapper.classList.add("hidden");
+      brandDescWrapper.classList.add("hidden");
+      typeWrapper.classList.add("hidden");
+      customTypeInput.classList.add("hidden");
+      durationSliderWrapper.classList.add("hidden");
+      budgetWrapper.classList.add("hidden");
+      budgetInput.value = "";
+      budgetMinMsg.style.display = "none";
+      campaignObjectiveWrapper.classList.add("hidden");
+      campaignObjectiveSelect.value = "";
+      adsPlatformWrapper.classList.add("hidden");
+      productCountWrapper.classList.add("hidden");
+      productCount.value = 1;
+      marketplaceWrapper.classList.add("hidden");
+      customMarketplaceInput.classList.add("hidden");
+      marketplaceProductCountWrapper.classList.add("hidden");
+      marketplaceProductCount.value = 1;
+      smmPlatformsWrapper.classList.add("hidden");
+      customSmmPlatformInput.classList.add("hidden");
+      seoTypeWrapper.classList.add("hidden");
+      seoTypeSelect.value = "";
+      appDescWrapper.classList.add("hidden");
+      appDescInput.value = "";
+      ecommerceProductCountWrapper.classList.add("hidden");
+      ecommerceProductCount.value = 1;
+      brandingMediumWrapper.classList.add("hidden");
+      brandingMediumSelect.value = "";
+      brandingLocationWrapper.classList.add("hidden");
+      brandingLocationInput.value = "";
+      brandingLocationMsg.style.display = "none";
+      followerWrapper.classList.add("hidden");
+      followerPlatformSelect.value = "";
+      customFollowerPlatformInput.classList.add("hidden");
+      followerCount.value = 50;
+      followerRangeMsg.style.display = "none";
+      productDesignWrapper.classList.add("hidden");
+      productDesignCount.value = 1;
+      productDesignRangeMsg.style.display = "none";
+      otherServiceWrapper.classList.add("hidden");
+      otherServiceDesc.value = "";
+      estimatedPriceRange.textContent = "";
+      averagePriceRange.textContent = "";
+      // Uncheck all checkboxes
+      document.querySelectorAll('input[type="checkbox"]').forEach(cb => cb.checked = false);
+      // Hide custom platform inputs
+      customSmmPlatformInput.value = "";
+      customMarketplaceInput.value = "";
+      customFollowerPlatformInput.value = "";
+      // Hide action buttons
+      previewQuoteBtn.style.display = "";
+      downloadQuoteBtn.style.display = "";
+      whatsappQuoteBtn.style.display = "";
+      callQuoteBtn.style.display = "none";
+      // Enable all buttons
+      previewQuoteBtn.disabled = false;
+      downloadQuoteBtn.disabled = false;
+      whatsappQuoteBtn.disabled = false;
+      callQuoteBtn.disabled = false;
+    }
+    function showRelevantFields(service) {
+      resetAllFields();
+      // Show only relevant fields
+      switch (service) {
+        case "Logo Design":
+          complexityWrapper.classList.remove("hidden");
+          categoryWrapper.classList.remove("hidden");
+          brandNameWrapper.classList.remove("hidden");
+          brandDescWrapper.classList.remove("hidden");
+          break;
+        case "Basic Website":
+        case "Advanced Website":
+          complexityWrapper.classList.remove("hidden");
+          typeWrapper.classList.remove("hidden");
+          break;
+        case "Social Media Management":
+          complexityWrapper.classList.remove("hidden");
+          smmPlatformsWrapper.classList.remove("hidden");
+          durationSliderWrapper.classList.remove("hidden");
+          break;
+        case "SEO Services":
+          seoTypeWrapper.classList.remove("hidden");
+          durationSliderWrapper.classList.remove("hidden");
+          break;
+        case "App Development":
+          complexityWrapper.classList.remove("hidden");
+          appDescWrapper.classList.remove("hidden");
+          break;
+        case "Content Writing":
+          complexityWrapper.classList.remove("hidden");
+          durationSliderWrapper.classList.remove("hidden");
+          break;
+        case "eCommerce Store":
+          ecommerceProductCountWrapper.classList.remove("hidden");
+          break;
+        case "Marketplace Management":
+          marketplaceWrapper.classList.remove("hidden");
+          marketplaceProductCountWrapper.classList.remove("hidden");
+          break;
+        case "Digital Marketing":
+          budgetWrapper.classList.remove("hidden");
+          campaignObjectiveWrapper.classList.remove("hidden");
+          durationSliderWrapper.classList.remove("hidden");
+          break;
+        case "Branding Services":
+          brandingMediumWrapper.classList.remove("hidden");
+          complexityWrapper.classList.remove("hidden");
+          break;
+        case "Instagram Followers":
+          followerWrapper.classList.remove("hidden");
+          break;
+        case "Meta and Google Ads":
+          budgetWrapper.classList.remove("hidden");
+          campaignObjectiveWrapper.classList.remove("hidden");
+          adsPlatformWrapper.classList.remove("hidden");
+          durationSliderWrapper.classList.remove("hidden");
+          break;
+        case "3D / Product Design":
+          productDesignWrapper.classList.remove("hidden");
+          break;
+        case "Other":
+          otherServiceWrapper.classList.remove("hidden");
+          break;
+      }
+    }
+    function isOtherSelected() {
+      // Checks if 'Other' is selected in any relevant dropdown or checkbox
+      if (serviceSelect.value === "Other") return true;
+      if (!categoryWrapper.classList.contains("hidden") && categorySelect.value === "Other") return true;
+      if (!typeWrapper.classList.contains("hidden") && typeSelect.value === "Other") return true;
+      if (!marketplaceWrapper.classList.contains("hidden")) {
+        let checked = Array.from(document.querySelectorAll(".marketplacePlatform:checked")).map(cb => cb.value);
+        if (checked.includes("Other")) return true;
+      }
+      if (!smmPlatformsWrapper.classList.contains("hidden")) {
+        let checked = Array.from(document.querySelectorAll(".smmPlatform:checked")).map(cb => cb.value);
+        if (checked.includes("Other")) return true;
+      }
+      if (!followerWrapper.classList.contains("hidden") && followerPlatformSelect.value === "Other") return true;
+      return false;
+    }
+    function handleOtherSelection() {
+      // Hide preview/download/whatsapp, show call for custom quote, show message if needed
+      if (isOtherSelected()) {
+        previewQuoteBtn.style.display = "none";
+        downloadQuoteBtn.style.display = "none";
+        whatsappQuoteBtn.style.display = "none";
+        callQuoteBtn.style.display = "";
+        estimatedPriceRange.textContent = "Custom service can only be requested by WhatsApp or by call.";
+        averagePriceRange.textContent = "";
+      } else {
+        previewQuoteBtn.style.display = "";
+        downloadQuoteBtn.style.display = "";
+        whatsappQuoteBtn.style.display = "";
+        callQuoteBtn.style.display = "none";
+      }
+    }
+
+    /* --- FIELD EVENTS & DYNAMIC LOGIC --- */
+    serviceSelect.addEventListener("change", function() {
+      currentServiceIndex = 0;
+      showRelevantFields(serviceSelect.value);
+      handleOtherSelection();
+      updatePrice();
+      updateMultiServiceUI();
+    });
+    addServiceBtn.addEventListener("click", function() {
+      // Save current service to multiServices
+      if (!serviceSelect.value) return;
+      saveCurrentServiceToMulti();
+      // Reset all fields for new service
+      serviceSelect.value = "";
+      resetAllFields();
+      updateMultiServiceUI();
+    });
+    function saveCurrentServiceToMulti() {
+      let data = collectCurrentServiceData();
+      if (!data || !data.service) return;
+      multiServices.push(data);
+    }
+    function removeServiceAtIndex(idx) {
+      multiServices.splice(idx, 1);
+      updateMultiServiceUI();
+    }
+    function updateMultiServiceUI() {
+      // Show all selected services as tags with remove
+      multiServiceList.innerHTML = "";
+      if (multiServices.length > 0) {
+        multiServices.forEach((svc, idx) => {
+          let el = document.createElement("span");
+          el.style.display = "inline-block";
+          el.style.background = "#222";
+          el.style.color = "#f39c12";
+          el.style.border = "1px solid #f39c12";
+          el.style.borderRadius = "14px";
+          el.style.padding = "2px 12px";
+          el.style.margin = "0 6px 8px 0";
+          el.style.fontSize = "13px";
+          el.textContent = svc.service;
+          let rm = document.createElement("button");
+          rm.type = "button";
+          rm.className = "remove-service-btn";
+          rm.innerHTML = "&times;";
+          rm.title = "Remove";
+          rm.onclick = () => { removeServiceAtIndex(idx); updateMultiServiceUI(); };
+          el.appendChild(rm);
+          multiServiceList.appendChild(el);
+        });
+      }
+      addServiceBtn.style.display = (serviceSelect.value && multiServices.length < 8) ? "" : "";
+    }
+    function collectCurrentServiceData() {
+      let svc = serviceSelect.value;
+      if (!svc) return null;
+      let obj = { service: svc };
+      // Collect all relevant fields for this service
+      switch (svc) {
+        case "Logo Design":
+          obj.complexity = complexitySelect.value;
+          obj.category = categorySelect.value === "Other" ? customCategoryInput.value : categorySelect.value;
+          obj.brandName = brandNameInput.value;
+          obj.brandDesc = brandDescInput.value;
+          obj.isOther = (categorySelect.value === "Other");
+          break;
+        case "Basic Website":
+        case "Advanced Website":
+          obj.complexity = complexitySelect.value;
+          obj.type = typeSelect.value === "Other" ? customTypeInput.value : typeSelect.value;
+          obj.isOther = (typeSelect.value === "Other");
+          break;
+        case "Social Media Management":
+          obj.complexity = complexitySelect.value;
+          obj.platforms = Array.from(document.querySelectorAll(".smmPlatform:checked")).map(cb => cb.value === "Other" ? customSmmPlatformInput.value : cb.value);
+          obj.duration = durationSlider.value;
+          obj.isOther = Array.from(document.querySelectorAll(".smmPlatform:checked")).map(cb => cb.value).includes("Other");
+          break;
+        case "SEO Services":
+          obj.seoType = seoTypeSelect.value;
+          obj.duration = durationSlider.value;
+          break;
+        case "App Development":
+          obj.complexity = complexitySelect.value;
+          obj.appDesc = appDescInput.value;
+          break;
+        case "Content Writing":
+          obj.complexity = complexitySelect.value;
+          obj.duration = durationSlider.value;
+          break;
+        case "eCommerce Store":
+          obj.productCount = ecommerceProductCount.value;
+          break;
+        case "Marketplace Management":
+          obj.platforms = Array.from(document.querySelectorAll(".marketplacePlatform:checked")).map(cb => cb.value === "Other" ? customMarketplaceInput.value : cb.value);
+          obj.productCount = marketplaceProductCount.value;
+          obj.isOther = Array.from(document.querySelectorAll(".marketplacePlatform:checked")).map(cb => cb.value).includes("Other");
+          break;
+        case "Digital Marketing":
+          obj.budget = budgetInput.value;
+          obj.objective = campaignObjectiveSelect.value;
+          obj.duration = durationSlider.value;
+          break;
+        case "Branding Services":
+          obj.medium = brandingMediumSelect.value;
+          obj.complexity = complexitySelect.value;
+          obj.location = brandingLocationInput.value;
+          break;
+        case "Instagram Followers":
+          obj.platform = followerPlatformSelect.value === "Other" ? customFollowerPlatformInput.value : followerPlatformSelect.value;
+          obj.followerCount = followerCount.value;
+          obj.isOther = (followerPlatformSelect.value === "Other");
+          break;
+        case "Meta and Google Ads":
+          obj.budget = budgetInput.value;
+          obj.objective = campaignObjectiveSelect.value;
+          obj.platforms = Array.from(document.querySelectorAll(".adsPlatform:checked")).map(cb => cb.value);
+          obj.duration = durationSlider.value;
+          break;
+        case "3D / Product Design":
+          obj.productCount = productDesignCount.value;
+          break;
+        case "Other":
+          obj.desc = otherServiceDesc.value;
+          obj.isOther = true;
+          break;
+      }
+      return obj;
+    }
+
+    /* --- CATEGORY/TYPE 'Other' HANDLING --- */
+    categorySelect.addEventListener("change", function() {
+      if (categorySelect.value === "Other") {
+        customCategoryInput.classList.remove("hidden");
+      } else {
+        customCategoryInput.classList.add("hidden");
+      }
+      handleOtherSelection();
+      updatePrice();
+    });
+    customCategoryInput.addEventListener("input", function() {
+      handleOtherSelection();
+      updatePrice();
+    });
+    typeSelect.addEventListener("change", function() {
+      if (typeSelect.value === "Other") {
+        customTypeInput.classList.remove("hidden");
+      } else {
+        customTypeInput.classList.add("hidden");
+      }
+      handleOtherSelection();
+      updatePrice();
+    });
+    customTypeInput.addEventListener("input", function() {
+      handleOtherSelection();
+      updatePrice();
+    });
+
+    /* --- BRANDING LOCATION SUGGESTION/RESTRICTION --- */
+    brandingMediumSelect.addEventListener("change", function() {
+      if (brandingMediumSelect.value === "Offline") {
+        brandingLocationWrapper.classList.remove("hidden");
+      } else {
+        brandingLocationWrapper.classList.add("hidden");
+        brandingLocationMsg.style.display = "none";
+      }
+      updatePrice();
+    });
+    brandingLocationInput.addEventListener("input", function() {
+      if (brandingLocationInput.value && brandingLocationInput.value.toLowerCase().indexOf("delhi") === -1 && brandingLocationInput.value.toLowerCase().indexOf("ncr") === -1) {
+        brandingLocationMsg.style.display = "";
+        estimatedPriceRange.textContent = "";
+        previewQuoteBtn.style.display = "none";
+        downloadQuoteBtn.style.display = "none";
+        whatsappQuoteBtn.style.display = "none";
+        callQuoteBtn.style.display = "none";
+      } else {
+        brandingLocationMsg.style.display = "none";
+        previewQuoteBtn.style.display = "";
+        downloadQuoteBtn.style.display = "";
+        whatsappQuoteBtn.style.display = "";
+        callQuoteBtn.style.display = "none";
+        updatePrice();
+      }
+    });
+
+    /* --- SOCIAL MEDIA MANAGEMENT 'Other' HANDLING --- */
+    document.querySelectorAll(".smmPlatform").forEach(cb => {
+      cb.addEventListener("change", function() {
+        let checked = Array.from(document.querySelectorAll(".smmPlatform:checked")).map(cb => cb.value);
+        if (checked.includes("Other")) {
+          customSmmPlatformInput.classList.remove("hidden");
+          // If other is checked, do not select all others
+          document.querySelectorAll(".smmPlatform").forEach(cb2 => {
+            if (cb2.value !== "Other") cb2.checked = false;
+          });
+        } else {
+          customSmmPlatformInput.classList.add("hidden");
+        }
+        handleOtherSelection();
+        updatePrice();
+      });
+    });
+    customSmmPlatformInput.addEventListener("input", function() {
+      handleOtherSelection();
+      updatePrice();
+    });
+
+    /* --- MARKETPLACE 'Other' HANDLING --- */
+    document.querySelectorAll(".marketplacePlatform").forEach(cb => {
+      cb.addEventListener("change", function() {
+        let checked = Array.from(document.querySelectorAll(".marketplacePlatform:checked")).map(cb => cb.value);
+        if (checked.includes("Other")) {
+          customMarketplaceInput.classList.remove("hidden");
+          // Uncheck all others
+          document.querySelectorAll(".marketplacePlatform").forEach(cb2 => {
+            if (cb2.value !== "Other") cb2.checked = false;
+          });
+        } else {
+          customMarketplaceInput.classList.add("hidden");
+        }
+        handleOtherSelection();
+        updatePrice();
+      });
+    });
+    customMarketplaceInput.addEventListener("input", function() {
+      handleOtherSelection();
+      updatePrice();
+    });
+
+    /* --- FOLLOWER SECTION --- */
+    followerPlatformSelect.addEventListener("change", function() {
+      if (followerPlatformSelect.value === "Other") {
+        customFollowerPlatformInput.classList.remove("hidden");
+      } else {
+        customFollowerPlatformInput.classList.add("hidden");
+      }
+      handleOtherSelection();
+      updatePrice();
+    });
+    customFollowerPlatformInput.addEventListener("input", function() {
+      handleOtherSelection();
+      updatePrice();
+    });
+    followerCount.addEventListener("input", function() {
+      let val = parseInt(followerCount.value, 10);
+      if (isNaN(val) || val < FOLLOWER_MIN) followerCount.value = FOLLOWER_MIN;
+      if (val % FOLLOWER_STEP !== 0) followerCount.value = Math.ceil(val / FOLLOWER_STEP) * FOLLOWER_STEP;
+      updatePrice();
+    });
+
+    /* --- PRODUCT DESIGN --- */
+    productDesignCount.addEventListener("input", function() {
+      let val = parseInt(productDesignCount.value, 10);
+      if (isNaN(val) || val < 1) productDesignCount.value = 1;
+      if (val > 10000) productDesignCount.value = 10000;
+      updatePrice();
+    });
+
+    /* --- ECOMMERCE PRODUCT COUNT --- */
+    ecommerceProductCount.addEventListener("input", function() {
+      let val = parseInt(ecommerceProductCount.value, 10);
+      if (isNaN(val) || val < 1) ecommerceProductCount.value = 1;
+      if (val > 10000) ecommerceProductCount.value = 10000;
+      updatePrice();
+    });
+
+    /* --- MARKETPLACE PRODUCT COUNT --- */
+    marketplaceProductCount.addEventListener("input", function() {
+      let val = parseInt(marketplaceProductCount.value, 10);
+      if (isNaN(val) || val < 1) marketplaceProductCount.value = 1;
+      if (val > 10000) marketplaceProductCount.value = 10000;
+      updatePrice();
+    });
+
+    /* --- COMPLEXITY, TYPE, ETC --- */
+    complexitySelect.addEventListener("change", function() {
+      updatePrice();
+    });
+    typeSelect.addEventListener("change", function() {
+      updatePrice();
+    });
+    seoTypeSelect.addEventListener("change", function() {
+      updatePrice();
+    });
+    brandingMediumSelect.addEventListener("change", function() {
+      updatePrice();
+    });
+    durationSlider.addEventListener("input", function() {
+      durationSliderValue.textContent = durationSlider.value;
+      updatePrice();
+    });
+
+    /* --- BUDGET --- */
+    budgetInput.addEventListener("input", function() {
+      let val = parseInt(budgetInput.value, 10);
+      if (isNaN(val)) val = 0;
+      if (val < 5000) {
+        budgetMinMsg.style.display = "";
+        budgetInput.value = 5000;
+      } else {
+        budgetMinMsg.style.display = "none";
+      }
+      updatePrice();
+    });
+
+    /* --- CAMPAIGN OBJECTIVE --- */
+    campaignObjectiveSelect.addEventListener("change", function() {
+      updatePrice();
+    });
+
+    /* --- MAIN PRICING LOGIC --- */
+    function updatePrice() {
+      let svc = serviceSelect.value;
+      let price = 0, priceRange = "", showPrice = true, duration = 1;
+      estimatedPriceRange.textContent = "";
+      averagePriceRange.textContent = "";
+      handleOtherSelection();
+      // Hide price for 'Other'
+      if (isOtherSelected()) {
+        estimatedPriceRange.textContent = "Custom service can only be requested by WhatsApp or by call.";
+        averagePriceRange.textContent = "";
+        return;
+      }
+      switch (svc) {
+        case "Logo Design":
+          if (!complexitySelect.value) { showPrice = false; break; }
+          if (categorySelect.value === "Other") { showPrice = false; break; }
+          price = LOGO_PRICING[complexitySelect.value] || 0;
+          priceRange = formatINR(price);
+          break;
+        case "Basic Website":
+        case "Advanced Website":
+          if (!complexitySelect.value) { showPrice = false; break; }
+          if (typeSelect.value === "Other") { showPrice = false; break; }
+          price = WEBSITE_PRICING[svc][complexitySelect.value] || 0;
+          priceRange = formatINR(price);
+          break;
+        case "Social Media Management":
+          if (!complexitySelect.value) { showPrice = false; break; }
+          let platforms = Array.from(document.querySelectorAll(".smmPlatform:checked")).map(cb => cb.value);
+          if (platforms.includes("Other")) { showPrice = false; break; }
+          duration = parseInt(durationSlider.value, 10) || 1;
+          price = SMM_PRICING[complexitySelect.value] * duration;
+          priceRange = formatINR(price) + " (" + duration + " month" + (duration > 1 ? "s" : "") + ")";
+          break;
+        case "SEO Services":
+          if (!seoTypeSelect.value) { showPrice = false; break; }
+          duration = parseInt(durationSlider.value, 10) || 1;
+          price = SEO_PRICING[seoTypeSelect.value] * duration;
+          priceRange = formatINR(SEO_PRICING[seoTypeSelect.value]) + " /month, " + formatINR(price) + " (" + duration + " month" + (duration > 1 ? "s" : "") + ")";
+          break;
+        case "App Development":
+          if (!complexitySelect.value) { showPrice = false; break; }
+          price = APP_PRICING[complexitySelect.value];
+          priceRange = formatINR(price);
+          break;
+        case "Content Writing":
+          if (!complexitySelect.value) { showPrice = false; break; }
+          duration = parseInt(durationSlider.value, 10) || 1;
+          price = CONTENT_WRITING_PRICING[complexitySelect.value] * duration;
+          priceRange = formatINR(CONTENT_WRITING_PRICING[complexitySelect.value]) + " /month, " + formatINR(price) + " (" + duration + " month" + (duration > 1 ? "s" : "") + ")";
+          break;
+        case "eCommerce Store":
+          let prodCount = parseInt(ecommerceProductCount.value, 10) || 1;
+          if (prodCount < 1) prodCount = 1;
+          let full10s = Math.floor(prodCount / 10);
+          let rem = prodCount % 10;
+          price = full10s * ECOMMERCE_PRICING[10] + rem * ECOMMERCE_PRICING[1];
+          priceRange = formatINR(price) + " (" + prodCount + " products)";
+          break;
+        case "Marketplace Management":
+          let mpPlatforms = Array.from(document.querySelectorAll(".marketplacePlatform:checked")).map(cb => cb.value);
+          if (mpPlatforms.includes("Other")) { showPrice = false; break; }
+          let mpProdCount = parseInt(marketplaceProductCount.value, 10) || 1;
+          price = mpProdCount * MARKETPLACE_PRICING_PER_PRODUCT;
+          priceRange = formatINR(price) + " (" + mpProdCount + " products)";
+          break;
+        case "Digital Marketing":
+          let budget = parseInt(budgetInput.value, 10) || 0;
+          if (budget < 5000) { showPrice = false; break; }
+          if (budget > 20000) {
+            estimatedPriceRange.textContent = "20,000+ budget needs a custom quote. Only request via WhatsApp or call.";
+            previewQuoteBtn.style.display = "none";
+            downloadQuoteBtn.style.display = "none";
+            whatsappQuoteBtn.style.display = "none";
+            callQuoteBtn.style.display = "";
+            return;
+          }
+          let dmObjective = campaignObjectiveSelect.value;
+          let dmFee = 0;
+          if (dmObjective === "Sales" || dmObjective === "Leads") dmFee = 6000;
+          else if (dmObjective === "Traffic" || dmObjective === "Engagement") dmFee = 3500;
+          else if (dmObjective === "Awareness") dmFee = 2500;
+          price = budget + dmFee;
+          priceRange = "Budget: " + formatINR(budget) + " + Service Fee: " + formatINR(dmFee) + " = " + formatINR(price);
+          break;
+        case "Branding Services":
+          if (!complexitySelect.value || !brandingMediumSelect.value) { showPrice = false; break; }
+          if (brandingMediumSelect.value === "Online") {
+            price = BRANDING_ONLINE_PRICING[complexitySelect.value];
+            priceRange = formatINR(price);
+          } else if (brandingMediumSelect.value === "Offline") {
+            priceRange = formatRange(BRANDING_OFFLINE_RANGE[0], BRANDING_OFFLINE_RANGE[1]);
+          }
+          break;
+        case "Instagram Followers":
+          if (!followerPlatformSelect.value) { showPrice = false; break; }
+          if (followerPlatformSelect.value === "Other") { showPrice = false; break; }
+          let fCount = parseInt(followerCount.value, 10) || 50;
+          if (fCount < 50) fCount = 50;
+          let per50 = FOLLOWER_PRICING[followerPlatformSelect.value] || 45;
+          let total = Math.ceil(fCount / 50) * per50;
+          price = total;
+          priceRange = formatINR(per50) + " per 50, " + formatINR(total) + " (" + fCount + " followers)";
+          break;
+        case "Meta and Google Ads":
+          let adsBudget = parseInt(budgetInput.value, 10) || 0;
+          if (adsBudget < 5000) { showPrice = false; break; }
+          let adsObjective = campaignObjectiveSelect.value;
+          let adsFee = ADS_BASE_PRICING[adsObjective] || 3000;
+          price = adsBudget + adsFee;
+          priceRange = "Budget: " + formatINR(adsBudget) + " + Service Fee: " + formatINR(adsFee) + " = " + formatINR(price);
+          break;
+        case "3D / Product Design":
+          let pdCount = parseInt(productDesignCount.value, 10) || 1;
+          if (pdCount > 10) {
+            estimatedPriceRange.textContent = "For more than 10 products, only request quote via WhatsApp or call.";
+            previewQuoteBtn.style.display = "none";
+            downloadQuoteBtn.style.display = "none";
+            whatsappQuoteBtn.style.display = "none";
+            callQuoteBtn.style.display = "";
+            return;
+          }
+          priceRange = formatRange(PRODUCT_DESIGN_RANGE[0]*pdCount, PRODUCT_DESIGN_RANGE[1]*pdCount) + " (" + pdCount + " products)";
+          break;
+        case "Other":
+          showPrice = false;
+          break;
+      }
+      if (showPrice) {
+        estimatedPriceRange.textContent = priceRange;
+      } else {
+        estimatedPriceRange.textContent = "";
+      }
+    }
+
+    /* --- PREVIEW/WHATSAPP/DOWNLOAD BUTTONS --- */
+    previewQuoteBtn.addEventListener("click", function() {
+      // If multiServices, preview all; else, preview current
+      let allServices = [...multiServices];
+      if (serviceSelect.value) {
+        let data = collectCurrentServiceData();
+        if (data && data.service) allServices.push(data);
+      }
+      if (allServices.length === 0) return;
+      showPopupForm(function() {
+        quotePreviewData = allServices;
+        renderQuotePreview(allServices, userDetails);
+        quotePreviewSection.classList.remove("hidden");
+        window.scrollTo({top: quotePreviewSection.offsetTop - 30, behavior: "smooth"});
+      });
+    });
+    downloadQuoteBtn.addEventListener("click", function() {
+      // Download full preview as PDF (all pages, not just viewport)
+      if (!quotePreviewData) {
+        previewQuoteBtn.click();
+        return;
+      }
+      let el = quotePreviewSection;
+      el.style.background = "#fff";
+      el.style.color = "#222";
+      // Use html2canvas to render full content, then jsPDF to save
+      html2canvas(el, {scrollY: -window.scrollY, useCORS:true, windowWidth: el.scrollWidth, windowHeight: el.scrollHeight, scale: 2})
+        .then(function(canvas) {
+          const imgData = canvas.toDataURL('image/png');
+          const pdf = new window.jspdf.jsPDF({
+            orientation: 'p',
+            unit: 'pt',
+            format: [canvas.width, canvas.height]
+          });
+          pdf.addImage(imgData, 'PNG', 0, 0, canvas.width, canvas.height);
+          pdf.save('AfterResult_Quotation.pdf');
+        });
+    });
+    whatsappQuoteBtn.addEventListener("click", function() {
+      // WhatsApp with all details
+      let allServices = [...multiServices];
+      if (serviceSelect.value) {
+        let data = collectCurrentServiceData();
+        if (data && data.service) allServices.push(data);
+      }
+      if (allServices.length === 0) return;
+      showPopupForm(function() {
+        let msg = "Quotation Request from AfterResult:\n";
+        msg += "Name: " + userDetails.name + "\n";
+        msg += "Email: " + userDetails.email + "\n";
+        msg += "Phone: " + userDetails.phone + "\n";
+        allServices.forEach(function(svc, idx) {
+          msg += "\nService #" + (idx+1) + ": " + svc.service + "\n";
+          Object.keys(svc).forEach(function(k) {
+            if (k === "service" || k === "isOther") return;
+            msg += k.replace(/([A-Z])/g, ' $1').replace(/^./, function(str) { return str.toUpperCase(); }) + ": " + svc[k] + "\n";
+          });
+        });
+        let url = "https://wa.me/919999999999?text=" + encodeURIComponent(msg);
+        window.open(url, "_blank");
+      });
+    });
+    callQuoteBtn.addEventListener("click", function() {
+      window.open("tel:+919999999999");
+    });
+
+    /* --- POPUP FORM LOGIC --- */
+    function showPopupForm(cb) {
+      popupFormOverlay.classList.add("show");
+      popupName.value = userDetails.name || "";
+      popupEmail.value = userDetails.email || "";
+      popupPhone.value = userDetails.phone || "";
+      popupForm.onsubmit = function(e) {
+        e.preventDefault();
+        if (!popupName.value.trim() || !popupEmail.value.trim() || !popupPhone.value.trim()) return;
+        userDetails.name = popupName.value.trim();
+        userDetails.email = popupEmail.value.trim();
+        userDetails.phone = popupPhone.value.trim();
+        popupFormOverlay.classList.remove("show");
+        cb();
+      };
+      popupCancelBtn.onclick = function() {
+        popupFormOverlay.classList.remove("show");
+      };
+    }
+
+    /* --- QUOTATION PREVIEW LOGIC --- */
+    function renderQuotePreview(services, user) {
+      let html = `
+        <div class="quotation-header">
+          <img src="https://www.afterresult.com/web/image/website/1/logo/AfterResult?unique=c0bef19" alt="AfterResult Logo">
+          <div>
+            <div style="font-size:18px;font-weight:700;color:#f39c12;">AfterResult</div>
+            <div style="font-size:13px;">Digital Services Quotation</div>
+          </div>
+        </div>
+        <div class="quotation-meta">
+          <span>Date: ${getTodayDateStr()}</span>
+          <span>To: ${user.name} (${user.email}, ${user.phone})</span>
+        </div>
+        <div class="quotation-section-title">Quotation Details</div>
+        <table class="quotation-table">
+          <tr>
+            <th>#</th>
+            <th>Service</th>
+            <th>Details</th>
+            <th>Amount</th>
+          </tr>
+      `;
+      let total = 0;
+      services.forEach(function(svc, idx) {
+        let details = "";
+        let amt = "";
+        switch (svc.service) {
+          case "Logo Design":
+            details = `Complexity: ${svc.complexity || ""}<br>Category: ${svc.category || ""}<br>Brand: ${svc.brandName || ""}` + (svc.brandDesc ? `<br>Description: ${svc.brandDesc}` : "");
+            if (!svc.isOther && svc.complexity) {
+              amt = formatINR(LOGO_PRICING[svc.complexity] || 0);
+              total += LOGO_PRICING[svc.complexity] || 0;
+            } else {
+              amt = "Custom Quote";
+            }
+            break;
+          case "Basic Website":
+          case "Advanced Website":
+            details = `Complexity: ${svc.complexity || ""}<br>Type: ${svc.type || ""}`;
+            if (!svc.isOther && svc.complexity) {
+              amt = formatINR(WEBSITE_PRICING[svc.service][svc.complexity] || 0);
+              total += WEBSITE_PRICING[svc.service][svc.complexity] || 0;
+            } else {
+              amt = "Custom Quote";
+            }
+            break;
+          case "Social Media Management":
+            details = `Complexity: ${svc.complexity || ""}<br>Platforms: ${svc.platforms ? svc.platforms.join(", ") : ""}<br>Duration: ${svc.duration || 1} month(s)`;
+            if (!svc.isOther && svc.complexity) {
+              let p = SMM_PRICING[svc.complexity] * (parseInt(svc.duration,10)||1);
+              amt = formatINR(p);
+              total += p;
+            } else {
+              amt = "Custom Quote";
+            }
+            break;
+          case "SEO Services":
+            details = `SEO Type: ${svc.seoType || ""}<br>Duration: ${svc.duration || 1} month(s)`;
+            if (svc.seoType) {
+              let p = SEO_PRICING[svc.seoType] * (parseInt(svc.duration,10)||1);
+              amt = formatINR(p);
+              total += p;
+            }
+            break;
+          case "App Development":
+            details = `Complexity: ${svc.complexity || ""}` + (svc.appDesc ? `<br>Description: ${svc.appDesc}` : "");
+            if (svc.complexity) {
+              amt = formatINR(APP_PRICING[svc.complexity]);
+              total += APP_PRICING[svc.complexity];
+            }
+            break;
+          case "Content Writing":
+            details = `Complexity: ${svc.complexity || ""}<br>Duration: ${svc.duration || 1} month(s)`;
+            if (svc.complexity) {
+              let p = CONTENT_WRITING_PRICING[svc.complexity] * (parseInt(svc.duration,10)||1);
+              amt = formatINR(p);
+              total += p;
+            }
+            break;
+          case "eCommerce Store":
+            details = `Products: ${svc.productCount || 1}`;
+            let prodCount = parseInt(svc.productCount,10)||1;
+            let full10s = Math.floor(prodCount/10);
+            let rem = prodCount%10;
+            let p = full10s*ECOMMERCE_PRICING[10]+rem*ECOMMERCE_PRICING[1];
+            amt = formatINR(p);
+            total += p;
+            break;
+          case "Marketplace Management":
+            details = `Platforms: ${svc.platforms ? svc.platforms.join(", ") : ""}<br>Products: ${svc.productCount || 1}`;
+            if (!svc.isOther) {
+              let p = (parseInt(svc.productCount,10)||1) * MARKETPLACE_PRICING_PER_PRODUCT;
+              amt = formatINR(p);
+              total += p;
+            } else {
+              amt = "Custom Quote";
+            }
+            break;
+          case "Digital Marketing":
+            details = `Budget: ${formatINR(svc.budget||0)}<br>Objective: ${svc.objective || ""}<br>Duration: ${svc.duration || 1} month(s)`;
+            if (svc.budget > 20000) {
+              amt = "Custom Quote";
+            } else {
+              let fee = 0;
+              if (svc.objective === "Sales" || svc.objective === "Leads") fee = 6000;
+              else if (svc.objective === "Tra
+
