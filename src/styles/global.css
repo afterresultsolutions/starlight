@@ -1,9 +1,2 @@
-/* Hide all sidebar submenu lists by default */
-.sidebar-group ul {
-  display: none;
-}
-
-/* Show submenu when the parent group has the 'open' class */
-.sidebar-group.open ul {
-  display: block;
-}
+.sidebar-group ul { display: none; }
+.sidebar-group.open ul { display: block; }
