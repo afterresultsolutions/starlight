@@ -1,17 +1,45 @@
+---
 title: Powering Business Growth with Smart, Scalable Solutions
 description: AfterResult Solution is a dynamic business growth partner specializing in lead generation, digital marketing, and brand development. We help businesses—big or small—connect with their target audience through strategic online and offline marketing solutions designed to deliver measurable results. Our expertise spans from social media management and SEO to targeted campaigns that boost visibility, engagement, and conversions. At AfterResult Solution, we are committed to driving real impact for our clients by transforming prospects into loyal customers, helping brands grow sustainably in a competitive market.
 hero:
-tagline: Fueling Growth, Delivering Results.
-image:
-file: ../../assets/houston.webp
-actions:
-- text: Learn More
-link: https://afterresult.solutions/guides/example/
-icon: right-arrow
-- text: Go to AfterResult Ed Tech
-link: https://www.afterresult.com/
-icon: external
-variant: minimal
+  tagline: Fueling Growth, Delivering Results.
+  image:
+    file: ../../assets/houston.webp
+  actions:
+    - text: Learn More
+      link: https://afterresult.solutions/guides/example/
+      icon: right-arrow
+    - text: Go to AfterResult Ed Tech
+      link: https://www.afterresult.com/
+      icon: external
+      variant: minimal
+---
+
 import { Card, CardGrid } from '@astrojs/starlight/components';
 
-<section class="hero"> <h1>AfterResult Solutions</h1> <p>Scale Smarter. Maximize ROI. Reach more clients with AI + human-powered marketing, offline and online execution.</p> <button onclick="location.href='https://afterresult.solutions/contact'">Talk to an Expert</button> </section> <section class="stats" style="display: flex; gap: 2rem; justify-content: center; margin: 3rem 0;"> <div class="stat" style="text-align: center;"> <span class="animated-number" data-target="210" style="font-size: 2.5rem; font-weight: bold;">0</span> <p>Projects Delivered</p> </div> <div class="stat" style="text-align: center;"> <span class="animated-number" data-target="100" style="font-size: 2.5rem; font-weight: bold;">0</span> <p>Clients Served</p> </div> <div class="stat" style="text-align: center;"> <span class="animated-number" data-target="30" style="font-size: 2.5rem; font-weight: bold;">0</span> <p>% Revenue Increase</p> </div> <div class="stat" style="text-align: center;"> <span class="animated-number" data-target="90" style="font-size: 2.5rem; font-weight: bold;">0</span> <p>Services Offered</p> </div> <div class="stat" style="text-align: center;"> <span class="animated-number" data-target="550" style="font-size: 2.5rem; font-weight: bold;">0</span> <p>Solutions Executed</p> </div> </section> <style> section.services { max-width: 1200px; margin: 2rem auto; padding: 0 1rem; } .services h2 { text-align: center; margin-bottom: 2rem; font-size: 2rem; font-weight: 700; } .service-cards { display: grid; grid-template-columns: repeat(auto-fit,minmax(280px,1fr)); gap: 1.5rem; } .service-cards .card { background: #fff; padding: 1.5rem 1.2rem; border-radius: 8px; box-shadow: 0 6px 15px rgb(0 0 0 / 0.1); display: flex; flex-direction: column; align-items: center; text-align: center; } .service-cards .card img { width: 48px; height: 48px; margin-bottom: 1rem; } .service-cards .card h3 { margin-bottom: 0.5rem; font-weight: 600; } .service-cards .card p { color: #555; font-size: 0.9rem; line-height: 1.4; } section.why-us { background: #f9f9f9; padding: 2rem 1rem; max-width: 900px; margin: 3rem auto; border-radius: 10px; } section.why-us h2 { text-align: center; margin-bottom: 1.5rem; font-size: 1.8rem; } section.why-us ul { list-style: none; padding: 0; } section.why-us ul li { margin-bottom: 1rem; font-size: 1rem; } section.why-us ul li b { color: #007acc; } section.timeline { max-width: 900px; margin: 3rem auto; padding: 0 1rem; } section.timeline h2 { text-align: center; margin-bottom: 2rem; font-size: 1.9rem; } section.timeline ol { list-style: none; counter-reset: step-counter; padding-left: 0; } section.timeline ol li { margin-bottom: 1.8rem; position: relative; padding-left: 3.2rem; } section.timeline ol li::before { content: counter(step-counter); counter-increment: step-counter; position: absolute; left: 0; top: 0; width: 2.5rem; height: 2.5rem; border-radius: 50%; background: #007acc; color: white; display: flex; align-items: center; justify-content: center; font-weight: 700; } section.timeline ol li b { font-weight: 700; } section.timeline ol li span { display: block; margin-top: 0.2rem; color: #555; font-size: 0.95rem; } section.cta { max-width: 700px; margin: 4rem auto 2rem; padding: 2rem 1rem; background: #007acc; color: white; text-align: center; border-radius: 12px; } section.cta h2 { font-size: 2rem; margin-bottom: 1rem; } section.cta p { font-size: 1.1rem; margin-bottom: 1.8rem; } section.cta button { background: white; color: #007acc; font-weight: 700; font-size: 1rem; padding: 0.75rem 2rem; border: none; border-radius: 30px; cursor: pointer; transition: background 0.3s ease; } section.cta button:hover { background: #005f99; color: white; } </style> <section class="services"> <h2>Our Core Services</h2> <div class="service-cards"> <div class="card"> <img src="/icons/strategic-implementation.svg" alt="Strategic Implementation" /> <h3>Strategic Implementation</h3> <p>Comprehensive project setup, canopy & on-ground activations, channel partnering, NGO outreach, and offline team deployment.</p> </div> <div class="card"> <img src="/icons/digital-growth.svg" alt="Digital Growth & Enablement" /> <h3>Digital Growth & Enablement</h3> <p>Marketplace enablement, product listing, website & social media presence, e-commerce development, and promotional campaigns.</p> </div> <div class="card"> <img src="/icons/lead-generation.svg" alt="Lead Generation" /> <h3>Precision-Driven Lead Generation</h3> <p>AI-driven data mining, client acquisition, industry-specific targeting, and verified pre-qualified decision-maker leads.</p> </div> <div class="card"> <img src="/icons/social-media.svg" alt="Social Media Marketing" /> <h3>Social Media Marketing</h3> <p>Planning, content creation, design, campaign management, and analytics tracking across platforms like Instagram, Facebook, LinkedIn.</p> </div> <div class="card"> <img src="/icons/seo.svg" alt="Search Engine Optimization" /> <h3>Search Engine Optimization (SEO)</h3> <p>Optimizing your website and content to improve search rankings, local visibility, and organic traffic growth.</p> </div> <div class="card"> <img src="/icons/gmb-optimization.svg" alt="Google My Business" /> <h3>Google My Business (GMB) Optimization</h3> <p>Enhance your local SEO and customer engagement by optimizing your GMB profile and leveraging local search opportunities.</p> </div> <div class="card"> <img src="/icons/shopify-woocommerce.svg" alt="Shopify & WooCommerce Dev" /> <h3>Shopify & WooCommerce Development</h3> <p>Build and manage powerful e-commerce stores optimized for performance and conversions.</p> </div> <div class="card"> <img src="/icons/quick-commerce.svg" alt="Quick Commerce Solutions" /> <h3>Quick Commerce Solutions</h3> <p>Implement fast delivery models and solutions tailored for timely product fulfillment and customer satisfaction.</p> </div> <div class="card"> <img src="/icons/growthfusion.svg" alt="GrowthFusion Consulting" /> <h3>GrowthFusion Framework Consulting</h3> <p>Expert consulting services to structure, scale, and optimize your sales and marketing funnels for sustainable growth.</p> </div> </div> </section> <section class="why-us"> <h2>What Makes AfterResult Stand Out?</h2> <ul> <li><b>360° Business Growth Solutions:</b> Comprehensive services covering lead generation, branding, SEO, and AI-driven automation to scale your business.</li> <li><b>Full-Spectrum Digital Presence:</b> From website development to social media management, we ensure a seamless digital identity for your brand.</li> <li><b>Market Expansion:</b> Helping businesses expand their reach through online and offline strategies, ensuring higher visibility and conversions.</li> <li><b>Experienced Team:</b> 36+ consultants and 68+ freelancers driving success across PAN India.</li> <li><b>Proven Results:</b> 210+ projects delivered, 100+ clients served, and 550+ solutions executed.</li> </ul> </section> <section class="timeline"> <h2>Our 4-Week Launch Plan</h2> <ol> <li> <b>Week 1:</b> <u>Strategy & Setup</u> <span>In-depth business, market, and competitor analysis; enablement, project structuring, and team deployment.</span> </li> <li> <b>Week 2:</b> <u>Development & Optimization</u> <span>Creation and optimization of marketing assets, branding materials, website setup, and campaign structures.</span> </li> <li> <b>Week 3:</b> <u>Market Activation & Outreach</u> <span>Hyperlocal campaigns, offline activations, transit advertising, and digital promotions to build brand awareness.</span> </li> <li> <b>Week 4:</b> <u>Execution & Performance Tracking</u> <span>Full-scale launch, real-time monitoring, optimization of campaigns for maximum ROI and growth.</span> </li> </ol> </section> <section class="cta"> <h2>Ready to Accelerate Your Growth?</h2> <p>Take the next step with AfterResult. Get a free consultation today!</p> <button onclick="location.href='https://afterresult.solutions/contact'">Contact Us</button> </section> <CardGrid stagger> <Card title="Social Media Marketing & Management" icon="star"> Build and manage your brand presence on Instagram, Facebook, and LinkedIn with daily posts, engagement, and analytics. </Card> <Card title="Performance-Driven Ad Campaigns" icon="star"> Run targeted Meta ads to boost reach, generate leads, and drive real business results with proper budget control. </Card> <Card title="Profile Optimization & Branding" icon="star"> Make your social media profiles look professional, on-brand, and conversion-ready with custom bios, highlights, and visuals. </Card> <Card title="Analytics & Strategy Reports" icon="star"> Get monthly reports with insights, performance breakdowns, and future strategies tailored to your growth goals. </Card> </CardGrid> <script> document.querySelectorAll('.animated-number').forEach(el => { let target = +el.getAttribute('data-target'); let count = 0; let step = Math.ceil(target / 60); function update() { count += step; if (count < target) { el.textContent = count; requestAnimationFrame(update); } else { el.textContent = target; } } update(); }); </script>
+<section class="hero">
+  <h1>AfterResult Solutions</h1>
+  <p>Scale Smarter. Maximize ROI. Reach more clients with AI + human-powered marketing, offline and online execution.</p>
+  <button>Talk to an Expert</button>
+</section>
+
+
+## Our Services
+
+<CardGrid stagger>
+  <Card title="Social Media Marketing & Management" icon="star">
+    Build and manage your brand presence on Instagram, Facebook, and LinkedIn with daily posts, engagement, and analytics.
+  </Card>
+
+  <Card title="Performance-Driven Ad Campaigns" icon="star">
+    Run targeted Meta ads to boost reach, generate leads, and drive real business results with proper budget control.
+  </Card>
+
+  <Card title="Profile Optimization & Branding" icon="star">
+    Make your social media profiles look professional, on-brand, and conversion-ready with custom bios, highlights, and visuals.
+  </Card>
+
+  <Card title="Analytics & Strategy Reports" icon="star">
+    Get monthly reports with insights, performance breakdowns, and future strategies tailored to your growth goals.
+  </Card>
+</CardGrid>
