@@ -21,7 +21,7 @@ export default defineConfig({
           items: [
             { label: 'Strategic Implementation', slug: 'services/first-page' },
             { label: 'Digital Growth & Enablement', slug: 'services/second-page' },
-            { label: 'Precision-Driven Lead Generation', slug: 'services/second-page' },
+            { label: 'Precision-Driven Lead Generation', slug: 'services/third-page' },
             { label: 'Shopify & WooCommerce Development', slug: 'services/f-page' },
             { label: 'Social Media Marketing', slug: 'services/fif' },
             { label: 'Search Engine Optimization (SEO)', slug: 'services/six' },
