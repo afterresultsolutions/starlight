@@ -49,13 +49,11 @@ export default defineConfig({
           ],
           collapsed: true,
         },
-        {
-          label: 'Pricing',
-          items: [
-            { label: 'Pricing', slug: 'pricing' },
-          ],
-          collapsed: true,
-        },
+                {
+  label: 'Pricing',
+  slug: 'pricing',
+  // No 'items' array here, so no dropdown or submenu
+}
         {
   label: 'Contact',
   slug: 'contact',
