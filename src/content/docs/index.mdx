@@ -61,32 +61,38 @@ import { Card, CardGrid } from '@astrojs/starlight/components';
 
 </CardGrid>
 
-<section style="background:transparent;padding:60px 20px;text-align:center;">
-  <h2 style="font-size:2.5em;margin-bottom:40px; color: inherit;">
+<section style="background:transparent; padding:60px 20px; text-align:center;">
+  <h2 style="font-size:2.5em; margin-bottom:40px; color:;">
     Our Impact in Numbers
   </h2>
-  
-  <div style="display:flex;justify-content:center;flex-wrap:wrap;gap:40px;">
-    
-    <div>
-      <h3 style="font-size:2em; color: inherit;">1000+</h3>
-      <p style="color: inherit;">Projects Completed</p>
-    </div>
-    
-    <div>
-      <h3 style="font-size:2em; color: inherit;">850+</h3>
-      <p style="color: inherit;">Happy Clients</p>
+
+  <div style="
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: center;
+  ">
+    <div style="flex: 1 1 200px;">
+      <h3 style="font-size:2em; color:inherit;">1000+</h3>
+      <p style="color:inherit;">Projects Completed</p>
     </div>
 
-    <div>
-      <h3 style="font-size:2em; color: inherit;">500+</h3>
-      <p style="color: inherit;">Campaigns Executed</p>
+    <div style="flex: 1 1 200px;">
+      <h3 style="font-size:2em; color:inherit;">850+</h3>
+      <p style="color:inherit;">Happy Clients</p>
     </div>
 
-    <div>
-      <h3 style="font-size:2em; color: inherit;">35+</h3>
-      <p style="color: inherit;">Industries Served</p>
+    <div style="flex: 1 1 200px;">
+      <h3 style="font-size:2em; color:inherit;">500+</h3>
+      <p style="color:inherit;">Campaigns Executed</p>
     </div>
 
+    <div style="flex: 1 1 200px;">
+      <h3 style="font-size:2em; color:inherit;">35+</h3>
+      <p style="color:inherit;">Industries Served</p>
+    </div>
   </div>
 </section>
