@@ -56,6 +56,11 @@ export default defineConfig({
           ],
           collapsed: true,
         },
+        {
+  label: 'Contact',
+  slug: 'contact',
+  // No 'items' array here, so no dropdown or submenu
+}
       ],
     }),
   ],
