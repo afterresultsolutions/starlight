@@ -47,4 +47,4 @@ We ensure:
 
 ---
 
-Accelerate your sales with AfterResult Leadin’s precise, powerful lead generation systems designed for growth and long-term client success.
+Accelerate your sales with AfterResult Leadin’s precise, powerful lead generation systems designed for growth and long-term client success
