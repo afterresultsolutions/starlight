@@ -5,43 +5,10 @@ description: "Flexible pricing plans for social media services tailored to your 
 
 # Our Pricing Plans 💼
 
-We offer simple, transparent pricing to help you scale your brand online.
-
-## 🔹 Starter Plan – ₹9,999/month  
-Perfect for small businesses and startups.
-
-- 12 posts/month (static + reels)
-- Basic profile optimization
-- Monthly growth report
-- 1 social platform (Instagram or Facebook)
-
----
-
-## 🔹 Growth Plan – ₹19,999/month  
-For growing brands ready to scale.
-
-- 20 posts/month (reels, carousels, stories)
-- Creative strategy + calendar
-- Performance tracking
-- Ads setup (Meta)
-- 2 platforms managed
-
----
-
-## 🔹 Premium Plan – ₹29,999/month  
-Full-service social media management.
-
-- 30+ posts/month + reel shoots
-- Personal brand & content strategy
-- Paid campaign management
-- Analytics dashboard
-- Upto 3 platforms (IG, FB, LinkedIn)
-
-
-```html
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>AfterResult Quotation Estimator</title>
+
 <style>
   body {
     font-family: "Inter", Arial, sans-serif;
@@ -88,7 +55,6 @@ Full-service social media management.
     color: #fff;
     font-size: 14px;
     margin-bottom: 14px;
-
     outline: none;
     transition: border-color 0.3s;
     text-align: left;
@@ -100,14 +66,14 @@ Full-service social media management.
     border-color: #e67e22;
   }
   .button-row {
-    display: ßex;
+    display: flex;
     gap: 12px;
     margin-bottom: 12px;
     margin-top: 8px;
-    ßex-wrap: wrap;
+    flex-wrap: wrap;
   }
   button {
-    ßex: 1;
+    flex: 1;
     padding: 10px 0;
     border: none;
     border-radius: 25px;
@@ -139,7 +105,6 @@ Full-service social media management.
     min-height: 24px;
     margin-bottom: 8px;
     white-space: pre-line;
-
     text-align: center;
   }
   #averagePriceRange {
@@ -151,7 +116,7 @@ Full-service social media management.
     font-style: italic;
   }
   .slider-row {
-    display: ßex;
+    display: flex;
     align-items: center;
     gap: 8px;
     margin-bottom: 14px;
@@ -190,7 +155,6 @@ Full-service social media management.
     border-color: #e67e22;
   }
   input[type="range"]::-moz-range-thumb {
-
     width: 10px;
     height: 18px;
     border-radius: 50%;
@@ -215,8 +179,8 @@ Full-service social media management.
     transition: background 0.2s;
   }
   .centered-checkboxes {
-    display: ßex;
-    ßex-wrap: wrap;
+    display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     gap: 10px;
     font-size: 0.85em;
@@ -241,7 +205,6 @@ Full-service social media management.
     width: auto;
     background: transparent !important;
     color: #888 !important;
-
     font-size: 0.85em !important;
     border: none !important;
     margin: 0 auto 10px auto !important;
@@ -284,7 +247,7 @@ Full-service social media management.
     font-weight: 700 !important;
     line-height: 1 !important;
     display: inline-block;
-    ßoat: right;
+    float: right;
   }
   #quotePreviewSection {
     background: #fff;
@@ -292,13 +255,12 @@ Full-service social media management.
     border-radius: 10px;
     padding: 15px;
     box-shadow: 0 0 20px #f39c12;
-
     margin-top: 25px;
     font-family: "Inter", Arial, sans-serif;
     font-size: 13px;
     max-width: 500px;
     position: relative;
-    overßow-x: auto;
+    overflow-x: auto;
   }
   #quotePreviewContent {
     max-width: 100%;
@@ -323,13 +285,13 @@ Full-service social media management.
     z-index: 1;
   }
   .quotation-header {
-    display: ßex;
+    display: flex;
     align-items: center;
     gap: 14px;
     border-bottom: 2px solid #f39c12;
     padding-bottom: 6px;
     margin-bottom: 15px;
-    ßex-wrap: wrap;
+    flex-wrap: wrap;
   }
   .quotation-header img {
     height: 50px;
@@ -337,13 +299,12 @@ Full-service social media management.
     border-radius: 8px;
     background: #fff;
     padding: 4px;
-    ßex-shrink: 0;
+    flex-shrink: 0;
   }
   .quotation-meta {
-    display: ßex;
-    ßex-wrap: wrap;
+    display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
-
     margin-bottom: 8px;
     font-size: 11px;
   }
@@ -387,20 +348,19 @@ Full-service social media management.
     padding: 10px;
     border-radius: 6px;
     max-height: 120px;
-    overßow-y: auto;
+    overflow-y: auto;
   }
   .quotation-sign {
     margin-top: 16px;
     font-size: 12px;
   }
   .qr-section {
-
-    display: ßex;
+    display: flex;
     align-items: center;
     gap: 16px;
     margin-top: 16px;
     margin-bottom: 12px;
-    ßex-wrap: wrap;
+    flex-wrap: wrap;
   }
   .qr-section img {
     width: 70px;
@@ -419,7 +379,7 @@ Full-service social media management.
   }
   /* Popup form styles */
   #popupFormOverlay {
-    position: Þxed;
+    position: fixed;
     top: 0; left: 0; right: 0; bottom: 0;
     background: rgba(0,0,0,0.85);
     display: none;
@@ -428,7 +388,7 @@ Full-service social media management.
     z-index: 9999;
   }
   #popupFormOverlay.show {
-    display: ßex;
+    display: flex;
   }
   #popupForm {
     background: #222;
@@ -445,7 +405,6 @@ Full-service social media management.
     margin-bottom: 15px;
     font-weight: 400;
     text-align: center;
-
   }
   #popupForm label {
     color: #ccc;
@@ -470,12 +429,12 @@ Full-service social media management.
     border-color: #e67e22;
   }
   #popupForm .button-row {
-    display: ßex;
+    display: flex;
     justify-content: space-between;
     gap: 10px;
   }
   #popupForm button {
-    ßex: 1;
+    flex: 1;
     padding: 10px 0;
     border: none;
     border-radius: 25px;
@@ -496,7 +455,6 @@ Full-service social media management.
     .quotation-header img {
       height: 38px;
     }
-
     .quotation-table th, .quotation-table td {
       padding: 4px 4px;
       font-size: 12px;
@@ -509,7 +467,9 @@ Full-service social media management.
       gap: 7px;
     }
   }
+
 </style>
+
 <div id="calculatorContainer" role="main" aria-label="Quotation Estimator">
   <h2>AfterResult Quotation Estimator</h2>
   <div id="multiServiceList"></div>
@@ -533,9 +493,9 @@ Full-service social media management.
       <option value="3D / Product Design">3D or Product Design</option>
       <option value="Other">Other (Request Quote)</option>
     </select>
-    <button id="addServiceBtn" class="add-service-btn" type="button" style="font-
-size:12px;">+ Add Another Service</button>
+    <button id="addServiceBtn" class="add-service-btn" type="button" style="font-size:12px;">+ Add Another Service</button>
   </div>
+
   <div id="complexityWrapper" class="hidden">
     <label for="complexitySelect">Select Project Complexity</label>
     <select id="complexitySelect" aria-label="Select project complexity">
@@ -544,32 +504,31 @@ size:12px;">+ Add Another Service</button>
       <option value="Moderate">Moderate</option>
       <option value="Advanced">Advanced</option>
     </select>
-
   </div>
+
   <div id="categoryWrapper" class="hidden">
     <label for="categorySelect">Select Category</label>
     <select id="categorySelect" aria-label="Select category">
       <option value="" disabled="" selected="">-- Choose category --</option>
       <option value="Lifestyle">Lifestyle</option>
       <option value="Education">Education</option>
-      <option value="Furniture &amp; Home Decor">Furniture &amp; Home Decor</
-option>
+      <option value="Furniture &amp; Home Decor">Furniture &amp; Home Decor</option>
       <option value="E-commerce">E-commerce</option>
       <option value="Service-Based Business">Service-Based Business</option>
       <option value="Other">Other</option>
     </select>
-    <input type="text" id="customCategoryInput" class="hidden" placeholder="Enter 
-your category" style="margin-bottom:10px;">
+    <input type="text" id="customCategoryInput" class="hidden" placeholder="Enter your category" style="margin-bottom:10px;">
   </div>
+
   <div id="brandNameWrapper" class="hidden">
     <label for="brandNameInput">Brand Name</label>
     <input type="text" id="brandNameInput" placeholder="Enter your brand name">
   </div>
   <div id="brandDescWrapper" class="hidden">
     <label for="brandDescInput">Brand Description (Optional)</label>
-    <input type="text" id="brandDescInput" placeholder="Describe your brand 
-(optional)">
+    <input type="text" id="brandDescInput" placeholder="Describe your brand (optional)">
   </div>
+
   <div id="typeWrapper" class="hidden">
     <label for="typeSelect">Select Type</label>
     <select id="typeSelect" aria-label="Select type">
@@ -582,98 +541,76 @@ your category" style="margin-bottom:10px;">
       <option value="Tools">Tools</option>
       <option value="Agency">Agency</option>
       <option value="Appointment">Appointment</option>
-      <option value="Company ProÞle">Company ProÞle</option>
+      <option value="Company Profile">Company Profile</option>
       <option value="Other">Other</option>
     </select>
-    <input type="text" id="customTypeInput" class="hidden" placeholder="Enter type" 
-style="margin-bottom:10px;">
+    <input type="text" id="customTypeInput" class="hidden" placeholder="Enter type" style="margin-bottom:10px;">
   </div>
-  <div id="durationSliderWrapper" class="hidden slider-row" aria-label="Select 
-project duration">
-    <label for="durationSlider" style="margin-bottom: 2px">Duration:</label>
 
+  <div id="durationSliderWrapper" class="hidden slider-row" aria-label="Select project duration">
+    <label for="durationSlider" style="margin-bottom: 2px">Duration:</label>
     <span style="font-size: 0.85em; color: #aaa">1</span>
-    <input type="range" id="durationSlider" min="1" max="36" value="1" aria-
-valuemin="1" aria-valuemax="36" aria-valuenow="1" aria-label="Duration in 
-months">
-    <span id="durationSliderValue" style="font-size: 0.9em; color: #f39c12; font-
-weight: 600">1</span>
+    <input type="range" id="durationSlider" min="1" max="36" value="1" aria-valuemin="1" aria-valuemax="36" aria-valuenow="1" aria-label="Duration in months">
+    <span id="durationSliderValue" style="font-size: 0.9em; color: #f39c12; font-weight: 600">1</span>
     <span style="font-size: 0.85em; color: #aaa">36 months</span>
   </div>
+
   <div id="budgetWrapper" class="hidden">
-    <label for="budgetInput">Enter Your Marketing Budget (
-!
-)</label>
-    <input type="number" id="budgetInput" min="5000" step="1" placeholder="Enter 
-amount (min 5000)">
-    <span id="budgetMinMsg" style="color:#f39c12;font-
-size:0.9em;display:none;">Minimum budget is 
-!
-5,000</span>
+    <label for="budgetInput">Enter Your Marketing Budget (₹)</label>
+    <input type="number" id="budgetInput" min="5000" step="1" placeholder="Enter amount (min 5000)">
+    <span id="budgetMinMsg" style="color:#f39c12;font-size:0.9em;display:none;">Minimum budget is ₹5,000</span>
   </div>
+
   <div id="campaignObjectiveWrapper" class="hidden">
     <label for="campaignObjectiveSelect">Campaign Objective</label>
     <select id="campaignObjectiveSelect">
       <option value="" disabled="" selected="">-- Select Objective --</option>
       <option value="Sales">Sales</option>
       <option value="Leads">Leads</option>
-      <option value="TrafÞc">TrafÞc</option>
+      <option value="Traffic">Traffic</option>
       <option value="Engagement">Engagement</option>
       <option value="Awareness">Awareness</option>
     </select>
   </div>
+
   <div id="adsPlatformWrapper" class="hidden">
     <label>Select Ad Platforms</label>
     <div class="centered-checkboxes">
-      <label><input type="checkbox" class="adsPlatform" value="Meta Ads"> Meta 
-Ads</label>
-      <label><input type="checkbox" class="adsPlatform" value="Google Ads"> 
-Google Ads</label>
+      <label><input type="checkbox" class="adsPlatform" value="Meta Ads"> Meta Ads</label>
+      <label><input type="checkbox" class="adsPlatform" value="Google Ads"> Google Ads</label>
     </div>
   </div>
+
   <div id="productCountWrapper" class="hidden">
     <label for="productCount">Number of Products</label>
     <input type="number" id="productCount" min="1" max="10000" value="1">
   </div>
+
   <div id="marketplaceWrapper" class="hidden">
     <label>Select Marketplace Platforms</label>
     <div class="centered-checkboxes" id="marketplacePlatforms">
-      <label><input type="checkbox" class="marketplacePlatform" value="Amazon"> 
-Amazon</label>
-      <label><input type="checkbox" class="marketplacePlatform" value="Flipkart"> 
-Flipkart</label>
-
-      <label><input type="checkbox" class="marketplacePlatform" value="Flipkart"> 
-Flipkart</label>
-      <label><input type="checkbox" class="marketplacePlatform" value="Other"> 
-Other</label>
+      <label><input type="checkbox" class="marketplacePlatform" value="Amazon"> Amazon</label>
+      <label><input type="checkbox" class="marketplacePlatform" value="Flipkart"> Flipkart</label>
+      <label><input type="checkbox" class="marketplacePlatform" value="Other"> Other</label>
     </div>
-    <input type="text" id="customMarketplaceInput" class="hidden" 
-placeholder="Enter platform name">
+    <input type="text" id="customMarketplaceInput" class="hidden" placeholder="Enter platform name">
     <div id="marketplaceProductCountWrapper" class="hidden">
       <label for="marketplaceProductCount">Number of Products</label>
-      <input type="number" id="marketplaceProductCount" min="1" max="10000" 
-value="1">
+      <input type="number" id="marketplaceProductCount" min="1" max="10000" value="1">
     </div>
   </div>
-  <div id="smmPlatformsWrapper" class="hidden checkboxGroup" aria-label="Select 
-social media platforms">
+
+  <div id="smmPlatformsWrapper" class="hidden checkboxGroup" aria-label="Select social media platforms">
     <label>Select Platforms</label><br>
-    <label><input type="checkbox" class="smmPlatform" value="Instagram"> 
-Instagram</label>
-    <label><input type="checkbox" class="smmPlatform" value="Facebook"> 
-Facebook</label>
-    <label><input type="checkbox" class="smmPlatform" value="LinkedIn"> 
-LinkedIn</label>
-    <label><input type="checkbox" class="smmPlatform" value="Twitter"> Twitter</
-label>
-    <label><input type="checkbox" class="smmPlatform" value="YouTube"> 
-YouTube</label>
-    <label><input type="checkbox" class="smmPlatform" value="Other"> Other</
-label>
-    <input type="text" id="customSmmPlatformInput" class="hidden" 
-placeholder="Enter platform name">
+    <label><input type="checkbox" class="smmPlatform" value="Instagram"> Instagram</label>
+    <label><input type="checkbox" class="smmPlatform" value="Facebook"> Facebook</label>
+    <label><input type="checkbox" class="smmPlatform" value="LinkedIn"> LinkedIn</label>
+    <label><input type="checkbox" class="smmPlatform" value="Twitter"> Twitter</label>
+    <label><input type="checkbox" class="smmPlatform" value="YouTube"> YouTube</label>
+    <label><input type="checkbox" class="smmPlatform" value="Other"> Other</label>
+    <input type="text" id="customSmmPlatformInput" class="hidden" placeholder="Enter platform name">
   </div>
+
   <div id="seoTypeWrapper" class="hidden">
     <label for="seoTypeSelect">SEO Service Type</label>
     <select id="seoTypeSelect">
@@ -683,30 +620,28 @@ placeholder="Enter platform name">
       <option value="Both">On-page + Off-page SEO</option>
     </select>
   </div>
+
   <div id="appDescWrapper" class="hidden">
     <label for="appDescInput">App Description (Optional)</label>
     <input type="text" id="appDescInput" placeholder="Describe your app (optional)">
   </div>
+
   <div id="ecommerceProductCountWrapper" class="hidden">
     <label for="ecommerceProductCount">Number of Products</label>
-    <input type="number" id="ecommerceProductCount" min="1" max="10000" 
-value="1">
-
-    <input type="number" id="ecommerceProductCount" min="1" max="10000" 
-value="1">
+    <input type="number" id="ecommerceProductCount" min="1" max="10000" value="1">
   </div>
+
   <div id="brandingMediumWrapper" class="hidden">
     <label for="brandingMediumSelect">Branding Medium</label>
     <select id="brandingMediumSelect">
       <option value="" disabled="" selected="">-- Select Medium --</option>
       <option value="Online">Online</option>
-      <option value="Ofßine">Ofßine</option>
+      <option value="Offline">Offline</option>
     </select>
   </div>
   <div id="brandingLocationWrapper" class="hidden">
     <label for="brandingLocationInput">Location (Only Delhi-NCR supported)</label>
-    <input type="text" id="brandingLocationInput" list="brandingLocationList" 
-placeholder="Type location">
+    <input type="text" id="brandingLocationInput" list="brandingLocationList" placeholder="Type location">
     <datalist id="brandingLocationList">
       <option value="Delhi-NCR">
       </option><option value="Delhi">
@@ -715,9 +650,9 @@ placeholder="Type location">
       </option><option value="Ghaziabad">
       </option><option value="Faridabad">
     </option></datalist>
-    <span id="brandingLocationMsg" style="color:#f39c12;font-
-size:0.9em;display:none;">We are currently not serving this area.</span>
+    <span id="brandingLocationMsg" style="color:#f39c12;font-size:0.9em;display:none;">We are currently not serving this area.</span>
   </div>
+
   <div id="followerWrapper" class="hidden">
     <label for="followerPlatformSelect">Select Platform</label>
     <select id="followerPlatformSelect">
@@ -727,42 +662,41 @@ size:0.9em;display:none;">We are currently not serving this area.</span>
       <option value="LinkedIn">LinkedIn</option>
       <option value="Other">Other</option>
     </select>
-    <input type="text" id="customFollowerPlatformInput" class="hidden" 
-placeholder="Enter platform name">
+    <input type="text" id="customFollowerPlatformInput" class="hidden" placeholder="Enter platform name">
     <label for="followerCount">Number of Followers (Min 50, step 50)</label>
     <input type="number" id="followerCount" min="50" step="50" value="50">
-    <span id="followerRangeMsg" style="color:#f39c12;font-
-size:0.9em;display:none;">Min 50, step 50. Price is for every 50 followers.</span>
+    <span id="followerRangeMsg" style="color:#f39c12;font-size:0.9em;display:none;">Min 50, step 50. Price is for every 50 followers.</span>
   </div>
+
   <div id="productDesignWrapper" class="hidden">
     <label for="productDesignCount">Number of Products</label>
     <input type="number" id="productDesignCount" min="1" max="10000" value="1">
-    <span id="productDesignRangeMsg" style="color:#f39c12;font-
-size:0.9em;display:none;">For more than 10 products, only request quote via 
-WhatsApp.</span>
-
+    <span id="productDesignRangeMsg" style="color:#f39c12;font-size:0.9em;display:none;">For more than 10 products, only request quote via WhatsApp.</span>
   </div>
+
   <div id="otherServiceWrapper" class="hidden">
     <label for="otherServiceDesc">Describe Your Service Request</label>
-    <input type="text" id="otherServiceDesc" placeholder="Describe your 
-requirement">
+    <input type="text" id="otherServiceDesc" placeholder="Describe your requirement">
   </div>
+
   <div id="estimatedPriceRange"></div>
   <div id="averagePriceRange"></div>
+
   <div class="button-row" id="actionButtonsRow">
     <button id="previewQuoteBtn" type="button">Preview Quotation</button>
     <button id="downloadQuoteBtn" type="button">Download Quotation</button>
-    <button id="whatsappQuoteBtn" class="whatsapp" type="button">Request via 
-WhatsApp</button>
-    <button id="callQuoteBtn" type="button" style="display:none;">Call for Custom 
-Quote</button>
+    <button id="whatsappQuoteBtn" class="whatsapp" type="button">Request via WhatsApp</button>
+    <button id="callQuoteBtn" type="button" style="display:none;">Call for Custom Quote</button>
   </div>
+
   <div>
     <div id="quotePreviewSection" class="hidden">
       <div id="quotePreviewContent"></div>
     </div>
   </div>
 </div>
+
+
 <div id="popupFormOverlay">
   <form id="popupForm" autocomplete="off">
     <h3>Enter Your Details</h3>
@@ -771,48 +705,40 @@ Quote</button>
     <label for="popupEmail">Email</label>
     <input type="email" id="popupEmail" required="">
     <label for="popupPhone">Phone</label>
-    <input type="tel" id="popupPhone" pattern="[0-9]{10}" maxlength="10" 
-required="">
+    <input type="tel" id="popupPhone" pattern="[0-9]{10}" maxlength="10" required="">
     <div class="button-row">
       <button id="popupSubmitBtn" type="submit">Continue</button>
       <button id="popupCancelBtn" type="button">Cancel</button>
     </div>
   </form>
 </div>
-<script src="https://cdnjs.cloud
-ß
-are.com/ajax/libs/html2canvas/1.4.1/
-html2canvas.min.js"></script>
-<script src="https://cdnjs.cloud
-ß
-are.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></
-script>
-<script>
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<script>
 /* --- UTILITY FUNCTIONS --- */
 function formatINR(num) {
   if (typeof num === "string") num = parseInt(num, 10);
   if (isNaN(num)) return "";
-  return "
-!
-" + num.toLocaleString("en-IN");
+  return "₹" + num.toLocaleString("en-IN");
 }
 function formatRange(min, max) {
-  return min === max ? formatINR(min) : `${formatINR(min)} Ð ${formatINR(max)}`;
+  return min === max ? formatINR(min) : `${formatINR(min)} – ${formatINR(max)}`;
 }
 function onlyDigits(str) {
   return String(str).replace(/\D/g, "");
 }
 function getTodayDateStr() {
   const d = new Date();
-  return d.toLocaleDateString("en-IN", {year: "numeric", month: "short", day: "2-
-digit"});
+  return d.toLocaleDateString("en-IN", {year: "numeric", month: "short", day: "2-digit"});
 }
+
 /* --- GLOBAL STATE --- */
 let multiServices = [];
 let currentServiceIndex = 0;
 let userDetails = { name: "", email: "", phone: "" };
 let quotePreviewData = null;
+
 /* --- ELEMENTS --- */
 const serviceSelect = document.getElementById("serviceSelect");
 const addServiceBtn = document.getElementById("addServiceBtn");
@@ -835,53 +761,37 @@ const durationSliderValue = document.getElementById("durationSliderValue");
 const budgetWrapper = document.getElementById("budgetWrapper");
 const budgetInput = document.getElementById("budgetInput");
 const budgetMinMsg = document.getElementById("budgetMinMsg");
-const campaignObjectiveWrapper = 
-document.getElementById("campaignObjectiveWrapper");
-const campaignObjectiveSelect = 
-document.getElementById("campaignObjectiveSelect");
-
+const campaignObjectiveWrapper = document.getElementById("campaignObjectiveWrapper");
+const campaignObjectiveSelect = document.getElementById("campaignObjectiveSelect");
 const adsPlatformWrapper = document.getElementById("adsPlatformWrapper");
 const productCountWrapper = document.getElementById("productCountWrapper");
 const productCount = document.getElementById("productCount");
 const marketplaceWrapper = document.getElementById("marketplaceWrapper");
 const marketplacePlatforms = document.getElementById("marketplacePlatforms");
-const customMarketplaceInput = 
-document.getElementById("customMarketplaceInput");
-const marketplaceProductCountWrapper = 
-document.getElementById("marketplaceProductCountWrapper");
-const marketplaceProductCount = 
-document.getElementById("marketplaceProductCount");
-const smmPlatformsWrapper = 
-document.getElementById("smmPlatformsWrapper");
-const customSmmPlatformInput = 
-document.getElementById("customSmmPlatformInput");
+const customMarketplaceInput = document.getElementById("customMarketplaceInput");
+const marketplaceProductCountWrapper = document.getElementById("marketplaceProductCountWrapper");
+const marketplaceProductCount = document.getElementById("marketplaceProductCount");
+const smmPlatformsWrapper = document.getElementById("smmPlatformsWrapper");
+const customSmmPlatformInput = document.getElementById("customSmmPlatformInput");
 const seoTypeWrapper = document.getElementById("seoTypeWrapper");
 const seoTypeSelect = document.getElementById("seoTypeSelect");
 const appDescWrapper = document.getElementById("appDescWrapper");
 const appDescInput = document.getElementById("appDescInput");
-const ecommerceProductCountWrapper = 
-document.getElementById("ecommerceProductCountWrapper");
-const ecommerceProductCount = 
-document.getElementById("ecommerceProductCount");
-const brandingMediumWrapper = 
-document.getElementById("brandingMediumWrapper");
-const brandingMediumSelect = 
-document.getElementById("brandingMediumSelect");
-const brandingLocationWrapper = 
-document.getElementById("brandingLocationWrapper");
+const ecommerceProductCountWrapper = document.getElementById("ecommerceProductCountWrapper");
+const ecommerceProductCount = document.getElementById("ecommerceProductCount");
+const brandingMediumWrapper = document.getElementById("brandingMediumWrapper");
+const brandingMediumSelect = document.getElementById("brandingMediumSelect");
+const brandingLocationWrapper = document.getElementById("brandingLocationWrapper");
 const brandingLocationInput = document.getElementById("brandingLocationInput");
 const brandingLocationMsg = document.getElementById("brandingLocationMsg");
 const followerWrapper = document.getElementById("followerWrapper");
 const followerPlatformSelect = document.getElementById("followerPlatformSelect");
-const customFollowerPlatformInput = 
-document.getElementById("customFollowerPlatformInput");
+const customFollowerPlatformInput = document.getElementById("customFollowerPlatformInput");
 const followerCount = document.getElementById("followerCount");
 const followerRangeMsg = document.getElementById("followerRangeMsg");
-const productDesignWrapper = 
-document.getElementById("productDesignWrapper");
+const productDesignWrapper = document.getElementById("productDesignWrapper");
 const productDesignCount = document.getElementById("productDesignCount");
-const productDesignRangeMsg = 
-document.getElementById("productDesignRangeMsg");
+const productDesignRangeMsg = document.getElementById("productDesignRangeMsg");
 const otherServiceWrapper = document.getElementById("otherServiceWrapper");
 const otherServiceDesc = document.getElementById("otherServiceDesc");
 const estimatedPriceRange = document.getElementById("estimatedPriceRange");
@@ -890,7 +800,6 @@ const previewQuoteBtn = document.getElementById("previewQuoteBtn");
 const downloadQuoteBtn = document.getElementById("downloadQuoteBtn");
 const whatsappQuoteBtn = document.getElementById("whatsappQuoteBtn");
 const callQuoteBtn = document.getElementById("callQuoteBtn");
-
 const quotePreviewSection = document.getElementById("quotePreviewSection");
 const quotePreviewContent = document.getElementById("quotePreviewContent");
 const popupFormOverlay = document.getElementById("popupFormOverlay");
@@ -901,6 +810,7 @@ const popupPhone = document.getElementById("popupPhone");
 const popupSubmitBtn = document.getElementById("popupSubmitBtn");
 const popupCancelBtn = document.getElementById("popupCancelBtn");
 const actionButtonsRow = document.getElementById("actionButtonsRow");
+
 /* --- LOGIC CONSTANTS --- */
 const LOGO_PRICING = {
   "Basic": 1800,
@@ -921,7 +831,7 @@ const WEBSITE_PRICING = {
 };
 const WEBSITE_TYPES = [
   "Landing Page", "E-commerce", "Ed-Tech", "Blog", "News and Updates",
-  "Tools", "Agency", "Appointment", "Company ProÞle", "Other"
+  "Tools", "Agency", "Appointment", "Company Profile", "Other"
 ];
 const SMM_PRICING = {
   "Basic": 3500,
@@ -940,7 +850,6 @@ const APP_PRICING = {
 };
 const ECOMMERCE_PRICING = {
   1: 50,
-
   10: 450
 };
 const MARKETPLACE_PRICING_PER_PRODUCT = 250;
@@ -962,7 +871,7 @@ const FOLLOWER_MIN = 50;
 const ADS_BASE_PRICING = {
   "Sales": 6000,
   "Leads": 6000,
-  "TrafÞc": 3000,
+  "Traffic": 3000,
   "Engagement": 3000,
   "Awareness": 2500
 };
@@ -972,6 +881,7 @@ const CONTENT_WRITING_PRICING = {
   "Moderate": 4500,
   "Advanced": 8000
 };
+
 /* --- FIELD RESET/SHOW/HIDE LOGIC --- */
 function resetAllFields() {
   // Hide all
@@ -990,7 +900,6 @@ function resetAllFields() {
   campaignObjectiveSelect.value = "";
   adsPlatformWrapper.classList.add("hidden");
   productCountWrapper.classList.add("hidden");
-
   productCount.value = 1;
   marketplaceWrapper.classList.add("hidden");
   customMarketplaceInput.classList.add("hidden");
@@ -1022,8 +931,7 @@ function resetAllFields() {
   estimatedPriceRange.textContent = "";
   averagePriceRange.textContent = "";
   // Uncheck all checkboxes
-  document.querySelectorAll('input[type="checkbox"]').forEach(cb => cb.checked = 
-false);
+  document.querySelectorAll('input[type="checkbox"]').forEach(cb => cb.checked = false);
   // Hide custom platform inputs
   customSmmPlatformInput.value = "";
   customMarketplaceInput.value = "";
@@ -1041,8 +949,7 @@ false);
 }
 function showRelevantFields(service) {
   resetAllFields();
-
-  // Show only relevant Þelds
+  // Show only relevant fields
   switch (service) {
     case "Logo Design":
       complexityWrapper.classList.remove("hidden");
@@ -1092,7 +999,6 @@ function showRelevantFields(service) {
       followerWrapper.classList.remove("hidden");
       break;
     case "Meta and Google Ads":
-
       budgetWrapper.classList.remove("hidden");
       campaignObjectiveWrapper.classList.remove("hidden");
       adsPlatformWrapper.classList.remove("hidden");
@@ -1109,45 +1015,36 @@ function showRelevantFields(service) {
 function isOtherSelected() {
   // Checks if 'Other' is selected in any relevant dropdown or checkbox
   if (serviceSelect.value === "Other") return true;
-  if (categoryWrapper.classList.contains("hidden") === false && categorySelect.value 
-=== "Other") return true;
-  if (typeWrapper.classList.contains("hidden") === false && typeSelect.value === 
-"Other") return true;
+  if (categoryWrapper.classList.contains("hidden") === false && categorySelect.value === "Other") return true;
+  if (typeWrapper.classList.contains("hidden") === false && typeSelect.value === "Other") return true;
   if (marketplaceWrapper.classList.contains("hidden") === false) {
-    let checked = 
-Array.from(document.querySelectorAll(".marketplacePlatform:checked")).map(cb => 
-cb.value);
+    let checked = Array.from(document.querySelectorAll(".marketplacePlatform:checked")).map(cb => cb.value);
     if (checked.includes("Other")) return true;
   }
   if (smmPlatformsWrapper.classList.contains("hidden") === false) {
-    let checked = 
-Array.from(document.querySelectorAll(".smmPlatform:checked")).map(cb => 
-cb.value);
+    let checked = Array.from(document.querySelectorAll(".smmPlatform:checked")).map(cb => cb.value);
     if (checked.includes("Other")) return true;
   }
-  if (followerWrapper.classList.contains("hidden") === false && 
-followerPlatformSelect.value === "Other") return true;
+  if (followerWrapper.classList.contains("hidden") === false && followerPlatformSelect.value === "Other") return true;
   return false;
 }
 function handleOtherSelection() {
-  // Hide preview/download/whatsapp, show call for custom quote, show message if 
-needed
+  // Hide preview/download/whatsapp, show call for custom quote, show message if needed
   if (isOtherSelected()) {
     previewQuoteBtn.style.display = "none";
     downloadQuoteBtn.style.display = "none";
     whatsappQuoteBtn.style.display = "none";
     callQuoteBtn.style.display = "";
-    estimatedPriceRange.textContent = "Custom service can only be requested by 
-WhatsApp or by call.";
+    estimatedPriceRange.textContent = "Custom service can only be requested by WhatsApp or by call.";
     averagePriceRange.textContent = "";
   } else {
     previewQuoteBtn.style.display = "";
     downloadQuoteBtn.style.display = "";
-
     whatsappQuoteBtn.style.display = "";
     callQuoteBtn.style.display = "none";
   }
 }
+
 /* --- FIELD EVENTS & DYNAMIC LOGIC --- */
 serviceSelect.addEventListener("change", function() {
   currentServiceIndex = 0;
@@ -1160,7 +1057,7 @@ addServiceBtn.addEventListener("click", function() {
   // Save current service to multiServices
   if (!serviceSelect.value) return;
   saveCurrentServiceToMulti();
-  // Reset all Þelds for new service
+  // Reset all fields for new service
   serviceSelect.value = "";
   resetAllFields();
   updateMultiServiceUI();
@@ -1193,26 +1090,23 @@ function updateMultiServiceUI() {
       rm.type = "button";
       rm.className = "remove-service-btn";
       rm.innerHTML = "&times;";
-
       rm.title = "Remove";
       rm.onclick = () => { removeServiceAtIndex(idx); updateMultiServiceUI(); };
       el.appendChild(rm);
       multiServiceList.appendChild(el);
     });
   }
-  addServiceBtn.style.display = (serviceSelect.value && multiServices.length < 8) ? 
-"" : "";
+  addServiceBtn.style.display = (serviceSelect.value && multiServices.length < 8) ? "" : "";
 }
 function collectCurrentServiceData() {
   let svc = serviceSelect.value;
   if (!svc) return null;
   let obj = { service: svc };
-  // Collect all relevant Þelds for this service
+  // Collect all relevant fields for this service
   switch (svc) {
     case "Logo Design":
       obj.complexity = complexitySelect.value;
-      obj.category = categorySelect.value === "Other" ? customCategoryInput.value : 
-categorySelect.value;
+      obj.category = categorySelect.value === "Other" ? customCategoryInput.value : categorySelect.value;
       obj.brandName = brandNameInput.value;
       obj.brandDesc = brandDescInput.value;
       obj.isOther = (categorySelect.value === "Other");
@@ -1220,19 +1114,14 @@ categorySelect.value;
     case "Basic Website":
     case "Advanced Website":
       obj.complexity = complexitySelect.value;
-      obj.type = typeSelect.value === "Other" ? customTypeInput.value : 
-typeSelect.value;
+      obj.type = typeSelect.value === "Other" ? customTypeInput.value : typeSelect.value;
       obj.isOther = (typeSelect.value === "Other");
       break;
     case "Social Media Management":
       obj.complexity = complexitySelect.value;
-      obj.platforms = 
-Array.from(document.querySelectorAll(".smmPlatform:checked")).map(cb => 
-cb.value === "Other" ? customSmmPlatformInput.value : cb.value);
+      obj.platforms = Array.from(document.querySelectorAll(".smmPlatform:checked")).map(cb => cb.value === "Other" ? customSmmPlatformInput.value : cb.value);
       obj.duration = durationSlider.value;
-      obj.isOther = 
-Array.from(document.querySelectorAll(".smmPlatform:checked")).map(cb => 
-cb.value).includes("Other");
+      obj.isOther = Array.from(document.querySelectorAll(".smmPlatform:checked")).map(cb => cb.value).includes("Other");
       break;
     case "SEO Services":
       obj.seoType = seoTypeSelect.value;
@@ -1244,20 +1133,15 @@ cb.value).includes("Other");
       break;
     case "Content Writing":
       obj.complexity = complexitySelect.value;
-
       obj.duration = durationSlider.value;
       break;
     case "eCommerce Store":
       obj.productCount = ecommerceProductCount.value;
       break;
     case "Marketplace Management":
-      obj.platforms = 
-Array.from(document.querySelectorAll(".marketplacePlatform:checked")).map(cb => 
-cb.value === "Other" ? customMarketplaceInput.value : cb.value);
+      obj.platforms = Array.from(document.querySelectorAll(".marketplacePlatform:checked")).map(cb => cb.value === "Other" ? customMarketplaceInput.value : cb.value);
       obj.productCount = marketplaceProductCount.value;
-      obj.isOther = 
-Array.from(document.querySelectorAll(".marketplacePlatform:checked")).map(cb => 
-cb.value).includes("Other");
+      obj.isOther = Array.from(document.querySelectorAll(".marketplacePlatform:checked")).map(cb => cb.value).includes("Other");
       break;
     case "Digital Marketing":
       obj.budget = budgetInput.value;
@@ -1270,17 +1154,14 @@ cb.value).includes("Other");
       obj.location = brandingLocationInput.value;
       break;
     case "Instagram Followers":
-      obj.platform = followerPlatformSelect.value === "Other" ? 
-customFollowerPlatformInput.value : followerPlatformSelect.value;
+      obj.platform = followerPlatformSelect.value === "Other" ? customFollowerPlatformInput.value : followerPlatformSelect.value;
       obj.followerCount = followerCount.value;
       obj.isOther = (followerPlatformSelect.value === "Other");
       break;
     case "Meta and Google Ads":
       obj.budget = budgetInput.value;
       obj.objective = campaignObjectiveSelect.value;
-      obj.platforms = 
-Array.from(document.querySelectorAll(".adsPlatform:checked")).map(cb => 
-cb.value);
+      obj.platforms = Array.from(document.querySelectorAll(".adsPlatform:checked")).map(cb => cb.value);
       obj.duration = durationSlider.value;
       break;
     case "3D / Product Design":
@@ -1293,8 +1174,8 @@ cb.value);
   }
   return obj;
 }
-/* --- CATEGORY/TYPE 'Other' HANDLING --- */
 
+/* --- CATEGORY/TYPE 'Other' HANDLING --- */
 categorySelect.addEventListener("change", function() {
   if (categorySelect.value === "Other") {
     customCategoryInput.classList.remove("hidden");
@@ -1321,9 +1202,10 @@ customTypeInput.addEventListener("input", function() {
   handleOtherSelection();
   updatePrice();
 });
+
 /* --- BRANDING LOCATION SUGGESTION/RESTRICTION --- */
 brandingMediumSelect.addEventListener("change", function() {
-  if (brandingMediumSelect.value === "Ofßine") {
+  if (brandingMediumSelect.value === "Offline") {
     brandingLocationWrapper.classList.remove("hidden");
   } else {
     brandingLocationWrapper.classList.add("hidden");
@@ -1332,9 +1214,7 @@ brandingMediumSelect.addEventListener("change", function() {
   updatePrice();
 });
 brandingLocationInput.addEventListener("input", function() {
-  if (brandingLocationInput.value && 
-brandingLocationInput.value.toLowerCase().indexOf("delhi") === -1 && 
-brandingLocationInput.value.toLowerCase().indexOf("ncr") === -1) {
+  if (brandingLocationInput.value && brandingLocationInput.value.toLowerCase().indexOf("delhi") === -1 && brandingLocationInput.value.toLowerCase().indexOf("ncr") === -1) {
     brandingLocationMsg.style.display = "";
     estimatedPriceRange.textContent = "";
     previewQuoteBtn.style.display = "none";
@@ -1344,19 +1224,17 @@ brandingLocationInput.value.toLowerCase().indexOf("ncr") === -1) {
   } else {
     brandingLocationMsg.style.display = "none";
     previewQuoteBtn.style.display = "";
-
     downloadQuoteBtn.style.display = "";
     whatsappQuoteBtn.style.display = "";
     callQuoteBtn.style.display = "none";
     updatePrice();
   }
 });
+
 /* --- SOCIAL MEDIA MANAGEMENT 'Other' HANDLING --- */
 document.querySelectorAll(".smmPlatform").forEach(cb => {
   cb.addEventListener("change", function() {
-    let checked = 
-Array.from(document.querySelectorAll(".smmPlatform:checked")).map(cb => 
-cb.value);
+    let checked = Array.from(document.querySelectorAll(".smmPlatform:checked")).map(cb => cb.value);
     if (checked.includes("Other")) {
       customSmmPlatformInput.classList.remove("hidden");
       // If other is checked, do not select all others
@@ -1374,12 +1252,11 @@ customSmmPlatformInput.addEventListener("input", function() {
   handleOtherSelection();
   updatePrice();
 });
+
 /* --- MARKETPLACE 'Other' HANDLING --- */
 document.querySelectorAll(".marketplacePlatform").forEach(cb => {
   cb.addEventListener("change", function() {
-    let checked = 
-Array.from(document.querySelectorAll(".marketplacePlatform:checked")).map(cb => 
-cb.value);
+    let checked = Array.from(document.querySelectorAll(".marketplacePlatform:checked")).map(cb => cb.value);
     if (checked.includes("Other")) {
       customMarketplaceInput.classList.remove("hidden");
       // Uncheck all others
@@ -1393,11 +1270,11 @@ cb.value);
     updatePrice();
   });
 });
-
 customMarketplaceInput.addEventListener("input", function() {
   handleOtherSelection();
   updatePrice();
 });
+
 /* --- FOLLOWER SECTION --- */
 followerPlatformSelect.addEventListener("change", function() {
   if (followerPlatformSelect.value === "Other") {
@@ -1415,10 +1292,10 @@ customFollowerPlatformInput.addEventListener("input", function() {
 followerCount.addEventListener("input", function() {
   let val = parseInt(followerCount.value, 10);
   if (isNaN(val) || val < FOLLOWER_MIN) followerCount.value = FOLLOWER_MIN;
-  if (val % FOLLOWER_STEP !== 0) followerCount.value = Math.ceil(val / 
-FOLLOWER_STEP) * FOLLOWER_STEP;
+  if (val % FOLLOWER_STEP !== 0) followerCount.value = Math.ceil(val / FOLLOWER_STEP) * FOLLOWER_STEP;
   updatePrice();
 });
+
 /* --- PRODUCT DESIGN --- */
 productDesignCount.addEventListener("input", function() {
   let val = parseInt(productDesignCount.value, 10);
@@ -1426,6 +1303,7 @@ productDesignCount.addEventListener("input", function() {
   if (val > 10000) productDesignCount.value = 10000;
   updatePrice();
 });
+
 /* --- ECOMMERCE PRODUCT COUNT --- */
 ecommerceProductCount.addEventListener("input", function() {
   let val = parseInt(ecommerceProductCount.value, 10);
@@ -1433,6 +1311,7 @@ ecommerceProductCount.addEventListener("input", function() {
   if (val > 10000) ecommerceProductCount.value = 10000;
   updatePrice();
 });
+
 /* --- MARKETPLACE PRODUCT COUNT --- */
 marketplaceProductCount.addEventListener("input", function() {
   let val = parseInt(marketplaceProductCount.value, 10);
@@ -1458,6 +1337,7 @@ durationSlider.addEventListener("input", function() {
   durationSliderValue.textContent = durationSlider.value;
   updatePrice();
 });
+
 /* --- BUDGET --- */
 budgetInput.addEventListener("input", function() {
   let val = parseInt(budgetInput.value, 10);
@@ -1470,10 +1350,12 @@ budgetInput.addEventListener("input", function() {
   }
   updatePrice();
 });
+
 /* --- CAMPAIGN OBJECTIVE --- */
 campaignObjectiveSelect.addEventListener("change", function() {
   updatePrice();
 });
+
 /* --- MAIN PRICING LOGIC --- */
 function updatePrice() {
   let svc = serviceSelect.value;
@@ -1483,11 +1365,9 @@ function updatePrice() {
   handleOtherSelection();
   // Hide price for 'Other'
   if (isOtherSelected()) {
-    estimatedPriceRange.textContent = "Custom service can only be requested by 
-WhatsApp or by call.";
+    estimatedPriceRange.textContent = "Custom service can only be requested by WhatsApp or by call.";
     averagePriceRange.textContent = "";
     return;
-
   }
   switch (svc) {
     case "Logo Design":
@@ -1505,21 +1385,17 @@ WhatsApp or by call.";
       break;
     case "Social Media Management":
       if (!complexitySelect.value) { showPrice = false; break; }
-      let platforms = 
-Array.from(document.querySelectorAll(".smmPlatform:checked")).map(cb => 
-cb.value);
+      let platforms = Array.from(document.querySelectorAll(".smmPlatform:checked")).map(cb => cb.value);
       if (platforms.includes("Other")) { showPrice = false; break; }
       duration = parseInt(durationSlider.value, 10) || 1;
       price = SMM_PRICING[complexitySelect.value] * duration;
-      priceRange = formatINR(price) + " (" + duration + " month" + (duration > 1 ? "s" : 
-"") + ")";
+      priceRange = formatINR(price) + " (" + duration + " month" + (duration > 1 ? "s" : "") + ")";
       break;
     case "SEO Services":
       if (!seoTypeSelect.value) { showPrice = false; break; }
       duration = parseInt(durationSlider.value, 10) || 1;
       price = SEO_PRICING[seoTypeSelect.value] * duration;
-      priceRange = formatINR(SEO_PRICING[seoTypeSelect.value]) + " /month, " + 
-formatINR(price) + " (" + duration + " month" + (duration > 1 ? "s" : "") + ")";
+      priceRange = formatINR(SEO_PRICING[seoTypeSelect.value]) + " /month, " + formatINR(price) + " (" + duration + " month" + (duration > 1 ? "s" : "") + ")";
       break;
     case "App Development":
       if (!complexitySelect.value) { showPrice = false; break; }
@@ -1530,24 +1406,18 @@ formatINR(price) + " (" + duration + " month" + (duration > 1 ? "s" : "") + ")";
       if (!complexitySelect.value) { showPrice = false; break; }
       duration = parseInt(durationSlider.value, 10) || 1;
       price = CONTENT_WRITING_PRICING[complexitySelect.value] * duration;
-      priceRange = 
-formatINR(CONTENT_WRITING_PRICING[complexitySelect.value]) + " /month, " + 
-formatINR(price) + " (" + duration + " month" + (duration > 1 ? "s" : "") + ")";
+      priceRange = formatINR(CONTENT_WRITING_PRICING[complexitySelect.value]) + " /month, " + formatINR(price) + " (" + duration + " month" + (duration > 1 ? "s" : "") + ")";
       break;
     case "eCommerce Store":
       let prodCount = parseInt(ecommerceProductCount.value, 10) || 1;
       if (prodCount < 1) prodCount = 1;
-      let full10s = Math.ßoor(prodCount / 10);
-
+      let full10s = Math.floor(prodCount / 10);
       let rem = prodCount % 10;
-      price = full10s * ECOMMERCE_PRICING[10] + rem * 
-ECOMMERCE_PRICING[1];
+      price = full10s * ECOMMERCE_PRICING[10] + rem * ECOMMERCE_PRICING[1];
       priceRange = formatINR(price) + " (" + prodCount + " products)";
       break;
     case "Marketplace Management":
-      let mpPlatforms = 
-Array.from(document.querySelectorAll(".marketplacePlatform:checked")).map(cb => 
-cb.value);
+      let mpPlatforms = Array.from(document.querySelectorAll(".marketplacePlatform:checked")).map(cb => cb.value);
       if (mpPlatforms.includes("Other")) { showPrice = false; break; }
       let mpProdCount = parseInt(marketplaceProductCount.value, 10) || 1;
       price = mpProdCount * MARKETPLACE_PRICING_PER_PRODUCT;
@@ -1557,8 +1427,7 @@ cb.value);
       let budget = parseInt(budgetInput.value, 10) || 0;
       if (budget < 5000) { showPrice = false; break; }
       if (budget > 20000) {
-        estimatedPriceRange.textContent = "20,000+ budget needs a custom quote. 
-Only request via WhatsApp or call.";
+        estimatedPriceRange.textContent = "20,000+ budget needs a custom quote. Only request via WhatsApp or call.";
         previewQuoteBtn.style.display = "none";
         downloadQuoteBtn.style.display = "none";
         whatsappQuoteBtn.style.display = "none";
@@ -1568,37 +1437,29 @@ Only request via WhatsApp or call.";
       let dmObjective = campaignObjectiveSelect.value;
       let dmFee = 0;
       if (dmObjective === "Sales" || dmObjective === "Leads") dmFee = 6000;
-      else if (dmObjective === "Traf
-Þ
-c" || dmObjective === "Engagement") dmFee = 
-3500;
+      else if (dmObjective === "Traffic" || dmObjective === "Engagement") dmFee = 3500;
       else if (dmObjective === "Awareness") dmFee = 2500;
       price = budget + dmFee;
-      priceRange = "Budget: " + formatINR(budget) + " + Service Fee: " + 
-formatINR(dmFee) + " = " + formatINR(price);
+      priceRange = "Budget: " + formatINR(budget) + " + Service Fee: " + formatINR(dmFee) + " = " + formatINR(price);
       break;
     case "Branding Services":
-      if (!complexitySelect.value || !brandingMediumSelect.value) { showPrice = false; 
-break; }
+      if (!complexitySelect.value || !brandingMediumSelect.value) { showPrice = false; break; }
       if (brandingMediumSelect.value === "Online") {
         price = BRANDING_ONLINE_PRICING[complexitySelect.value];
         priceRange = formatINR(price);
-      } else if (brandingMediumSelect.value === "Ofßine") {
-        priceRange = formatRange(BRANDING_OFFLINE_RANGE[0], 
-BRANDING_OFFLINE_RANGE[1]);
+      } else if (brandingMediumSelect.value === "Offline") {
+        priceRange = formatRange(BRANDING_OFFLINE_RANGE[0], BRANDING_OFFLINE_RANGE[1]);
       }
       break;
     case "Instagram Followers":
       if (!followerPlatformSelect.value) { showPrice = false; break; }
       if (followerPlatformSelect.value === "Other") { showPrice = false; break; }
-
       let fCount = parseInt(followerCount.value, 10) || 50;
       if (fCount < 50) fCount = 50;
       let per50 = FOLLOWER_PRICING[followerPlatformSelect.value] || 45;
       let total = Math.ceil(fCount / 50) * per50;
       price = total;
-      priceRange = formatINR(per50) + " per 50, " + formatINR(total) + " (" + fCount + " 
-followers)";
+      priceRange = formatINR(per50) + " per 50, " + formatINR(total) + " (" + fCount + " followers)";
       break;
     case "Meta and Google Ads":
       let adsBudget = parseInt(budgetInput.value, 10) || 0;
@@ -1606,22 +1467,19 @@ followers)";
       let adsObjective = campaignObjectiveSelect.value;
       let adsFee = ADS_BASE_PRICING[adsObjective] || 3000;
       price = adsBudget + adsFee;
-      priceRange = "Budget: " + formatINR(adsBudget) + " + Service Fee: " + 
-formatINR(adsFee) + " = " + formatINR(price);
+      priceRange = "Budget: " + formatINR(adsBudget) + " + Service Fee: " + formatINR(adsFee) + " = " + formatINR(price);
       break;
     case "3D / Product Design":
       let pdCount = parseInt(productDesignCount.value, 10) || 1;
       if (pdCount > 10) {
-        estimatedPriceRange.textContent = "For more than 10 products, only request 
-quote via WhatsApp or call.";
+        estimatedPriceRange.textContent = "For more than 10 products, only request quote via WhatsApp or call.";
         previewQuoteBtn.style.display = "none";
         downloadQuoteBtn.style.display = "none";
         whatsappQuoteBtn.style.display = "none";
         callQuoteBtn.style.display = "";
         return;
       }
-      priceRange = formatRange(PRODUCT_DESIGN_RANGE[0] * pdCount, 
-PRODUCT_DESIGN_RANGE[1] * pdCount) + " (" + pdCount + " products)";
+      priceRange = formatRange(PRODUCT_DESIGN_RANGE[0] * pdCount, PRODUCT_DESIGN_RANGE[1] * pdCount) + " (" + pdCount + " products)";
       break;
     case "Other":
       showPrice = false;
@@ -1633,6 +1491,7 @@ PRODUCT_DESIGN_RANGE[1] * pdCount) + " (" + pdCount + " products)";
     estimatedPriceRange.textContent = "";
   }
 }
+
 /* --- PREVIEW/WHATSAPP/DOWNLOAD BUTTONS --- */
 previewQuoteBtn.addEventListener("click", function() {
   // If multiServices, preview all; else, preview current
@@ -1641,7 +1500,6 @@ previewQuoteBtn.addEventListener("click", function() {
     let data = collectCurrentServiceData();
     if (data && data.service) allServices.push(data);
   }
-
   if (allServices.length === 0) return;
   showPopupForm(() => {
     quotePreviewData = allServices;
@@ -1660,8 +1518,7 @@ downloadQuoteBtn.addEventListener("click", function() {
   el.style.background = "#fff";
   el.style.color = "#222";
   // Use html2canvas to render full content, then jsPDF to save
-  html2canvas(el, {scrollY: -window.scrollY, useCORS:true, windowWidth: 
-el.scrollWidth, windowHeight: el.scrollHeight, scale: 2})
+  html2canvas(el, {scrollY: -window.scrollY, useCORS:true, windowWidth: el.scrollWidth, windowHeight: el.scrollHeight, scale: 2})
     .then(canvas => {
       const imgData = canvas.toDataURL('image/png');
       const pdf = new window.jspdf.jsPDF({
@@ -1690,9 +1547,7 @@ whatsappQuoteBtn.addEventListener("click", function() {
       msg += "\nService #" + (idx+1) + ": " + svc.service + "\n";
       Object.keys(svc).forEach(k => {
         if (k === "service" || k === "isOther") return;
-        msg += k.replace(/([A-Z])/g, ' $1').replace(/^./, str => str.toUpperCase()) + ": " + 
-svc[k] + "\n";
-
+        msg += k.replace(/([A-Z])/g, ' $1').replace(/^./, str => str.toUpperCase()) + ": " + svc[k] + "\n";
       });
     });
     let url = "https://wa.me/919999999999?text=" + encodeURIComponent(msg);
@@ -1702,6 +1557,7 @@ svc[k] + "\n";
 callQuoteBtn.addEventListener("click", function() {
   window.open("tel:+919999999999");
 });
+
 /* --- POPUP FORM LOGIC --- */
 function showPopupForm(cb) {
   popupFormOverlay.classList.add("show");
@@ -1710,8 +1566,7 @@ function showPopupForm(cb) {
   popupPhone.value = userDetails.phone || "";
   popupForm.onsubmit = function(e) {
     e.preventDefault();
-    if (!popupName.value.trim() || !popupEmail.value.trim() || !
-popupPhone.value.trim()) return;
+    if (!popupName.value.trim() || !popupEmail.value.trim() || !popupPhone.value.trim()) return;
     userDetails.name = popupName.value.trim();
     userDetails.email = popupEmail.value.trim();
     userDetails.phone = popupPhone.value.trim();
@@ -1722,12 +1577,12 @@ popupPhone.value.trim()) return;
     popupFormOverlay.classList.remove("show");
   };
 }
+
 /* --- QUOTATION PREVIEW LOGIC --- */
 function renderQuotePreview(services, user) {
   let html = `
     <div class="quotation-header">
-      <img src="https://www.afterresult.com/web/image/website/1/logo/AfterResult?
-unique=c0bef19" alt="AfterResult Logo">
+      <img src="https://www.afterresult.com/web/image/website/1/logo/AfterResult?unique=c0bef19" alt="AfterResult Logo">
       <div>
         <div style="font-size:18px;font-weight:700;color:#f39c12;">AfterResult</div>
         <div style="font-size:13px;">Digital Services Quotation</div>
@@ -1741,7 +1596,6 @@ unique=c0bef19" alt="AfterResult Logo">
     <table class="quotation-table">
       <tr>
         <th>#</th>
-
         <th>Service</th>
         <th>Details</th>
         <th>Amount</th>
@@ -1753,9 +1607,7 @@ unique=c0bef19" alt="AfterResult Logo">
     let amt = "";
     switch (svc.service) {
       case "Logo Design":
-        details = `Complexity: ${svc.complexity || ""}<br>Category: ${svc.category || ""}
-<br>Brand: ${svc.brandName || ""}` + (svc.brandDesc ? `<br>Description: $
-{svc.brandDesc}` : "");
+        details = `Complexity: ${svc.complexity || ""}<br>Category: ${svc.category || ""}<br>Brand: ${svc.brandName || ""}` + (svc.brandDesc ? `<br>Description: ${svc.brandDesc}` : "");
         if (!svc.isOther && svc.complexity) {
           amt = formatINR(LOGO_PRICING[svc.complexity] || 0);
           total += LOGO_PRICING[svc.complexity] || 0;
@@ -1774,8 +1626,7 @@ unique=c0bef19" alt="AfterResult Logo">
         }
         break;
       case "Social Media Management":
-        details = `Complexity: ${svc.complexity || ""}<br>Platforms: ${svc.platforms ? 
-svc.platforms.join(", ") : ""}<br>Duration: ${svc.duration || 1} month(s)`;
+        details = `Complexity: ${svc.complexity || ""}<br>Platforms: ${svc.platforms ? svc.platforms.join(", ") : ""}<br>Duration: ${svc.duration || 1} month(s)`;
         if (!svc.isOther && svc.complexity) {
           let p = SMM_PRICING[svc.complexity] * (parseInt(svc.duration,10)||1);
           amt = formatINR(p);
@@ -1785,29 +1636,24 @@ svc.platforms.join(", ") : ""}<br>Duration: ${svc.duration || 1} month(s)`;
         }
         break;
       case "SEO Services":
-        details = `SEO Type: ${svc.seoType || ""}<br>Duration: ${svc.duration || 1} 
-month(s)`;
+        details = `SEO Type: ${svc.seoType || ""}<br>Duration: ${svc.duration || 1} month(s)`;
         if (svc.seoType) {
           let p = SEO_PRICING[svc.seoType] * (parseInt(svc.duration,10)||1);
           amt = formatINR(p);
           total += p;
         }
-
         break;
       case "App Development":
-        details = `Complexity: ${svc.complexity || ""}` + (svc.appDesc ? 
-`<br>Description: ${svc.appDesc}` : "");
+        details = `Complexity: ${svc.complexity || ""}` + (svc.appDesc ? `<br>Description: ${svc.appDesc}` : "");
         if (svc.complexity) {
           amt = formatINR(APP_PRICING[svc.complexity]);
           total += APP_PRICING[svc.complexity];
         }
         break;
       case "Content Writing":
-        details = `Complexity: ${svc.complexity || ""}<br>Duration: ${svc.duration || 1} 
-month(s)`;
+        details = `Complexity: ${svc.complexity || ""}<br>Duration: ${svc.duration || 1} month(s)`;
         if (svc.complexity) {
-          let p = CONTENT_WRITING_PRICING[svc.complexity] * 
-(parseInt(svc.duration,10)||1);
+          let p = CONTENT_WRITING_PRICING[svc.complexity] * (parseInt(svc.duration,10)||1);
           amt = formatINR(p);
           total += p;
         }
@@ -1815,18 +1661,16 @@ month(s)`;
       case "eCommerce Store":
         details = `Products: ${svc.productCount || 1}`;
         let prodCount = parseInt(svc.productCount,10)||1;
-        let full10s = Math.ßoor(prodCount/10);
+        let full10s = Math.floor(prodCount/10);
         let rem = prodCount%10;
         let p = full10s*ECOMMERCE_PRICING[10]+rem*ECOMMERCE_PRICING[1];
         amt = formatINR(p);
         total += p;
         break;
       case "Marketplace Management":
-        details = `Platforms: ${svc.platforms ? svc.platforms.join(", ") : ""}<br>Products: 
-${svc.productCount || 1}`;
+        details = `Platforms: ${svc.platforms ? svc.platforms.join(", ") : ""}<br>Products: ${svc.productCount || 1}`;
         if (!svc.isOther) {
-          let p = (parseInt(svc.productCount,10)||1) * 
-MARKETPLACE_PRICING_PER_PRODUCT;
+          let p = (parseInt(svc.productCount,10)||1) * MARKETPLACE_PRICING_PER_PRODUCT;
           amt = formatINR(p);
           total += p;
         } else {
@@ -1834,18 +1678,13 @@ MARKETPLACE_PRICING_PER_PRODUCT;
         }
         break;
       case "Digital Marketing":
-        details = `Budget: ${formatINR(svc.budget||0)}<br>Objective: ${svc.objective || 
-""}<br>Duration: ${svc.duration || 1} month(s)`;
+        details = `Budget: ${formatINR(svc.budget||0)}<br>Objective: ${svc.objective || ""}<br>Duration: ${svc.duration || 1} month(s)`;
         if (svc.budget > 20000) {
           amt = "Custom Quote";
         } else {
           let fee = 0;
           if (svc.objective === "Sales" || svc.objective === "Leads") fee = 6000;
-          else if (svc.objective === "Traf
-Þ
-c" || svc.objective === "Engagement") fee = 
-3500;
-
+          else if (svc.objective === "Traffic" || svc.objective === "Engagement") fee = 3500;
           else if (svc.objective === "Awareness") fee = 2500;
           let p = (parseInt(svc.budget,10)||0) + fee;
           amt = formatINR(p);
@@ -1853,20 +1692,17 @@ c" || svc.objective === "Engagement") fee =
         }
         break;
       case "Branding Services":
-        details = `Medium: ${svc.medium || ""}<br>Complexity: ${svc.complexity || ""}` + 
-(svc.location ? `<br>Location: ${svc.location}` : "");
+        details = `Medium: ${svc.medium || ""}<br>Complexity: ${svc.complexity || ""}` + (svc.location ? `<br>Location: ${svc.location}` : "");
         if (svc.medium === "Online") {
           let p = BRANDING_ONLINE_PRICING[svc.complexity];
           amt = formatINR(p);
           total += p;
-        } else if (svc.medium === "Ofßine") {
-          amt = formatRange(BRANDING_OFFLINE_RANGE[0], 
-BRANDING_OFFLINE_RANGE[1]);
+        } else if (svc.medium === "Offline") {
+          amt = formatRange(BRANDING_OFFLINE_RANGE[0], BRANDING_OFFLINE_RANGE[1]);
         }
         break;
       case "Instagram Followers":
-        details = `Platform: ${svc.platform || ""}<br>Followers: ${svc.followerCount || 50}
-`;
+        details = `Platform: ${svc.platform || ""}<br>Followers: ${svc.followerCount || 50}`;
         if (!svc.isOther) {
           let cnt = parseInt(svc.followerCount,10)||50;
           let per50 = FOLLOWER_PRICING[svc.platform]||45;
@@ -1878,9 +1714,7 @@ BRANDING_OFFLINE_RANGE[1]);
         }
         break;
       case "Meta and Google Ads":
-        details = `Budget: ${formatINR(svc.budget||0)}<br>Objective: ${svc.objective || 
-""}<br>Platforms: ${svc.platforms ? svc.platforms.join(", ") : ""}<br>Duration: $
-{svc.duration || 1} month(s)`;
+        details = `Budget: ${formatINR(svc.budget||0)}<br>Objective: ${svc.objective || ""}<br>Platforms: ${svc.platforms ? svc.platforms.join(", ") : ""}<br>Duration: ${svc.duration || 1} month(s)`;
         let adsFee = ADS_BASE_PRICING[svc.objective] || 3000;
         let adsP = (parseInt(svc.budget,10)||0) + adsFee;
         amt = formatINR(adsP);
@@ -1892,11 +1726,9 @@ BRANDING_OFFLINE_RANGE[1]);
         if (cnt > 10) {
           amt = "Custom Quote";
         } else {
-          amt = formatRange(PRODUCT_DESIGN_RANGE[0]*cnt, 
-PRODUCT_DESIGN_RANGE[1]*cnt);
+          amt = formatRange(PRODUCT_DESIGN_RANGE[0]*cnt, PRODUCT_DESIGN_RANGE[1]*cnt);
         }
         break;
-
       case "Other":
         details = svc.desc || "";
         amt = "Custom Quote";
@@ -1921,32 +1753,28 @@ PRODUCT_DESIGN_RANGE[1]*cnt);
         <li>GST extra as applicable.</li>
         <li>50% advance payment required to start project.</li>
         <li>Delivery timelines as per project complexity and requirements.</li>
-        <li>For custom/other services, Þnal price will be shared after discussion.</li>
-        <li>For branding (ofßine), service limited to Delhi-NCR only.</li>
-        <li>For digital marketing, budget above 
-!
-20,000 requires custom quote.</li>
+        <li>For custom/other services, final price will be shared after discussion.</li>
+        <li>For branding (offline), service limited to Delhi-NCR only.</li>
+        <li>For digital marketing, budget above ₹20,000 requires custom quote.</li>
         <li>All services subject to company policies and mutual agreement.</li>
       </ul>
     </div>
     <div class="quotation-sign">
       <b>AfterResult Team</b><br>
-      <span style="font-size:11px;">www.afterresult.com | info@afterresult.com | 
-+91-9999999999</span>
+      <span style="font-size:11px;">www.afterresult.com | info@afterresult.com | +91-9999999999</span>
     </div>
     <div class="qr-section">
-      <img src="https://www.afterresult.com/web/image/website/1/logo/AfterResult?
-unique=c0bef19" alt="AfterResult Logo">
+      <img src="https://www.afterresult.com/web/image/website/1/logo/AfterResult?unique=c0bef19" alt="AfterResult Logo">
       <span class="website-link">www.afterresult.com</span>
     </div>
     <div class="watermark">AfterResult</div>
   `;
   quotePreviewContent.innerHTML = html;
 }
+
 /* --- INITIALIZE --- */
 resetAllFields();
 updateMultiServiceUI();
 updatePrice();
 
 </script>
-```
