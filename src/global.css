@@ -1,0 +1,2 @@
+.sidebar-group ul { display: none; }
+.sidebar-group.open ul { display: block; }
