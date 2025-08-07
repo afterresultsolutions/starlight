@@ -39,31 +39,29 @@ import { Card, CardGrid } from '@astrojs/starlight/components';
 
 <section class="hero">
   <h1></h1>
-
   <div style="
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: stretch;
     justify-content: center;
     gap: 40px;
     max-width: 1000px;
     margin: 0 auto;
     text-align: center;
-  ">
-    <div style="flex: 1 1 200px;">
+    flex-wrap: nowrap;         /* Force single line */
+    ">
+    <div style="flex: 0 1 220px;">
       <h3 style="font-size:2em; color:inherit;">1000+</h3>
       <p style="color:inherit;">Projects Completed</p>
     </div>
-
-    <div style="flex: 1 1 200px;">
+    <div style="flex: 0 1 220px;">
       <h3 style="font-size:2em; color:inherit;">850+</h3>
       <p style="color:inherit;">Happy Clients</p>
     </div>
-
-    <div style="flex: 1 1 200px;">
+    <div style="flex: 0 1 220px;">
       <h3 style="font-size:2em; color:inherit;">500+</h3>
       <p style="color:inherit;">Campaigns Executed</p>
     </div>
-
   </div>
 </section>
 
