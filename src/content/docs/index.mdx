@@ -1,10 +1,17 @@
 ---
 title: Powering Business Growth with Smart, Scalable Solutions
-     <script type="module" src="https://unpkg.com/@splinetool/viewer@1.10.42/build/spline-viewer.js"></script>
-     <spline-viewer 
-     url="https://prod.spline.design/DnX0UlWy9qE5APHD/scene.splinecode" 
-       style="width:100vw; height:100vh; display:block; border:none; outline:none;">
+       <script type="module" src="https://unpkg.com/@splinetool/viewer@1.10.42/build/spline-viewer.js"></script>
+       <spline-viewer 
+       id="myspline"
+       url="https://prod.spline.design/DnX0UlWy9qE5APHD/scene.splinecode" 
+        style="width:60vw; height:60vh; display:block; border:none; outline:none;">
        </spline-viewer>
+       <script>
+  // Redirect to your URL on any click inside the 3D scene
+       document.getElementById('myspline').addEventListener('click', function() {
+       window.location.href = 'https://www.afterresult.solutions';
+       });
+     </script>
 description: AfterResult Solution is a dynamic business growth partner specializing in lead generation, digital marketing, and brand development. We help businesses—big or small—connect with their target audience through strategic online and offline marketing solutions designed to deliver measurable results. 
 hero:
   tagline: Fueling Growth, Delivering Results.
