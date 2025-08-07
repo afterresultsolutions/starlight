@@ -29,41 +29,34 @@ import { Card, CardGrid } from '@astrojs/starlight/components';
 
 <section class="hero">
   <h1></h1>
-  <p style="max-width: 800px; margin: 0 auto; font-size: 1.1em; line-height: 1.6; color: inherit;">
-    At AfterResult, we offer a wide range of business development services tailored to help brands grow across digital and physical platforms. Our offerings include social media marketing and management, performance-driven ad campaigns, profile optimization, strategic reporting, offline activation, and complete digital enablement. Whether you need to build your online presence, generate qualified leads, set up ecommerce systems, or launch a local outreach campaign, we provide end-to-end solutions to drive measurable results and sustainable business growth.
-  </p>
-</section>
-
-## Our Impact in Numbers
----
-
-<section class="hero">
-  <h1></h1>
   <div style="
     display: flex;
     flex-direction: row;
     align-items: stretch;
     justify-content: center;
     gap: 40px;
+    width: 100%;
     max-width: 1000px;
     margin: 0 auto;
     text-align: center;
-    flex-wrap: nowrap;         /* Force single line */
-    ">
-    <div style="flex: 0 1 220px;">
+    flex-wrap: nowrap;      /* NO wrapping ever */
+    overflow-x: auto;       /* allow side scroll on small screens */
+  ">
+    <div style="flex: 1 0 0; min-width: 180px;">
       <h3 style="font-size:2em; color:inherit;">1000+</h3>
       <p style="color:inherit;">Projects Completed</p>
     </div>
-    <div style="flex: 0 1 220px;">
+    <div style="flex: 1 0 0; min-width: 180px;">
       <h3 style="font-size:2em; color:inherit;">850+</h3>
       <p style="color:inherit;">Happy Clients</p>
     </div>
-    <div style="flex: 0 1 220px;">
+    <div style="flex: 1 0 0; min-width: 180px;">
       <h3 style="font-size:2em; color:inherit;">500+</h3>
       <p style="color:inherit;">Campaigns Executed</p>
     </div>
   </div>
 </section>
+
 
 ## Download Our Services Brochure
 
