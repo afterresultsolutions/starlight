@@ -1,295 +1,22 @@
 ---
-title: AfterResult Solutions - Your Brand. Our Mission. Measurable Results.
-description: Enabling brands to grow with performance-driven digital marketing and smart business solutions
+title: AfterResult Solutions
+description: Your Brand. Our Mission. Measurable Results.
 template: splash
 hero:
   tagline: Your Brand. Our Mission. Measurable Results.
+  image:
+    file: ../../assets/logo.svg
   actions:
     - text: Get Started Today
-      link: "#contact"
+      link: /contact/
       icon: right-arrow
       variant: primary
     - text: View Our Services
-      link: "#services"
+      link: /services/
       variant: minimal
 ---
 
-<style>
-{`
-  .hero-section {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    color: white;
-    padding: 100px 0;
-    text-align: center;
-    margin: -2rem -2rem 4rem -2rem;
-  }
-
-  .stats-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 2rem;
-    margin: 3rem 0;
-  }
-
-  .stat-card {
-    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
-    padding: 2rem;
-    border-radius: 15px;
-    text-align: center;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-    transition: transform 0.3s ease;
-  }
-
-  .stat-card:hover {
-    transform: translateY(-10px);
-  }
-
-  .stat-number {
-    font-size: 2.5rem;
-    font-weight: 700;
-    color: #667eea;
-    display: block;
-    margin-bottom: 0.5rem;
-  }
-
-  .stat-label {
-    font-size: 1rem;
-    color: #666;
-  }
-
-  .services-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-    gap: 2rem;
-    margin: 3rem 0;
-  }
-
-  .service-card {
-    background: white;
-    padding: 2rem;
-    border-radius: 15px;
-    box-shadow: 0 5px 25px rgba(0,0,0,0.1);
-    border-left: 4px solid #667eea;
-    transition: all 0.3s ease;
-  }
-
-  .service-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 40px rgba(0,0,0,0.15);
-  }
-
-  .service-icon {
-    font-size: 2.5rem;
-    color: #667eea;
-    margin-bottom: 1rem;
-  }
-
-  .service-title {
-    font-size: 1.3rem;
-    margin-bottom: 1rem;
-    color: #333;
-    font-weight: 600;
-  }
-
-  .service-description {
-    color: #666;
-    line-height: 1.6;
-  }
-
-  .offer-section {
-    background: linear-gradient(135deg, #ff6b6b 0%, #ee5a52 100%);
-    color: white;
-    padding: 4rem 2rem;
-    text-align: center;
-    border-radius: 15px;
-    margin: 3rem 0;
-  }
-
-  .offer-title {
-    font-size: 2rem;
-    margin-bottom: 1rem;
-  }
-
-  .offer-text {
-    font-size: 1.1rem;
-    margin-bottom: 2rem;
-  }
-
-  .offer-button {
-    background: white;
-    color: #ff6b6b;
-    padding: 1rem 2rem;
-    border-radius: 50px;
-    text-decoration: none;
-    font-weight: 600;
-    display: inline-block;
-    transition: all 0.3s ease;
-  }
-
-  .offer-button:hover {
-    transform: scale(1.05);
-    box-shadow: 0 5px 15px rgba(255,255,255,0.3);
-  }
-
-  .pdf-section {
-    background: #f8f9fa;
-    padding: 3rem 2rem;
-    border-radius: 15px;
-    text-align: center;
-    margin: 3rem 0;
-  }
-
-  .pdf-preview {
-    background: white;
-    padding: 3rem 2rem;
-    border: 2px dashed #667eea;
-    border-radius: 10px;
-    margin-top: 2rem;
-  }
-
-  .pdf-icon {
-    font-size: 3rem;
-    color: #667eea;
-    margin-bottom: 1rem;
-  }
-
-  .download-btn {
-    background: #667eea;
-    color: white;
-    padding: 1rem 2rem;
-    text-decoration: none;
-    border-radius: 8px;
-    font-weight: 600;
-    display: inline-block;
-    transition: background 0.3s ease;
-  }
-
-  .download-btn:hover {
-    background: #5a67d8;
-  }
-
-  .testimonials-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
-    margin: 3rem 0;
-  }
-
-  .testimonial-card {
-    background: #f8f9fa;
-    padding: 2rem;
-    border-radius: 15px;
-    position: relative;
-  }
-
-  .testimonial-card::before {
-    content: '"';
-    font-size: 3rem;
-    color: #667eea;
-    position: absolute;
-    top: 10px;
-    left: 20px;
-  }
-
-  .testimonial-text {
-    font-style: italic;
-    margin-bottom: 1rem;
-    padding-top: 1rem;
-  }
-
-  .testimonial-author {
-    font-weight: 600;
-    color: #333;
-  }
-
-  .contact-section {
-    background: linear-gradient(135deg, #333 0%, #555 100%);
-    color: white;
-    padding: 4rem 2rem;
-    border-radius: 15px;
-    margin: 3rem 0;
-  }
-
-  .contact-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 3rem;
-    margin-top: 2rem;
-  }
-
-  .contact-form {
-    background: rgba(255,255,255,0.1);
-    padding: 2rem;
-    border-radius: 15px;
-  }
-
-  .form-group {
-    margin-bottom: 1.5rem;
-  }
-
-  .form-input {
-    width: 100%;
-    padding: 1rem;
-    border: none;
-    border-radius: 8px;
-    background: rgba(255,255,255,0.1);
-    color: white;
-    font-size: 1rem;
-  }
-
-  .form-input::placeholder {
-    color: rgba(255,255,255,0.7);
-  }
-
-  .submit-btn {
-    background: #667eea;
-    color: white;
-    padding: 1rem 2rem;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    font-size: 1rem;
-    transition: background 0.3s ease;
-  }
-
-  .submit-btn:hover {
-    background: #5a67d8;
-  }
-
-  .contact-item {
-    display: flex;
-    align-items: center;
-    margin-bottom: 1.5rem;
-  }
-
-  .contact-icon {
-    font-size: 1.5rem;
-    margin-right: 1rem;
-    color: #667eea;
-  }
-
-  @media (max-width: 768px) {
-    .services-grid {
-      grid-template-columns: 1fr;
-    }
-    .contact-grid {
-      grid-template-columns: 1fr;
-    }
-    .stats-grid {
-      grid-template-columns: repeat(2, 1fr);
-    }
-    .hero-section {
-      padding: 60px 1rem;
-    }
-  }
-
-  @media (max-width: 480px) {
-    .stats-grid {
-      grid-template-columns: 1fr;
-    }
-  }
-`}
-</style>
+import { Card, CardGrid } from '@astrojs/starlight/components';
 
 ## 🚀 Welcome to AfterResult Solutions
 
@@ -299,185 +26,173 @@ hero:
 
 ## 📊 Our Impact in Numbers
 
-<div className="stats-grid">
-  <div className="stat-card">
-    <span className="stat-number">100+</span>
-    <span className="stat-label">Clients Across India</span>
-  </div>
-  <div className="stat-card">
-    <span className="stat-number">210+</span>
-    <span className="stat-label">Successful Projects</span>
-  </div>
-  <div className="stat-card">
-    <span className="stat-number">30%↑</span>
-    <span className="stat-label">Average Revenue Growth</span>
-  </div>
-  <div className="stat-card">
-    <span className="stat-number">550+</span>
-    <span className="stat-label">Solutions Delivered</span>
-  </div>
-  <div className="stat-card">
-    <span className="stat-number">90+</span>
-    <span className="stat-label">Expert Consultants</span>
-  </div>
-  <div className="stat-card">
-    <span className="stat-number">68+</span>
-    <span className="stat-label">Monthly Retained Clients</span>
-  </div>
-</div>
+<CardGrid stagger>
+  <Card title="100+" icon="star">
+    **Clients Across India**
+    
+    PAN India presence with expert digital marketing services
+  </Card>
+  
+  <Card title="210+" icon="rocket">
+    **Successful Projects**
+    
+    Delivered across multiple sectors and business sizes
+  </Card>
+  
+  <Card title="30%↑" icon="up-caret">
+    **Average Revenue Growth**
+    
+    Improved brand positioning and measurable results
+  </Card>
+  
+  <Card title="550+" icon="puzzle">
+    **Solutions Delivered**
+    
+    End-to-end solutions through AfterResult framework
+  </Card>
+  
+  <Card title="90+" icon="user">
+    **Expert Consultants**
+    
+    Experienced consultants engaged across India
+  </Card>
+  
+  <Card title="68+" icon="heart">
+    **Monthly Retained Clients**
+    
+    Clients returning for repeat services every month
+  </Card>
+</CardGrid>
 
 ---
 
-## 🛠️ Our Core Services {#services}
+## 🛠️ Our Core Services
 
 **Full-stack digital solutions designed to accelerate your business growth**
 
-<div className="services-grid">
-  <div className="service-card">
-    <div className="service-icon">🌐</div>
-    <h3 className="service-title">Digital Marketing & Web Development</h3>
-    <p className="service-description">Full-stack digital solutions including custom website development (WordPress, Shopify, WooCommerce), SEO, paid ads, performance marketing, and landing page optimization to increase visibility and conversions.</p>
-  </div>
+<CardGrid stagger>
+  <Card title="Digital Marketing & Web Development" icon="laptop">
+    Full-stack digital solutions including custom website development (WordPress, Shopify, WooCommerce), SEO, paid ads, performance marketing, and landing page optimization to increase visibility and conversions.
+  </Card>
 
-  <div className="service-card">
-    <div className="service-icon">📱</div>
-    <h3 className="service-title">Social Media Strategy & Management</h3>
-    <p className="service-description">Strategic planning and hands-on execution for platforms like Instagram, LinkedIn, and Facebook. Includes content creation, visual design, calendar planning, community engagement, and analytics tracking.</p>
-  </div>
+  <Card title="Social Media Strategy & Management" icon="twitter">
+    Strategic planning and hands-on execution for platforms like Instagram, LinkedIn, and Facebook. Includes content creation, visual design, calendar planning, community engagement, and analytics tracking.
+  </Card>
 
-  <div className="service-card">
-    <div className="service-icon">📈</div>
-    <h3 className="service-title">Lead Generation & Business Prospecting</h3>
-    <p className="service-description">Data-driven B2B and B2C lead generation campaigns using advanced tools and platforms. We help build CRM systems, set up outreach workflows, and create targeted prospecting campaigns to boost your sales pipeline.</p>
-  </div>
+  <Card title="Lead Generation & Business Prospecting" icon="magnifier">
+    Data-driven B2B and B2C lead generation campaigns using advanced tools and platforms. We help build CRM systems, set up outreach workflows, and create targeted prospecting campaigns to boost your sales pipeline.
+  </Card>
 
-  <div className="service-card">
-    <div className="service-icon">🎨</div>
-    <h3 className="service-title">Branding, Identity & Design</h3>
-    <p className="service-description">End-to-end brand development including logo creation, company profile design, pitch decks, marketing collaterals, and visual brand guidelines. We ensure your brand is aligned, recognizable, and ready for scale.</p>
-  </div>
+  <Card title="Branding, Identity & Design" icon="paintbrush">
+    End-to-end brand development including logo creation, company profile design, pitch decks, marketing collaterals, and visual brand guidelines. We ensure your brand is aligned, recognizable, and ready for scale.
+  </Card>
 
-  <div className="service-card">
-    <div className="service-icon">🚀</div>
-    <h3 className="service-title">Startup Growth & Business Development</h3>
-    <p className="service-description">Special support for startups and emerging brands through growth consulting, automation workflows, sales funnels, investor decks, go-to-market strategy, and customer acquisition planning.</p>
-  </div>
+  <Card title="Startup Growth & Business Development" icon="rocket">
+    Special support for startups and emerging brands through growth consulting, automation workflows, sales funnels, investor decks, go-to-market strategy, and customer acquisition planning.
+  </Card>
 
-  <div className="service-card">
-    <div className="service-icon">📍</div>
-    <h3 className="service-title">Offline Marketing & Local Visibility</h3>
-    <p className="service-description">Execution of local marketing campaigns including pamphlet distribution, vehicle branding, outdoor flex boards, and strategic offline placements to support hyperlocal visibility and integrated marketing reach.</p>
-  </div>
-</div>
+  <Card title="Offline Marketing & Local Visibility" icon="map">
+    Execution of local marketing campaigns including pamphlet distribution, vehicle branding, outdoor flex boards, and strategic offline placements to support hyperlocal visibility and integrated marketing reach.
+  </Card>
+</CardGrid>
 
 ---
 
-## 🎯 Special Offer
+## 🎯 Special Limited Time Offer
 
-<div className="offer-section">
-  <h2 className="offer-title">Limited Time Offer!</h2>
-  <p className="offer-text">Get 25% OFF on your first digital marketing package + FREE brand consultation session</p>
-  <a href="#contact" className="offer-button">Claim Your Discount</a>
-</div>
+:::tip[Exclusive Deal for New Clients]
+**Get 25% OFF on your first digital marketing package + FREE brand consultation session**
+
+Ready to accelerate your business growth? Don't miss this opportunity!
+
+[Claim Your Discount](/contact/)
+:::
 
 ---
 
 ## 📄 Company E-Profile
 
-<div className="pdf-section">
-  <h2>Download Our Complete Company Profile</h2>
-  <p>Learn more about our services, achievements, and success stories</p>
-  
-  <div className="pdf-preview">
-    <div className="pdf-icon">📄</div>
-    <h3>AfterResult Solutions E-Profile</h3>
-    <p>Complete company overview, services, achievements, and statistics</p>
-    <a href="/path-to-your-pdf/afterresult-profile.pdf" className="download-btn" download>
-      📥 Download PDF
-    </a>
-  </div>
-</div>
+:::note[Download Our Complete Profile]
+**AfterResult Solutions E-Profile**
+
+Complete company overview, services, achievements, and statistics. Learn more about our expertise and success stories.
+
+📥 [Download PDF](/afterresult-profile.pdf)
+:::
 
 ---
 
 ## 💬 What Our Clients Say
 
-<div className="testimonials-grid">
-  <div className="testimonial-card">
-    <p className="testimonial-text">AfterResult Solutions transformed our digital presence completely. Our online sales increased by 45% within 3 months of working with them.</p>
-    <p className="testimonial-author">- Tech Startup CEO</p>
-  </div>
+<CardGrid stagger>
+  <Card title="Tech Startup CEO" icon="star">
+    > "AfterResult Solutions transformed our digital presence completely. Our online sales increased by 45% within 3 months of working with them."
+  </Card>
   
-  <div className="testimonial-card">
-    <p className="testimonial-text">Professional team with excellent communication. They delivered exactly what we needed for our brand launch and exceeded our expectations.</p>
-    <p className="testimonial-author">- E-commerce Brand Owner</p>
-  </div>
+  <Card title="E-commerce Brand Owner" icon="star">
+    > "Professional team with excellent communication. They delivered exactly what we needed for our brand launch and exceeded our expectations."
+  </Card>
   
-  <div className="testimonial-card">
-    <p className="testimonial-text">The ROI on our digital marketing campaigns has been outstanding. AfterResult's data-driven approach really works!</p>
-    <p className="testimonial-author">- SME Business Owner</p>
-  </div>
-</div>
+  <Card title="SME Business Owner" icon="star">
+    > "The ROI on our digital marketing campaigns has been outstanding. AfterResult's data-driven approach really works!"
+  </Card>
+</CardGrid>
 
 ---
 
-## 📞 Get In Touch {#contact}
+## 📞 Get In Touch
 
-<div className="contact-section">
-  <h2 style={{textAlign: 'center', marginBottom: '2rem'}}>Ready to Grow Your Business?</h2>
-  
-  <div className="contact-grid">
-    <div className="contact-form">
-      <h3 style={{marginBottom: '2rem'}}>Send Us a Message</h3>
-      <form>
-        <div className="form-group">
-          <input type="text" placeholder="Your Name" className="form-input" required />
-        </div>
-        <div className="form-group">
-          <input type="email" placeholder="Your Email" className="form-input" required />
-        </div>
-        <div className="form-group">
-          <input type="tel" placeholder="Your Phone" className="form-input" />
-        </div>
-        <div className="form-group">
-          <textarea placeholder="Your Message" rows="5" className="form-input" required></textarea>
-        </div>
-        <button type="submit" className="submit-btn">Send Message</button>
-      </form>
-    </div>
-    
-    <div>
-      <h3 style={{marginBottom: '2rem'}}>Contact Information</h3>
-      
-      <div className="contact-item">
-        <span className="contact-icon">📞</span>
-        <div>
-          <p>+91 9991283530</p>
-          <p>+91 9599169901</p>
-        </div>
-      </div>
-      
-      <div className="contact-item">
-        <span className="contact-icon">✉️</span>
-        <p>info.afterresult@gmail.com</p>
-      </div>
-      
-      <div className="contact-item">
-        <span className="contact-icon">🌐</span>
-        <div>
-          <p>www.afterresult.com</p>
-          <p>www.afterresult.solutions</p>
-        </div>
-      </div>
-      
-      <div className="contact-item">
-        <span className="contact-icon">📍</span>
-        <p>PAN India Presence<br />Serving clients across India</p>
-      </div>
-    </div>
-  </div>
-</div>
+Ready to grow your business with AfterResult Solutions? We're here to help you achieve measurable results.
+
+### Contact Information
+
+📞 **Phone Numbers:**
+- +91 9991283530
+- +91 9599169901
+
+✉️ **Email:**
+- info.afterresult@gmail.com
+
+🌐 **Websites:**
+- www.afterresult.com
+- www.afterresult.solutions
+
+📍 **Service Area:**
+- PAN India Presence
+- Serving clients across India
+
+:::caution[Ready to Start?]
+**Let's discuss your project requirements!**
+
+Contact us today for a free consultation and discover how we can help accelerate your business growth.
+
+[Get Free Consultation](/contact/)
+:::
 
 ---
 
-**© 2024 AfterResult Solutions. All rights reserved. Your Partner for Real Business Impact.**
+## 🏆 Why Choose AfterResult Solutions?
+
+<CardGrid>
+  <Card title="Proven Track Record" icon="trophy">
+    Over 210+ successful projects delivered with measurable results and improved brand positioning.
+  </Card>
+  
+  <Card title="Expert Team" icon="user">
+    90+ experienced consultants and domain experts engaged across India for comprehensive support.
+  </Card>
+  
+  <Card title="Full-Service Agency" icon="puzzle">
+    From digital marketing to offline campaigns, we provide end-to-end marketing solutions.
+  </Card>
+  
+  <Card title="Data-Driven Approach" icon="chart">
+    Performance-focused strategies backed by analytics and continuous optimization.
+  </Card>
+</CardGrid>
+
+---
+
+**© 2024 AfterResult Solutions. All rights reserved.**
+
+*Your Partner for Real Business Impact - Enabling brands to grow with performance-driven digital marketing and smart business solutions.*
