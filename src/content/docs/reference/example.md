@@ -16,7 +16,3 @@ Our Services:
 	•	Performance Marketing & Analytics
 	•	Landing Page Creation & Conversion Optimization
 
-
-## Further Search
-
-- Use [AfterResult Service Search engine](https://www.afterresult.com/service) to get a wide range of 90+ services
