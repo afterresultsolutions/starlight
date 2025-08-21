@@ -26,7 +26,7 @@ description: "Our Social Media Marketing service is designed to elevate your bra
   margin-top: 24px;
   transition: background 0.2s;
 ">
-  Contact Us
+  Book Now
 </a>
 
 
