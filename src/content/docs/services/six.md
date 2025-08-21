@@ -2,6 +2,19 @@
 title: "Search Engine Optimization (SEO)"
 description: "Our comprehensive approach covers all aspects of SEO to drive organic traffic and qualified leads to your site."
 ---
+<a href="https://rzp.io/rzp/l1KrzqVU" style="
+  display: inline-block;
+  padding: 12px 28px;
+  background-color: #008000;
+  color: #fff;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+  margin-top: 24px;
+  transition: background 0.2s;
+">
+  Book Now
+</a>
 <a href="https://wa.me/919991283530?text=Hi%2C%20I%20am%20interested%20in%20Search%20Engine%20optimisation%2C%20please%20arrange%20a%20call%20back." style="
   display: inline-block;
   padding: 12px 28px;
