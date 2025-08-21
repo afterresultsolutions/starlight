@@ -3,6 +3,20 @@ title: "Quick Commerce Solutions"
 description: "We help you integrate your business with digital platforms for fast, efficient, and scalable growth."
 ---
 
+<a href="https://rzp.io/rzp/BuM0FsX4" style="
+  display: inline-block;
+  padding: 12px 28px;
+  background-color: #0070f3;
+  color: #fff;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+  margin-top: 24px;
+  transition: background 0.2s;
+">
+  Book Now
+</a>
+
 <a href="https://wa.me/919991283530?text=Hi%2C%20I%20am%20interested%20in%20Quick%20Commerce%20Solutions%2C%20please%20arrange%20a%20call%20back." style="
   display: inline-block;
   padding: 12px 28px;
@@ -17,19 +31,6 @@ description: "We help you integrate your business with digital platforms for fas
   Contact Us
 </a>
 
-<a https://rzp.io/rzp/BuM0FsX4" style="
-  display: inline-block;
-  padding: 12px 28px;
-  background-color: #0070f3;
-  color: #fff;
-  border-radius: 6px;
-  text-decoration: none;
-  font-weight: bold;
-  margin-top: 24px;
-  transition: background 0.2s;
-">
-  Book Now
-</a>
 
 # Quick Commerce Solutions
 
