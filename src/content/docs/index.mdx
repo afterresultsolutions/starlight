@@ -22,99 +22,725 @@ hero:
   <p>Scale Smarter. Maximize ROI. Reach more clients with AI + human-powered marketing, offline and online execution.</p>
 </section>
 
-## Our Services
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AfterResult Solutions - Your Brand. Our Mission. Measurable Results.</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-<section class="hero">
-  <h1></h1>
-  <p style="max-width: 800px; margin: 0 auto; font-size: 1.1em; line-height: 1.6; color: inherit;">
-    At AfterResult, we offer a wide range of business development services tailored to help brands grow across digital and physical platforms. Our offerings include social media marketing and management, performance-driven ad campaigns, profile optimization, strategic reporting, offline activation, and complete digital enablement. Whether you need to build your online presence, generate qualified leads, set up ecommerce systems, or launch a local outreach campaign, we provide end-to-end solutions to drive measurable results and sustainable business growth.
-  </p>
-</section>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            overflow-x: hidden;
+        }
 
-## Our Impact in Numbers
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
 
-<section class="hero">
-  <h1></h1>
-  <div style="
-    display: flex;
-    flex-direction: row;
-    align-items: stretch;
-    justify-content: center;
-    gap: 40px;
-    max-width: 1000px;
-    margin: 0 auto;
-    text-align: center;
-    flex-wrap: wrap;
-  ">
-    <div class="stat-box">
-      <h3>1000+</h3>
-      <p>Projects Completed</p>
-    </div>
-    <div class="stat-box">
-      <h3>850+</h3>
-      <p>Happy Clients</p>
-    </div>
-    <div class="stat-box">
-      <h3>500+</h3>
-      <p>Campaigns Executed</p>
-    </div>
-  </div>
-</section>
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 100px 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
 
-<style>
-  .stat-box {
-    flex: 0 1 220px;
-    animation: breathe 3s ease-in-out infinite;
-  }
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 100" preserveAspectRatio="none"><polygon fill="rgba(255,255,255,0.1)" points="1000,0 1000,100 0,100"/></svg>') no-repeat;
+            background-size: cover;
+        }
 
-  .stat-box h3 {
-    font-size: 2em;
-    color: inherit;
-  }
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            animation: fadeInUp 1s ease-out;
+        }
 
-  .stat-box p {
-    color: inherit;
-  }
+        .hero h1 {
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
 
-  @keyframes breathe {
-    0%   { transform: scale(1); opacity: 1; }
-    50%  { transform: scale(1.05); opacity: 0.9; }
-    100% { transform: scale(1); opacity: 1; }
-  }
+        .hero-subtitle {
+            font-size: 1.3rem;
+            margin-bottom: 30px;
+            opacity: 0.9;
+        }
 
-  @media (max-width: 768px) {
-    .hero div {
-      flex-direction: column;
-      gap: 20px;
-    }
-  }
-</style>
+        .cta-button {
+            display: inline-block;
+            background: #ff6b6b;
+            color: white;
+            padding: 15px 30px;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(255, 107, 107, 0.4);
+        }
 
-## Download Our Services Brochure
+        .cta-button:hover {
+            background: #ff5252;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(255, 107, 107, 0.6);
+        }
 
-<section class="hero">
-  <h1></h1>
-  <p style="max-width: 700px; margin: 0 auto 30px; font-size: 1.1em; line-height: 1.6; color: inherit;">
-    Get a complete overview of all the solutions we offer — from digital marketing and e-commerce to BTL activations and consulting. Download our detailed brochure to explore how we can help grow your business.
-  </p>
+        /* Stats Section */
+        .stats {
+            background: #f8f9fa;
+            padding: 80px 0;
+        }
 
-  <a 
-    href="https://cdn2.f-cdn.com/files/download/257089198/afterresult.pdf" 
-    target="_blank" 
-    rel="noopener noreferrer"
-    style="
-      display: inline-block;
-      padding: 14px 28px;
-      background: #007BFF;
-      color: white;
-      border-radius: 8px;
-      text-decoration: none;
-      font-weight: 600;
-      transition: background 0.3s;
-    "
-    onmouseover="this.style.background='#0056b3'" 
-    onmouseout="this.style.background='#007BFF'"
-  >
-    Download PDF
-  </a>
-</section>
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            text-align: center;
+        }
+
+        .stat-item {
+            background: white;
+            padding: 40px 20px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+            animation: fadeInUp 0.8s ease-out;
+        }
+
+        .stat-item:hover {
+            transform: translateY(-10px);
+        }
+
+        .stat-number {
+            font-size: 3rem;
+            font-weight: 700;
+            color: #667eea;
+            display: block;
+        }
+
+        .stat-label {
+            font-size: 1.1rem;
+            color: #666;
+            margin-top: 10px;
+        }
+
+        /* Services Section */
+        .services {
+            padding: 80px 0;
+            background: white;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.8rem;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            color: #666;
+            margin-bottom: 60px;
+            font-size: 1.2rem;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+        }
+
+        .service-card {
+            background: white;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 5px 25px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+            border-left: 4px solid #667eea;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 40px rgba(0,0,0,0.15);
+        }
+
+        .service-icon {
+            font-size: 3rem;
+            color: #667eea;
+            margin-bottom: 20px;
+        }
+
+        .service-title {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: #333;
+        }
+
+        .service-description {
+            color: #666;
+            line-height: 1.7;
+        }
+
+        /* Offer Section */
+        .offer {
+            background: linear-gradient(135deg, #ff6b6b 0%, #ee5a52 100%);
+            color: white;
+            padding: 80px 0;
+            text-align: center;
+        }
+
+        .offer-content {
+            animation: pulse 2s infinite;
+        }
+
+        .offer-title {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        .offer-text {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+        }
+
+        .offer-button {
+            background: white;
+            color: #ff6b6b;
+            padding: 15px 40px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            display: inline-block;
+            transition: all 0.3s ease;
+        }
+
+        .offer-button:hover {
+            transform: scale(1.05);
+            box-shadow: 0 5px 15px rgba(255,255,255,0.3);
+        }
+
+        /* PDF Section */
+        .pdf-section {
+            background: #f8f9fa;
+            padding: 80px 0;
+            text-align: center;
+        }
+
+        .pdf-embed {
+            width: 100%;
+            height: 600px;
+            border: none;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            margin-top: 30px;
+        }
+
+        /* Testimonials */
+        .testimonials {
+            padding: 80px 0;
+            background: white;
+        }
+
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .testimonial-card {
+            background: #f8f9fa;
+            padding: 40px;
+            border-radius: 15px;
+            text-align: center;
+            position: relative;
+        }
+
+        .testimonial-card::before {
+            content: '"';
+            font-size: 4rem;
+            color: #667eea;
+            position: absolute;
+            top: 10px;
+            left: 20px;
+        }
+
+        .testimonial-text {
+            font-style: italic;
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+        }
+
+        .testimonial-author {
+            font-weight: 600;
+            color: #333;
+        }
+
+        /* Contact Section */
+        .contact {
+            background: #333;
+            color: white;
+            padding: 80px 0;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+        }
+
+        .contact-form {
+            background: rgba(255,255,255,0.1);
+            padding: 40px;
+            border-radius: 15px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 15px;
+            border: none;
+            border-radius: 8px;
+            background: rgba(255,255,255,0.1);
+            color: white;
+            font-size: 1rem;
+        }
+
+        .form-group input::placeholder,
+        .form-group textarea::placeholder {
+            color: rgba(255,255,255,0.7);
+        }
+
+        .submit-btn {
+            background: #667eea;
+            color: white;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: background 0.3s ease;
+        }
+
+        .submit-btn:hover {
+            background: #5a67d8;
+        }
+
+        .contact-info h3 {
+            margin-bottom: 30px;
+            font-size: 1.8rem;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .contact-item i {
+            font-size: 1.5rem;
+            margin-right: 15px;
+            color: #667eea;
+        }
+
+        /* Footer */
+        .footer {
+            background: #222;
+            color: white;
+            text-align: center;
+            padding: 30px 0;
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero-subtitle {
+                font-size: 1.1rem;
+            }
+
+            .section-title {
+                font-size: 2.2rem;
+            }
+
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .contact-grid {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 20px;
+            }
+
+            .service-card {
+                padding: 30px;
+            }
+
+            .pdf-embed {
+                height: 400px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                padding: 0 15px;
+            }
+
+            .hero {
+                padding: 60px 0;
+            }
+
+            .stats-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .stats, .services, .offer, .pdf-section, .testimonials, .contact {
+                padding: 60px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>AfterResult Solutions</h1>
+                <p class="hero-subtitle">Your Brand. Our Mission. Measurable Results.</p>
+                <p style="font-size: 1.1rem; margin-bottom: 40px;">Enabling brands to grow with performance-driven digital marketing and smart business solutions</p>
+                <a href="#contact" class="cta-button">Get Started Today</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <span class="stat-number">100+</span>
+                    <span class="stat-label">Clients Across India</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">210+</span>
+                    <span class="stat-label">Successful Projects</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">30%↑</span>
+                    <span class="stat-label">Average Revenue Growth</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">550+</span>
+                    <span class="stat-label">Solutions Delivered</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">90+</span>
+                    <span class="stat-label">Expert Consultants</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">68+</span>
+                    <span class="stat-label">Monthly Retained Clients</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services">
+        <div class="container">
+            <h2 class="section-title">Our Core Services</h2>
+            <p class="section-subtitle">Full-stack digital solutions designed to accelerate your business growth</p>
+            
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-globe"></i>
+                    </div>
+                    <h3 class="service-title">Digital Marketing & Web Development</h3>
+                    <p class="service-description">Full-stack digital solutions including custom website development (WordPress, Shopify, WooCommerce), SEO, paid ads, performance marketing, and landing page optimization to increase visibility and conversions.</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-hashtag"></i>
+                    </div>
+                    <h3 class="service-title">Social Media Strategy & Management</h3>
+                    <p class="service-description">Strategic planning and hands-on execution for platforms like Instagram, LinkedIn, and Facebook. Includes content creation, visual design, calendar planning, community engagement, and analytics tracking.</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3 class="service-title">Lead Generation & Business Prospecting</h3>
+                    <p class="service-description">Data-driven B2B and B2C lead generation campaigns using advanced tools and platforms. We help build CRM systems, set up outreach workflows, and create targeted prospecting campaigns to boost your sales pipeline.</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-palette"></i>
+                    </div>
+                    <h3 class="service-title">Branding, Identity & Design</h3>
+                    <p class="service-description">End-to-end brand development including logo creation, company profile design, pitch decks, marketing collaterals, and visual brand guidelines. We ensure your brand is aligned, recognizable, and ready for scale.</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-rocket"></i>
+                    </div>
+                    <h3 class="service-title">Startup Growth & Business Development</h3>
+                    <p class="service-description">Special support for startups and emerging brands through growth consulting, automation workflows, sales funnels, investor decks, go-to-market strategy, and customer acquisition planning.</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <h3 class="service-title">Offline Marketing & Local Visibility</h3>
+                    <p class="service-description">Execution of local marketing campaigns including pamphlet distribution, vehicle branding, outdoor flex boards, and strategic offline placements to support hyperlocal visibility and integrated marketing reach.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Special Offer Section -->
+    <section class="offer">
+        <div class="container">
+            <div class="offer-content">
+                <h2 class="offer-title">Limited Time Offer!</h2>
+                <p class="offer-text">Get 25% OFF on your first digital marketing package + FREE brand consultation session</p>
+                <a href="#contact" class="offer-button">Claim Your Discount</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Company Profile PDF Section -->
+    <section class="pdf-section" id="company-profile">
+        <div class="container">
+            <h2 class="section-title">Company E-Profile</h2>
+            <p class="section-subtitle">Download our complete company profile and learn more about our services</p>
+            
+            <!-- PDF Preview -->
+            <div style="background: white; padding: 40px; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); margin-top: 30px;">
+                <div style="text-align: center; padding: 60px 20px; border: 2px dashed #667eea; border-radius: 10px;">
+                    <i class="fas fa-file-pdf" style="font-size: 4rem; color: #667eea; margin-bottom: 20px;"></i>
+                    <h3 style="margin-bottom: 15px; color: #333;">AfterResult Solutions E-Profile</h3>
+                    <p style="color: #666; margin-bottom: 25px;">Complete company overview, services, achievements, and statistics</p>
+                    <a href="data:application/pdf;base64," download="AfterResult-Solutions-Profile.pdf" style="background: #667eea; color: white; padding: 12px 25px; text-decoration: none; border-radius: 8px; font-weight: 600;">
+                        <i class="fas fa-download"></i> Download PDF
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials">
+        <div class="container">
+            <h2 class="section-title">What Our Clients Say</h2>
+            <p class="section-subtitle">Success stories from brands we've helped grow</p>
+            
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <p class="testimonial-text">AfterResult Solutions transformed our digital presence completely. Our online sales increased by 45% within 3 months of working with them.</p>
+                    <p class="testimonial-author">- Tech Startup CEO</p>
+                </div>
+                
+                <div class="testimonial-card">
+                    <p class="testimonial-text">Professional team with excellent communication. They delivered exactly what we needed for our brand launch and exceeded our expectations.</p>
+                    <p class="testimonial-author">- E-commerce Brand Owner</p>
+                </div>
+                
+                <div class="testimonial-card">
+                    <p class="testimonial-text">The ROI on our digital marketing campaigns has been outstanding. AfterResult's data-driven approach really works!</p>
+                    <p class="testimonial-author">- SME Business Owner</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <h2 class="section-title" style="color: white; margin-bottom: 60px;">Get In Touch</h2>
+            
+            <div class="contact-grid">
+                <div class="contact-form">
+                    <h3 style="margin-bottom: 30px;">Send Us a Message</h3>
+                    <form>
+                        <div class="form-group">
+                            <input type="text" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" placeholder="Your Email" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="tel" placeholder="Your Phone">
+                        </div>
+                        <div class="form-group">
+                            <textarea placeholder="Your Message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="submit-btn">Send Message</button>
+                    </form>
+                </div>
+                
+                <div class="contact-info">
+                    <h3>Contact Information</h3>
+                    
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <p>+91 9991283530</p>
+                            <p>+91 9599169901</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <p>info.afterresult@gmail.com</p>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <i class="fas fa-globe"></i>
+                        <div>
+                            <p>www.afterresult.com</p>
+                            <p>www.afterresult.solutions</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <p>PAN India Presence<br>Serving clients across India</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 AfterResult Solutions. All rights reserved. Your Partner for Real Business Impact.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for CTA buttons
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Animation on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.animation = 'fadeInUp 0.8s ease-out forwards';
+                }
+            });
+        }, observerOptions);
+
+        // Observe all service cards and stat items
+        document.querySelectorAll('.service-card, .stat-item, .testimonial-card').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Form submission handler
+        document.querySelector('form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you for your message! We will get back to you soon.');
+            this.reset();
+        });
+
+        // Counter animation for stats
+        function animateCounter(element, target) {
+            let count = 0;
+            const increment = target / 100;
+            const timer = setInterval(() => {
+                count += increment;
+                if (count >= target) {
+                    count = target;
+                    clearInterval(timer);
+                }
+                element.textContent = Math.floor(count) + (element.textContent.includes('%') ? '%↑' : element.textContent.includes('+') ? '+' : '');
+            }, 20);
+        }
+
+        // Trigger counter animation when stats section is visible
+        const statsObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const numbers = entry.target.querySelectorAll('.stat-number');
+                    numbers.forEach(num => {
+                        const target = parseInt(num.textContent.replace(/[^\d]/g, ''));
+                        if (target) {
+                            animateCounter(num, target);
+                        }
+                    });
+                    statsObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.5 });
+
+        statsObserver.observe(document.querySelector('.stats'));
+    </script>
+</body>
+</html>
