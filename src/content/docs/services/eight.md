@@ -16,7 +16,6 @@ description: "We help you integrate your business with digital platforms for fas
 ">
   Book Now
 </a>
-
 <a href="https://wa.me/919991283530?text=Hi%2C%20I%20am%20interested%20in%20Quick%20Commerce%20Solutions%2C%20please%20arrange%20a%20call%20back." style="
   display: inline-block;
   padding: 12px 28px;
