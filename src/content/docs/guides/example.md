@@ -7,4 +7,3 @@ AfterResult Solution is a dynamic business growth partner specializing in lead g
 
 ## Fueling Growth, Delivering Results.
 
-- Read [about AfterResult](https://www.afterresult.com/about) in the Official Website
