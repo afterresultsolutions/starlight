@@ -15,9 +15,6 @@ hero:
       variant: minimal
 ---
 
-import { Card, CardGrid } from '@astrojs/starlight/components';
-
-
 ## AfterResult Solutions
 ---
 
@@ -26,7 +23,6 @@ import { Card, CardGrid } from '@astrojs/starlight/components';
   <p>Scale Smarter. Maximize ROI. Reach more clients with AI + human-powered marketing, offline and online execution.</p>
 </section>
 ---
-
 
 ## Our Services
 ---
@@ -53,7 +49,7 @@ import { Card, CardGrid } from '@astrojs/starlight/components';
     max-width: 1000px;
     margin: 0 auto;
     text-align: center;
-    flex-wrap: wrap;   /* allow vertical stack on mobile */
+    flex-wrap: wrap;
   ">
     <div class="stat-box">
       <h3>1000+</h3>
@@ -85,14 +81,12 @@ import { Card, CardGrid } from '@astrojs/starlight/components';
     color: inherit;
   }
 
-  /* breathing animation */
   @keyframes breathe {
     0%   { transform: scale(1); opacity: 1; }
     50%  { transform: scale(1.05); opacity: 0.9; }
     100% { transform: scale(1); opacity: 1; }
   }
 
-  /* mobile responsive */
   @media (max-width: 768px) {
     .hero div {
       flex-direction: column;
