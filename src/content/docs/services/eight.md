@@ -17,7 +17,7 @@ description: "We help you integrate your business with digital platforms for fas
   Contact Us
 </a>
 
-<a https://rzp.io/rzp/BuM0FsX4 " style="
+<a https://rzp.io/rzp/BuM0FsX4" style="
   display: inline-block;
   padding: 12px 28px;
   background-color: #0070f3;
