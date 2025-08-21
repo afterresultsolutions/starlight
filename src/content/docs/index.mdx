@@ -53,23 +53,53 @@ import { Card, CardGrid } from '@astrojs/starlight/components';
     max-width: 1000px;
     margin: 0 auto;
     text-align: center;
-    flex-wrap: nowrap;         /* Force single line */
-    ">
-    <div style="flex: 0 1 220px;">
-      <h3 style="font-size:2em; color:inherit;">1000+</h3>
-      <p style="color:inherit;">Projects Completed</p>
+    flex-wrap: wrap;   /* allow vertical stack on mobile */
+  ">
+    <div class="stat-box">
+      <h3>1000+</h3>
+      <p>Projects Completed</p>
     </div>
-    <div style="flex: 0 1 220px;">
-      <h3 style="font-size:2em; color:inherit;">850+</h3>
-      <p style="color:inherit;">Happy Clients</p>
+    <div class="stat-box">
+      <h3>850+</h3>
+      <p>Happy Clients</p>
     </div>
-    <div style="flex: 0 1 220px;">
-      <h3 style="font-size:2em; color:inherit;">500+</h3>
-      <p style="color:inherit;">Campaigns Executed</p>
+    <div class="stat-box">
+      <h3>500+</h3>
+      <p>Campaigns Executed</p>
     </div>
   </div>
 </section>
 
+<style>
+  .stat-box {
+    flex: 0 1 220px;
+    animation: breathe 3s ease-in-out infinite;
+  }
+
+  .stat-box h3 {
+    font-size: 2em;
+    color: inherit;
+  }
+
+  .stat-box p {
+    color: inherit;
+  }
+
+  /* breathing animation */
+  @keyframes breathe {
+    0%   { transform: scale(1); opacity: 1; }
+    50%  { transform: scale(1.05); opacity: 0.9; }
+    100% { transform: scale(1); opacity: 1; }
+  }
+
+  /* mobile responsive */
+  @media (max-width: 768px) {
+    .hero div {
+      flex-direction: column;
+      gap: 20px;
+    }
+  }
+</style>
 ---
 
 ## Download Our Services Brochure
