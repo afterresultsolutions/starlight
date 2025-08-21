@@ -5,7 +5,7 @@ description: "Digital services including marketplace listing, e-commerce develop
 <a href="https://rzp.io/rzp/ph9oV4G" style="
   display: inline-block;
   padding: 12px 28px;
-  background-color: #0070f3;
+  background-color: #008000;
   color: #fff;
   border-radius: 6px;
   text-decoration: none;
@@ -13,7 +13,7 @@ description: "Digital services including marketplace listing, e-commerce develop
   margin-top: 24px;
   transition: background 0.2s;
 ">
-  Contact Us
+  Book Now
 </a>
 <a href="https://wa.me/919991283530?text=Hi%2C%20I%20am%20interested%20in%20Digital%20Growth%2C%20please%20arrange%20a%20call%20back." style="
   display: inline-block;
