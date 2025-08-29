@@ -42,104 +42,285 @@ At AfterResult Solutions, we believe in transparent and flexible pricing to supp
 <div style="background:#fffbe0; border-radius: 12px; padding: 1.5rem; box-shadow: 0 4px 10px #ece7d7; text-align:center;"> <h3 style="color:#000000; margin-bottom: 0.8rem;">Starting at ₹6,000 </h3> <p style="font-size: 0.75rem; font-weight: 600; margin-bottom: 1rem;"> Market Price ₹11,000+ / project</p> <ul style="list-style: none; padding: 0; color:#444; text-align:left; margin-bottom: 1.5rem;"> <li>✔ Perfect for small businesses & startups</li> <li>✔ Short-term & one-off projects</li> <li>✔ Budget-friendly and quick setup</li> <li>✔ Project-based pricing, no monthly commitment</li> </ul> <button onclick="location.href='/contact'" style="background:#e1a100; color:#fff; border:none; padding: 0.6rem 2rem; border-radius: 25px; cursor:pointer; font-weight: 600;">Start Now</button> </div>
 
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Content Calendar Generator</title>
+<section class="content-calendar">
   <style>
-    body { font-family: Arial, sans-serif; margin: 20px; }
-    h1 { text-align: center; }
-    form { margin-bottom: 20px; max-width: 500px; }
-    label { display: block; margin: 8px 0 4px; }
-    input, select { width: 100%; padding: 6px; margin-bottom: 10px; }
-    table { width: 100%; border-collapse: collapse; margin-top: 20px; }
-    th, td { border: 1px solid #ccc; padding: 8px; text-align: left; }
-    button { padding: 10px 15px; margin-top: 10px; cursor: pointer; }
+    .content-calendar {
+      font-family: system-ui, sans-serif;
+      max-width: 650px;
+      margin: 2rem auto;
+      padding: 1.5rem;
+      border-radius: 16px;
+      background: #fafafa;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    }
+    .content-calendar h2 {
+      text-align: center;
+      margin-bottom: 1rem;
+      font-size: 1.6rem;
+      font-weight: 600;
+      color: #333;
+    }
+    .cc-form {
+      display: grid;
+      gap: 1rem;
+      margin-bottom: 1.5rem;
+    }
+    .cc-field label {
+      display: block;
+      margin-bottom: 0.3rem;
+      font-weight: 500;
+      color: #444;
+      text-align: center;
+    }
+    .cc-field input, .cc-field select {
+      width: 100%;
+      padding: 0.7rem;
+      border-radius: 12px;
+      border: 1px solid #ddd;
+      font-size: 0.95rem;
+    }
+    /* Pills container */
+    .cc-pills {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.6rem;
+      justify-items: center;
+    }
+    .cc-pill, .cc-btn {
+      width: 100%;
+      max-width: 160px;
+      text-align: center;
+      padding: 0.6rem 0.8rem;
+      border-radius: 999px;
+      border: 1px solid #ddd;
+      font-size: 0.9rem;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .cc-pill {
+      background: white;
+      color: #333;
+    }
+    .cc-pill.active {
+      background: #007bff;
+      color: white;
+      border-color: #007bff;
+    }
+    /* Buttons */
+    .cc-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6rem;
+      justify-content: center;
+    }
+    .cc-btn {
+      border: none;
+      font-weight: 500;
+    }
+    .cc-btn.preview {
+      background: #007bff;
+      color: white;
+    }
+    .cc-btn.preview:hover {
+      background: #005fcc;
+    }
+    .cc-btn.download {
+      background: #1b7b3a;
+      color: white;
+    }
+    .cc-btn.download:hover {
+      background: #145c2a;
+    }
+    /* Table */
+    .cc-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 1rem;
+    }
+    .cc-table th, .cc-table td {
+      border: 1px solid #ddd;
+      padding: 0.6rem;
+      text-align: left;
+      font-size: 0.9rem;
+    }
+    .cc-table th {
+      background: #f1f1f1;
+      font-weight: 600;
+    }
+    .festival {
+      background: #fff6d9;
+      font-weight: 600;
+      color: #a86b00;
+    }
+    @media(max-width:480px){
+      .cc-pill, .cc-btn {
+        max-width: 100%;
+      }
+      .cc-pills {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
   </style>
-</head>
-<body>
-  <h1>Content Calendar Generator</h1>
 
-  <form id="calendarForm">
-    <label>Calendar Name:</label>
-    <input type="text" id="calendarName" required>
+  <h2>📅 Content Calendar Generator</h2>
+  <form class="cc-form" id="calendarForm">
+    <div class="cc-field">
+      <label>Calendar Name</label>
+      <input type="text" id="calendarName" placeholder="e.g. Fashion Week Campaign" required="">
+    </div>
 
-    <label>Number of Days:</label>
-    <input type="number" id="days" min="1" value="7" required>
+    <div class="cc-field">
+      <label>Select Time Period</label>
+      <input type="date" id="startDate" required="">
+      <input type="date" id="endDate" required="">
+    </div>
 
-    <label>Platform:</label>
-    <select id="platform">
-      <option>Instagram</option>
-      <option>Facebook</option>
-      <option>LinkedIn</option>
-      <option>Twitter</option>
-    </select>
+    <div class="cc-field">
+      <label>Choose Platforms (select multiple)</label>
+      <div class="cc-pills" id="platformPills">
+        <div class="cc-pill active" data-value="Instagram">Instagram</div>
+        <div class="cc-pill" data-value="Facebook">Facebook</div>
+        <div class="cc-pill" data-value="LinkedIn">LinkedIn</div>
+        <div class="cc-pill" data-value="Twitter">Twitter</div>
+      </div>
+    </div>
 
-    <label>Content Type:</label>
-    <select id="contentType">
-      <option>Reels</option>
-      <option>Creatives</option>
-      <option>All</option>
-    </select>
+    <div class="cc-field">
+      <label>Content Type</label>
+      <select id="contentType">
+        <option>All</option>
+        <option>Reels</option>
+        <option>Posts</option>
+        <option>Carousels</option>
+        <option>Stories</option>
+        <option>Creatives</option>
+      </select>
+    </div>
 
-    <label>Industry:</label>
-    <input type="text" id="industry" placeholder="e.g. Fashion, Tech, Food">
+    <div class="cc-field">
+      <label>Industry</label>
+      <input type="text" id="industry" list="industryOptions" placeholder="e.g. Fashion, Tech, Food">
+      <datalist id="industryOptions">
+        <option value="Fashion">
+        </option><option value="Technology">
+        </option><option value="Food &amp; Beverages">
+        </option><option value="Healthcare">
+        </option><option value="Education">
+        </option><option value="Travel">
+      </option></datalist>
+    </div>
 
-    <button type="submit">Generate Calendar</button>
+    <div class="cc-field" style="text-align:center;">
+      <label>
+        <input type="checkbox" id="includeFestivals">
+        Include upcoming festivals
+      </label>
+    </div>
+
+    <div class="cc-actions">
+      <button class="cc-btn preview" type="button" onclick="generateCalendar('preview')">Preview</button>
+      <button class="cc-btn download" type="button" onclick="generateCalendar('download')">Download</button>
+    </div>
   </form>
 
   <div id="calendarOutput"></div>
 
   <script>
-    document.getElementById("calendarForm").addEventListener("submit", function(e){
-      e.preventDefault();
-      
-      const name = document.getElementById("calendarName").value;
-      const days = parseInt(document.getElementById("days").value);
-      const platform = document.getElementById("platform").value;
-      const contentType = document.getElementById("contentType").value;
-      const industry = document.getElementById("industry").value;
-
-      let table = `<h2>${name} - Content Calendar</h2>`;
-      table += `<table><tr><th>Date</th><th>Time</th><th>Content</th><th>Content Type</th><th>Platform</th><th>Industry</th></tr>`;
-
-      const today = new Date();
-      for(let i=0; i<days; i++){
-        let date = new Date();
-        date.setDate(today.getDate() + i);
-        let dateStr = date.toISOString().split('T')[0];
-
-        table += `<tr>
-          <td>${dateStr}</td>
-          <td>--:--</td>
-          <td>Content Idea</td>
-          <td>${contentType}</td>
-          <td>${platform}</td>
-          <td>${industry}</td>
-        </tr>`;
-      }
-      table += `</table>`;
-      table += `<button onclick="downloadCSV()">Download as CSV</button>`;
-
-      document.getElementById("calendarOutput").innerHTML = table;
+    // ✅ Toggle multiple pill selection
+    document.querySelectorAll(".cc-pill").forEach(pill => {
+      pill.addEventListener("click", () => {
+        pill.classList.toggle("active");
+      });
     });
 
-    function downloadCSV(){
-      let rows = [];
-      document.querySelectorAll("table tr").forEach(tr => {
-        let row = [];
-        tr.querySelectorAll("th, td").forEach(cell => row.push(cell.innerText));
-        rows.push(row.join(","));
-      });
+    // ✅ Suggested peak posting times (example averages)
+    const peakTimes = {
+      "Instagram": "11:00",
+      "Facebook": "13:00",
+      "LinkedIn": "09:00",
+      "Twitter": "12:00"
+    };
 
-      let csvContent = rows.join("\n");
-      let blob = new Blob([csvContent], { type: "text/csv" });
-      let link = document.createElement("a");
-      link.href = URL.createObjectURL(blob);
-      link.download = "content_calendar.csv";
-      link.click();
+    // ✅ Festival list (example, you can extend this)
+    const festivals = [
+      { date: "2025-10-02", name: "Gandhi Jayanti" },
+      { date: "2025-10-20", name: "Diwali" },
+      { date: "2025-12-25", name: "Christmas" }
+    ];
+
+    // ✅ Content types when "All" is selected
+    const allContentTypes = ["Reels", "Posts", "Carousels", "Stories", "Creatives"];
+
+    function generateCalendar(mode){
+      const name = document.getElementById("calendarName").value;
+      const startDate = new Date(document.getElementById("startDate").value);
+      const endDate = new Date(document.getElementById("endDate").value);
+      const platforms = Array.from(document.querySelectorAll(".cc-pill.active")).map(p => p.dataset.value);
+      const contentType = document.getElementById("contentType").value;
+      const industry = document.getElementById("industry").value;
+      const includeFestivals = document.getElementById("includeFestivals").checked;
+
+      if(platforms.length === 0){
+        alert("Please select at least one platform.");
+        return;
+      }
+      if(!startDate || !endDate || startDate > endDate){
+        alert("Please select a valid date range.");
+        return;
+      }
+
+      let rows = [];
+      rows.push(["Date","Time","Content","Content Type","Platform","Industry"]);
+
+      let dayIndex = 0;
+      for(let d = new Date(startDate); d <= endDate; d.setDate(d.getDate()+1)){
+        let dateStr = d.toISOString().split('T')[0];
+        let todaysTypes = contentType === "All" ? [allContentTypes[dayIndex % allContentTypes.length]] : [contentType];
+        
+        platforms.forEach(platform => {
+          todaysTypes.forEach(type => {
+            rows.push([
+              dateStr,
+              peakTimes[platform] || "--:--",
+              "Content Idea",
+              type,
+              platform,
+              industry
+            ]);
+          });
+        });
+
+        dayIndex++;
+      }
+
+      // ✅ Add festivals if checked
+      if(includeFestivals){
+        festivals.forEach(fest => {
+          let fDate = new Date(fest.date);
+          if(fDate >= startDate && fDate <= endDate){
+            rows.push([fest.date, "--:--", fest.name, "Festival", "-", "-"]);
+          }
+        });
+      }
+
+      if(mode === "preview"){
+        let table = `<h3>${name} - Content Calendar</h3><table class="cc-table"><tr>${rows[0].map(h=>`<th>${h}</th>`).join("")}</tr>`;
+        rows.slice(1).forEach(r=>{
+          const isFestival = r[3] === "Festival";
+          table += `<tr class="${isFestival ? 'festival':''}">${r.map(c => `<td>${c}</td>`).join("")}</tr>`;
+        });
+        table += `</table>`;
+        document.getElementById("calendarOutput").innerHTML = table;
+      }
+
+      if(mode === "download"){
+        let csvContent = rows.map(r=>r.join(",")).join("\n");
+        let blob = new Blob([csvContent], { type: "text/csv" });
+        let link = document.createElement("a");
+        link.href = URL.createObjectURL(blob);
+        link.download = "content_calendar.csv";
+        link.click();
+      }
     }
   </script>
-</body>
-</html>
+</section>
