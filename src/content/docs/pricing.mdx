@@ -40,3 +40,108 @@ At AfterResult Solutions, we believe in transparent and flexible pricing to supp
 
 ## Freelancer
 <div style="background:#fffbe0; border-radius: 12px; padding: 1.5rem; box-shadow: 0 4px 10px #ece7d7; text-align:center;"> <h3 style="color:#000000; margin-bottom: 0.8rem;">Starting at ₹6,000 </h3> <p style="font-size: 0.75rem; font-weight: 600; margin-bottom: 1rem;"> Market Price ₹11,000+ / project</p> <ul style="list-style: none; padding: 0; color:#444; text-align:left; margin-bottom: 1.5rem;"> <li>✔ Perfect for small businesses & startups</li> <li>✔ Short-term & one-off projects</li> <li>✔ Budget-friendly and quick setup</li> <li>✔ Project-based pricing, no monthly commitment</li> </ul> <button onclick="location.href='/contact'" style="background:#e1a100; color:#fff; border:none; padding: 0.6rem 2rem; border-radius: 25px; cursor:pointer; font-weight: 600;">Start Now</button> </div>
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Content Calendar Generator</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 20px; }
+    h1 { text-align: center; }
+    form { margin-bottom: 20px; }
+    label { display: block; margin: 8px 0 4px; }
+    input, select { width: 100%; padding: 6px; margin-bottom: 10px; }
+    table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+    table, th, td { border: 1px solid #ccc; }
+    th, td { padding: 8px; text-align: left; }
+    button { padding: 10px 15px; margin-top: 10px; cursor: pointer; }
+  </style>
+</head>
+<body>
+  <h1>Content Calendar Generator</h1>
+  <form id="calendarForm">
+    <label>Calendar Name:</label>
+    <input type="text" id="calendarName" required>
+
+    <label>Number of Days:</label>
+    <input type="number" id="days" min="1" value="7" required>
+
+    <label>Platform:</label>
+    <select id="platform">
+      <option>Instagram</option>
+      <option>Facebook</option>
+      <option>LinkedIn</option>
+      <option>Twitter</option>
+    </select>
+
+    <label>Content Type:</label>
+    <select id="contentType">
+      <option>Reels</option>
+      <option>Creatives</option>
+      <option>All</option>
+    </select>
+
+    <label>Industry:</label>
+    <input type="text" id="industry" placeholder="e.g. Fashion, Tech, Food">
+
+    <button type="submit">Generate Calendar</button>
+  </form>
+
+  <div id="calendarOutput"></div>
+
+  <script>
+    document.getElementById("calendarForm").addEventListener("submit", function(e){
+      e.preventDefault();
+      
+      const name = document.getElementById("calendarName").value;
+      const days = parseInt(document.getElementById("days").value);
+      const platform = document.getElementById("platform").value;
+      const contentType = document.getElementById("contentType").value;
+      const industry = document.getElementById("industry").value;
+
+      let table = `<h2>${name} - Content Calendar</h2>`;
+      table += `<table><tr><th>Date</th><th>Time</th><th>Content</th><th>Content Type</th><th>Platform</th><th>Industry</th></tr>`;
+
+      const today = new Date();
+      for(let i=0; i<days; i++){
+        let date = new Date();
+        date.setDate(today.getDate() + i);
+        let dateStr = date.toISOString().split('T')[0];
+
+        table += `<tr>
+          <td>${dateStr}</td>
+          <td>--:--</td>
+          <td>Content Idea</td>
+          <td>${contentType}</td>
+          <td>${platform}</td>
+          <td>${industry}</td>
+        </tr>`;
+      }
+      table += `</table>`;
+      table += `<button onclick="downloadCSV()">Download as CSV</button>`;
+
+      document.getElementById("calendarOutput").innerHTML = table;
+    });
+
+    function downloadCSV(){
+      let rows = [];
+      document.querySelectorAll("table tr").forEach(tr => {
+        let row = [];
+        tr.querySelectorAll("th, td").forEach(cell => row.push(cell.innerText));
+        rows.push(row.join(","));
+      });
+
+      let csvContent = rows.join("\n");
+      let blob = new Blob([csvContent], { type: "text/csv" });
+      let link = document.createElement("a");
+      link.href = URL.createObjectURL(blob);
+      link.download = "content_calendar.csv";
+      link.click();
+    }
+  </script>
+</body>
+</html>
